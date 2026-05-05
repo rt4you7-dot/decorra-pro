@@ -1020,6 +1020,114 @@ function Footer() {
   );
 }
 
+// ─── Nav Bar ───────────────────────────────────────────────────────────────────
+
+function NavBar() {
+  return (
+    <nav className="sticky top-0 z-50 bg-white/95 backdrop-blur-sm border-b border-[#E8DDD0] py-3 px-4 md:px-8">
+      <div className="max-w-4xl mx-auto flex justify-between items-center">
+        <a
+          href="#form"
+          className="bg-[#6B1A47] text-white text-sm font-semibold px-5 py-2 rounded-lg hover:bg-[#4E1235] transition-colors"
+        >
+          הצטרפות →
+        </a>
+        <div className="text-center">
+          <p className="font-bold text-[#6B1A47] text-base" style={{ fontFamily: SERIF }}>
+            Decorra Pro
+          </p>
+          <p className="text-[#5A3F50] text-xs">סטודיו ברברה ברזין</p>
+        </div>
+      </div>
+    </nav>
+  );
+}
+
+// ─── Video Section ─────────────────────────────────────────────────────────────
+
+function VideoSection() {
+  // ← החלפי את VIDEO_ID_HERE במזהה הסרטון שלך מ-YouTube
+  // לדוגמה: youtube.com/watch?v=abc123  →  youtubeId = "abc123"
+  const youtubeId = "VIDEO_ID_HERE";
+
+  return (
+    <section className="py-16 md:py-20 px-4 md:px-8 max-w-4xl mx-auto">
+      <Fade className="text-center mb-10">
+        <h2 className="text-3xl md:text-4xl text-[#1A1218] mb-3" style={{ fontFamily: SERIF }}>
+          ראי את הסטודיו בפעולה
+        </h2>
+        <p className="text-[#5A3F50] text-lg">45 שנה של ניסיון — מרוכזות בשיטה אחת ברורה</p>
+      </Fade>
+      <Fade>
+        <div
+          className="relative w-full rounded-2xl overflow-hidden shadow-xl bg-[#1A1218]"
+          style={{ paddingTop: "56.25%" }}
+        >
+          {youtubeId === "VIDEO_ID_HERE" ? (
+            <div className="absolute inset-0 flex flex-col items-center justify-center text-white gap-4">
+              <div className="w-20 h-20 rounded-full bg-[#6B1A47] flex items-center justify-center text-3xl">
+                ▶
+              </div>
+              <p className="text-[#F9D0CF] text-lg font-semibold">הסרטון יתווסף בקרוב</p>
+            </div>
+          ) : (
+            <iframe
+              className="absolute inset-0 w-full h-full"
+              src={`https://www.youtube.com/embed/${youtubeId}`}
+              title="Decorra Pro - סטודיו ברברה ברזין"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+            />
+          )}
+        </div>
+      </Fade>
+    </section>
+  );
+}
+
+// ─── Gallery Section ───────────────────────────────────────────────────────────
+
+function GallerySection() {
+  const tiles = [
+    { label: "סלון", bg: "#F9D0CF" },
+    { label: "חדר שינה", bg: "#E8DDD0" },
+    { label: "מטבח", bg: "#F9D0CF" },
+    { label: "פינת אוכל", bg: "#E8DDD0" },
+    { label: "חלל עבודה", bg: "#F9D0CF" },
+    { label: "כניסה לבית", bg: "#E8DDD0" },
+  ];
+
+  return (
+    <section className="py-16 md:py-20 px-4 md:px-8 max-w-4xl mx-auto">
+      <Fade className="text-center mb-10">
+        <h2 className="text-3xl md:text-4xl text-[#1A1218] mb-3" style={{ fontFamily: SERIF }}>
+          מתוך עבודות הסטודיו
+        </h2>
+        <p className="text-[#5A3F50] text-lg">3,600+ פרויקטים. כל אחד — עם כוונה.</p>
+      </Fade>
+      <StaggerFade className="grid grid-cols-2 md:grid-cols-3 gap-4 mb-6">
+        {tiles.map((tile, i) => (
+          <motion.div
+            key={i}
+            variants={fadeUp}
+            className="aspect-square rounded-xl overflow-hidden flex flex-col items-center justify-center shadow-sm gap-2"
+            style={{ backgroundColor: tile.bg }}
+          >
+            <span className="text-3xl">🏠</span>
+            <p className="text-[#6B1A47] font-semibold text-sm">{tile.label}</p>
+            <p className="text-[#5A3F50] text-xs">תמונה בקרוב</p>
+          </motion.div>
+        ))}
+      </StaggerFade>
+      <Fade>
+        <p className="text-center text-[#5A3F50] text-sm italic">
+          תמונות פרויקטים מהסטודיו יתווספו בקרוב
+        </p>
+      </Fade>
+    </section>
+  );
+}
+
 // ─── Main Page ─────────────────────────────────────────────────────────────────
 
 export default function DecoraProPage() {
@@ -1030,6 +1138,7 @@ export default function DecoraProPage() {
         🎉 מחיר השקה | Decorra Pro חלק 1 | ₪450 בלבד — לזמן מוגבל
       </div>
 
+      <NavBar />
       <HeroSection />
       <Divider />
       <ProblemSection />
@@ -1041,7 +1150,11 @@ export default function DecoraProPage() {
       <Divider />
       <AuthoritySection />
       <Divider />
+      <VideoSection />
+      <Divider />
       <SolutionSection />
+      <Divider />
+      <GallerySection />
       <InlineCTA />
       <Divider />
       <TestimonialsSection />
