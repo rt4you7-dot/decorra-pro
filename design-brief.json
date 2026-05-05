@@ -1,0 +1,38 @@
+{
+  "designBrief": {
+    "playbook": "feminine-white-dr-brand-edition",
+    "colors": {
+      "bg": "#FAF6F0",
+      "bgAlt": "#F9D0CF",
+      "bgDark": "#6B1A47",
+      "text": "#1A1218",
+      "textSecondary": "#5A3F50",
+      "accent": "#6B1A47",
+      "accentLight": "#F9D0CF",
+      "markerHighlight": "#F9D0CF",
+      "cta": "#6B1A47",
+      "ctaHover": "#4E1235",
+      "ctaText": "#FFFFFF"
+    },
+    "typography": {
+      "headings": "Playfair Display, serif",
+      "body": "Heebo, sans-serif",
+      "direction": "RTL",
+      "language": "Hebrew"
+    },
+    "vibe": "elegant-feminine-authority",
+    "animationLevel": "minimal",
+    "sectionTransitions": "white-space-generous",
+    "specialElements": [
+      "plum-header-bar",
+      "pink-marker-highlights",
+      "cream-background-sections",
+      "plum-cta-buttons",
+      "serif-display-headings",
+      "BB-monogram-divider",
+      "chapter-cards-on-cream",
+      "founder-profile-cards-plum-accent"
+    ],
+    "notes": "הדף צריך להרגיש המשך ישיר של האתר הקיים. Plum #6B1A47 הוא צבע ה-CTA והסמכות. Baby Pink #F9D0CF הוא ה-highlight ומרקרים. Cream #FAF6F0 הוא הרקע הראשי. פונט כותרות = Playfair Display (serif אלגנטי כמו באתר). RTL לאורך כל הדף."
+  }
+}
