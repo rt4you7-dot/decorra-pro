@@ -251,7 +251,7 @@ function HeroSection() {
           מבלבול וחוסר ביטחון לשיטה ברורה שעובדת
         </p>
         <p className="text-[#5A3F50] text-base mb-6">Decorra Pro מבית סטודיו ברברה ברזין</p>
-        <h1 className="text-4xl md:text-5xl lg:text-6xl text-[#1A1218] leading-tight mb-6 font-bold">
+        <h1 className="text-5xl md:text-6xl lg:text-7xl text-[#1A1218] leading-tight mb-6 font-black">
           את לא מתבלבלת כי אין לך טעם.
           <br /><span className="text-[#6B1A47]">את מתבלבלת כי אין לך שיטה.</span>
         </h1>
