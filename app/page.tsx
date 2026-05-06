@@ -491,11 +491,17 @@ function WhatYouGetSection() {
 
       <div className="mb-4">
         <p className="text-[#6B1A47] font-semibold text-center mb-4">6 הפרקים הזמינים עכשיו:</p>
-        <StaggerFade className="grid grid-cols-2 md:grid-cols-3 gap-3 mb-6">
+        <StaggerFade className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
           {CHAPTERS.map((ch) => (
-            <motion.div key={ch.number} variants={fadeUp} className="bg-[#6B1A47] text-white rounded-xl p-4 text-center">
-              <p className="text-2xl font-bold mb-1" style={{ fontFamily: SERIF }}>{ch.number}</p>
-              <p className="text-[#F9D0CF] text-xs leading-snug">{ch.name.split(":")[0]}</p>
+            <motion.div key={ch.number} variants={fadeUp} className="bg-white rounded-xl overflow-hidden shadow-sm border border-[#E8DDD0]">
+              <div className="bg-[#6B1A47] py-3 px-5 flex items-center gap-3">
+                <span className="text-white font-bold text-2xl flex-shrink-0" style={{ fontFamily: SERIF }}>{ch.number}</span>
+                <span className="text-[#F9D0CF] text-sm font-semibold leading-snug">{ch.name}</span>
+              </div>
+              <div className="p-5 space-y-3">
+                <p className="text-[#5A3F50] text-sm leading-relaxed">{ch.description}</p>
+                <p className="text-[#6B1A47] font-semibold text-sm">✅ {ch.transformation}</p>
+              </div>
             </motion.div>
           ))}
         </StaggerFade>
