@@ -311,6 +311,89 @@ function VideoSection() {
   );
 }
 
+// ─── Authority ─────────────────────────────────────────────────────────────────
+
+function AuthoritySection() {
+  return (
+    <section className="py-16 md:py-20 px-4 md:px-8 max-w-4xl mx-auto">
+      <Fade className="text-center mb-10">
+        <h2 className="text-3xl md:text-4xl text-[#1A1218]" style={{ fontFamily: SERIF }}>
+          מי עומד מאחורי השיטה?
+        </h2>
+      </Fade>
+      <StaggerFade className="grid md:grid-cols-2 gap-6 mb-8">
+        {/* Boris Sultanov */}
+        <motion.div variants={fadeUp} className="bg-white rounded-2xl overflow-hidden shadow-sm border border-[#E8DDD0]">
+          <div className="bg-[#6B1A47] py-5 px-6">
+            <p className="text-white font-bold text-xl" style={{ fontFamily: SERIF }}>בוריס סולטנוב</p>
+            <p className="text-[#F9D0CF] text-sm mt-1">מרצה בכיר | סטודיו ברברה ברזין</p>
+          </div>
+          <div className="p-6 space-y-3 text-[#5A3F50] leading-relaxed">
+            <p>מייסד מחלקת הום סטיילינג והמחלקה הבינלאומית של הסטודיו.</p>
+            <p>20+ שנות ניסיון בעיצוב פנים ובהוראה — ממקום של אנשים שעשו את זה באמת.</p>
+            <p className="text-[#1A1218] font-semibold">
+              בוריס מלמד אותך לראות את החלל — לא רק להסתכל עליו.
+            </p>
+          </div>
+        </motion.div>
+
+        {/* Barbara Barzin */}
+        <motion.div variants={fadeUp} className="bg-white rounded-2xl overflow-hidden shadow-sm border border-[#E8DDD0]">
+          <div className="bg-[#6B1A47] py-5 px-6">
+            <p className="text-white font-bold text-xl" style={{ fontFamily: SERIF }}>ברברה ברזין</p>
+            <p className="text-[#F9D0CF] text-sm mt-1">מייסדת הסטודיו | אוטוריטה מובילה בעיצוב פנים</p>
+          </div>
+          <div className="p-6 space-y-3 text-[#5A3F50] leading-relaxed">
+            <p>45+ שנה בתחום עיצוב הפנים בישראל — מהשמות הגדולים והוותיקים בענף.</p>
+            <p>מנטורית של אלפי מעצבים ובוגרי סטודיו ברברה ברזין ברחבי הארץ.</p>
+            <p className="text-[#1A1218] font-semibold">
+              ברברה בנתה שיטה — לא סתם תוכן. זו המתודולוגיה שמאחורי Decorra Pro.
+            </p>
+          </div>
+        </motion.div>
+      </StaggerFade>
+
+      <Fade>
+        <div className="bg-[#FAF6F0] border border-[#E8DDD0] rounded-2xl p-6 text-center">
+          <p className="text-[#1A1218] font-bold text-lg leading-relaxed">
+            Decorra Pro נבנתה מתוך ניסיון אמיתי בשטח —
+            <br />לא תאוריה. לא ניחושים.
+          </p>
+        </div>
+      </Fade>
+    </section>
+  );
+}
+
+// ─── Marketing Video ────────────────────────────────────────────────────────────
+
+function MarketingVideoSection() {
+  const youtubeId = "MARKETING_VIDEO_ID_HERE";
+  return (
+    <section className="py-10 md:py-16 px-4 md:px-8 max-w-4xl mx-auto">
+      <Fade>
+        <div className="relative w-full rounded-2xl overflow-hidden shadow-xl bg-[#1A1218]" style={{ paddingTop: "56.25%" }}>
+          {youtubeId === "MARKETING_VIDEO_ID_HERE" ? (
+            <div className="absolute inset-0 flex flex-col items-center justify-center text-white gap-4">
+              <p className="text-6xl">🎬</p>
+              <p className="text-[#F9D0CF] text-xl font-semibold">סרטון שיווקי</p>
+              <p className="text-white/50 text-sm">יתווסף בקרוב</p>
+            </div>
+          ) : (
+            <iframe
+              className="absolute inset-0 w-full h-full"
+              src={`https://www.youtube.com/embed/${youtubeId}`}
+              title="Decorra Pro - Marketing"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+            />
+          )}
+        </div>
+      </Fade>
+    </section>
+  );
+}
+
 // ─── Truth ─────────────────────────────────────────────────────────────────────
 
 function TruthSection() {
@@ -692,6 +775,10 @@ export default function DecoraProPage() {
       <HeroSection />
       <Divider />
       <VideoSection />
+      <Divider />
+      <AuthoritySection />
+      <Divider />
+      <MarketingVideoSection />
       <Divider />
       <TruthSection />
       <Divider />
