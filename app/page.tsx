@@ -35,41 +35,41 @@ const CHAPTERS: Chapter[] = [
     number: 1,
     name: "שיח עומק: עיצוב עם כוונה",
     description:
-      'ברברה ובוריס ילמדו אותך להתחיל מהשאלה הנכונה: איך נראים "חיים טובים" — ואיך זה מתבטא בבית שלך.',
+      'ברברה ובוריס ילמדו אותך להתחיל מהתמונה הגדולה: איך נראים "חיים טובים" ואיך זה מתבטא בבית שלך.',
     transformation: 'אחרי הפרק הזה תפסיקי לעצב "יפה" — ותתחילי לעצב עם כוונה.',
   },
   {
     number: 2,
-    name: "סידור מדף: הקומפוזיציה שמשנה הכל",
-    description: "שיטה פשוטה שעובדת תוך דקות — על כל משטח, בכל חדר, בכל בית.",
-    transformation: "אחרי הפרק הזה תסתכלי אחרת על כל פינה בבית.",
+    name: "סידור מדף: שינוי מיידי בעיניים",
+    description: "שיטה פשוטה לקומפוזיציה שעובדת תוך דקות — על כל משטח, בכל חדר.",
+    transformation: "אחרי הפרק הזה תסתכלי אחרת על כל משטח בבית.",
   },
   {
     number: 3,
-    name: "צבע: להפסיק לפחד ולהתחיל לבחור",
+    name: "צבע: להפסיק לפחד מטעויות",
     description:
       "איך לבחור צבע נכון — גם בלי להיות מומחית, גם בלי תואר, גם בלי ניסיון קודם.",
-    transformation: "אחרי הפרק הזה תקבלי החלטות צבע בלי להתחרט.",
+    transformation: "אחרי הפרק הזה תדעי לקבל החלטות צבע בלי להתחרט.",
   },
   {
     number: 4,
-    name: "שרטוטים: לקרוא תוכנית כמו מקצוענית",
+    name: "שרטוטים: להבין תכנית העמדה בלי להיות טכנית",
     description:
-      "איך להפוך תוכנית עמידה לכלי עבודה אמיתי — ולבחור פריטים בדיוק מלא.",
+      "איך לקרוא תוכנית ולהשתמש בה לבחירות מדויקות — בלי ניחוש, בלי טעויות.",
     transformation: "אחרי הפרק הזה תפסיקי לנחש גדלים.",
   },
   {
     number: 5,
-    name: "שיטת הבצל: לזהות מה לא עובד",
+    name: "שיטת הבצל: להבין מה לא עובד",
     description:
-      "השיטה שמלמדת אותך לפרק כל חלל שכבה אחרי שכבה — ולזהות בדיוק מאיפה מתחילים לתקן.",
-    transformation: "אחרי הפרק הזה תלמדי לחשוב על חלל — לא רק להרגיש אותו.",
+      "איך לזהות בעיות בחלל ואיפה מתחילים לתקן — שכבה אחרי שכבה, בצורה שיטתית.",
+    transformation: "אחרי הפרק הזה תלמדי דרך לחשוב על חלל — לא רק להרגיש אותו.",
   },
   {
     number: 6,
-    name: "סיור באולם תצוגה: לקנות כמו מקצוענית",
+    name: "סיור באולם תצוגה: לבחור כמו מקצוענית",
     description:
-      "איך להיכנס לחנות עם ראש ברור — ולצאת עם פריטים שמתחברים לתמונה שלמה.",
+      "איך להפסיק לקנות פריטים בודדים שלא מתחברים — ולצאת עם תמונה שלמה בראש.",
     transformation: "אחרי הפרק הזה תראי את הבית כולו — לא רק פריט אחד.",
   },
 ];
@@ -132,23 +132,23 @@ const TESTIMONIALS: Testimonial[] = [
 const FAQ_ITEMS: FAQItem[] = [
   {
     q: "6 פרקים — זה מספיק?",
-    a: "כל פרק הוא כלי עבודה אמיתי — לא שיעור תיאורטי. יחד הם יוצרים בסיס שישנה את הדרך שבה את רואה כל חלל. וזו רק ההתחלה — עוד חלקים בדרך.",
+    a: "כל פרק נותן כלי עבודה אמיתי. יחד הם יוצרים שינוי תפיסתי מיידי — וזו כאמור רק ההתחלה 😊",
   },
   {
     q: "זה מתאים גם למתחילות לגמרי?",
-    a: "כן. לא צריך ידע קודם, לא צריך רקע בעיצוב. רק רצון ללמוד שיטה.",
-  },
-  {
-    q: "זה מתאים גם למי שכבר עוסקת בתחום?",
-    a: "מאוד. במיוחד למי שמרגישה שחסר לה סדר או ביטחון בהלבשה ובבחירות.",
+    a: "כן. הכל מוסבר בצורה פשוטה וברורה. לא צריך ידע קודם ולא רקע בעיצוב.",
   },
   {
     q: "תוך כמה זמן רואים שינוי?",
     a: "כבר תוך כדי צפייה. כל פרק נותן כלי שאפשר להשתמש בו — עוד באותו היום.",
   },
   {
-    q: "מה קורה עם החלקים הבאים של הקורס?",
-    a: "Decorra Pro מתפתח כמו מערכת — עוד חלקים בדרך. מי שנכנסת עכשיו במחיר ההשקה תקבל גישה לחלקים הבאים במחיר מועדף.",
+    q: "זה מתאים גם למעצבות?",
+    a: "מאוד. במיוחד למי שמרגישה חוסר ביטחון בהלבשה ובבחירות.",
+  },
+  {
+    q: "מה קורה עם החלקים הבאים?",
+    a: "Decorra Pro מתפתח כמו מערכת — עוד חלקים בדרך. מי שנכנסת עכשיו תקבל גישה לחלקים הבאים במחיר מועדף.",
   },
   {
     q: "איך ניגשים לתוכן אחרי הרכישה?",
@@ -397,9 +397,11 @@ function HeroSection() {
     <section className="py-16 md:py-28 px-4 md:px-8 max-w-3xl mx-auto text-center">
       <Fade>
         <p className="text-[#6B1A47] font-semibold text-sm uppercase tracking-widest mb-3">
-          סוף לבית ה&apos;כמעט&apos;.
+          מבלבול וחוסר ביטחון לשיטה ברורה שעובדת
         </p>
-        <p className="text-[#5A3F50] text-base mb-8">ברוכה הבאה ל-Decorra Pro.</p>
+        <p className="text-[#5A3F50] text-base mb-6">
+          Decorra Pro מבית סטודיו ברברה ברזין
+        </p>
         <h1
           className="text-4xl md:text-5xl lg:text-6xl text-[#1A1218] leading-tight mb-6"
           style={{ fontFamily: SERIF }}
@@ -411,12 +413,13 @@ function HeroSection() {
           <span className="text-[#6B1A47]">את מתבלבלת</span>
           <br />
           כי אין לך שיטה.
-          <br />
-          <span className="text-[#6B1A47]">ועכשיו — יש.</span>
         </h1>
-        <p className="text-[#5A3F50] text-lg md:text-xl mb-10 leading-relaxed max-w-xl mx-auto">
-          המדריך הדיגיטלי מבית סטודיו ברברה ברזין שילמד אותך לחשוב, לבחור
-          ולעצב — כמו מקצוענית.
+        <div className="space-y-1 text-[#5A3F50] text-lg mb-8">
+          <p>יש לך עין טובה. יש לך השראה. יש לך רצון.</p>
+          <p className="font-semibold text-[#1A1218]">אבל כשצריך לבחור באמת? משהו נתקע.</p>
+        </div>
+        <p className="text-[#5A3F50] text-lg mb-10 leading-relaxed max-w-xl mx-auto">
+          המדריך הדיגיטלי שילמד אותך לחשוב, לבחור ולעצב כמו מקצוענית!
         </p>
         <div className="flex justify-center">
           <CTAButton text="אני רוצה שיטה ברורה →" />
@@ -669,19 +672,75 @@ function AuthoritySection() {
 function SolutionSection() {
   return (
     <section className="py-16 md:py-20 px-4 md:px-8 max-w-4xl mx-auto">
+      {/* האמת הפשוטה */}
       <Fade className="text-center mb-12">
-        <p className="text-[#5A3F50] text-lg mb-4">ועכשיו, אחרי 45 שנה בשטח —</p>
+        <h2 className="text-3xl md:text-4xl text-[#1A1218] mb-6" style={{ fontFamily: SERIF }}>
+          האמת הפשוטה
+        </h2>
+        <div className="space-y-3 text-[#5A3F50] text-lg leading-loose max-w-2xl mx-auto">
+          <p className="font-bold text-[#1A1218] text-xl">
+            עיצוב טוב הוא לא כישרון.
+            <br />הוא לא אינטואיציה.
+            <br /><Highlight>הוא שיטה.</Highlight>
+          </p>
+          <p>שיטה שאומרת לך:</p>
+          <div className="text-right space-y-2 bg-[#FAF6F0] rounded-2xl p-6 border border-[#E8DDD0]">
+            {["מאיפה מתחילים", "מה עושים קודם", "איך בוחרים נכון", "ואיך הכל מתחבר לתוצאה אחת שלמה"].map((item, i) => (
+              <p key={i} className="flex items-center gap-2 text-[#1A1218]">
+                <span className="text-[#6B1A47]">✦</span> {item}
+              </p>
+            ))}
+          </div>
+          <p className="text-[#1A1218] font-semibold">
+            בלי ניחושים. בלי בלבול. בלי טעויות יקרות.
+          </p>
+        </div>
+      </Fade>
+
+      {/* זה לא קורס רגיל */}
+      <Fade className="mb-12">
+        <div className="bg-[#6B1A47] text-white rounded-2xl p-8 text-center">
+          <p className="text-2xl font-bold mb-4" style={{ fontFamily: SERIF }}>
+            חשוב להבין: זה לא קורס רגיל
+          </p>
+          <div className="space-y-2 text-[#F9D0CF] text-lg mb-6">
+            <p>זה לא מדריך שמתחיל באל״ף ומסתיים בתי״ו.</p>
+            <p>זה לא ידע שצריך &ldquo;לסיים&rdquo; כדי להשתמש בו.</p>
+          </div>
+          <div className="grid md:grid-cols-3 gap-4 text-center">
+            {[
+              { icon: "🎯", text: "כל פרק = כלי עבודה אמיתי" },
+              { icon: "💡", text: "כל חלק = שינוי בתפיסה" },
+              { icon: "⚡", text: "כל צפייה = התקדמות מיידית" },
+            ].map((item, i) => (
+              <div key={i} className="bg-white/10 rounded-xl p-4">
+                <p className="text-2xl mb-1">{item.icon}</p>
+                <p className="text-white font-semibold text-sm">{item.text}</p>
+              </div>
+            ))}
+          </div>
+          <p className="text-white font-bold text-lg mt-6">
+            גם פרק אחד נותן לך יתרון.
+            <br />
+            <span className="text-[#F9D0CF]">וכשמחברים עוד חלקים? פתאום הכל מתחיל להסתדר.</span>
+          </p>
+        </div>
+      </Fade>
+
+      <Fade className="text-center mb-12">
+        <p className="text-[#5A3F50] text-lg mb-2">אז מה את מקבלת עכשיו?</p>
         <h2
           className="text-5xl md:text-6xl text-[#6B1A47] mb-2 tracking-wide"
           style={{ fontFamily: SERIF }}
         >
           DECORRA PRO
         </h2>
-        <p className="text-[#5A3F50] text-lg mb-6">מבית סטודיו ברברה ברזין</p>
-        <p className="text-[#1A1218] text-xl md:text-2xl font-semibold max-w-2xl mx-auto leading-relaxed mb-8">
-          המדריך הדיגיטלי שילמד אותך לחשוב, לבחור ולעצב כמו מקצוענית —
-          <br />
-          בלי לנחש, בלי לבזבז, בלי להרגיש שמשהו &ldquo;לא יושב עד הסוף&rdquo;.
+        <p className="text-[#5A3F50] text-lg mb-4">מבית סטודיו ברברה ברזין</p>
+        <p className="text-[#1A1218] text-xl font-semibold max-w-2xl mx-auto leading-relaxed mb-2">
+          סנונית ראשונה ומופלאה מתוך המדריך המלא!
+        </p>
+        <p className="text-[#5A3F50] text-lg mb-8">
+          6 פרקים. 6 זוויות שונות. 6 קפיצות מדרגה בהבנה שלך.
         </p>
         {/* Stats bar */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-3 max-w-xl mx-auto">
@@ -708,11 +767,22 @@ function SolutionSection() {
       </StaggerFade>
 
       <Fade>
-        <div className="bg-[#FAF6F0] border border-[#E8DDD0] rounded-2xl p-6 text-center">
-          <p className="text-[#1A1218] font-bold text-lg mb-1">זו רק ההתחלה.</p>
+        <div className="bg-[#FAF6F0] border border-[#E8DDD0] rounded-2xl p-6 md:p-8 text-center">
+          <p className="text-[#1A1218] font-bold text-xl mb-4" style={{ fontFamily: SERIF }}>
+            וזה רק ההתחלה!
+          </p>
+          <div className="space-y-2 mb-5">
+            {[
+              { icon: "🔹", text: 'עוד "סנוניות" — זוויות חדשות' },
+              { icon: "🔹", text: "מודולי עומק — כניסה לעומק אמיתי" },
+              { icon: "🔹", text: "שיטה שמתפתחת כל הזמן" },
+            ].map((item, i) => (
+              <p key={i} className="text-[#5A3F50] flex items-center gap-2 justify-center">
+                <span>{item.icon}</span> {item.text}
+              </p>
+            ))}
+          </div>
           <p className="text-[#5A3F50] leading-relaxed">
-            Decorra Pro נבנה כמו פאזל — כל פרק מוסיף שכבה.
-            <br />
             את לא נכנסת לקורס סגור.{" "}
             <Highlight>את נכנסת למערכת שמתפתחת איתך.</Highlight>
           </p>
@@ -755,23 +825,24 @@ function UrgencySection() {
     <section className="py-16 md:py-20 px-4 md:px-8 max-w-3xl mx-auto text-center">
       <Fade>
         <div className="bg-[#1A1218] text-white rounded-2xl p-8 md:p-12">
-          <p
-            className="text-3xl md:text-4xl mb-6"
-            style={{ fontFamily: SERIF }}
-          >
-            הבית לא ישתנה לבד.
+          <p className="text-3xl md:text-4xl mb-6" style={{ fontFamily: SERIF }}>
+            אם לא תעשי שינוי עכשיו…
           </p>
           <p className="text-[#F9D0CF] text-lg md:text-xl leading-loose mb-6">
-            אבל כל שנה שעוברת בלי שיטה —
+            סביר שתמשיכי:
             <br />
-            זה עוד כסף על פריטים שלא עובדים,
+            להתלבט,
             <br />
-            עוד סידור מחדש שמסתיים ב&ldquo;כמעט&rdquo;,
+            לבזבז כסף,
             <br />
-            ועוד תחושה שמשהו חסר — בלי לדעת מה. 👀
+            ולהישאר עם בית &ldquo;כמעט&rdquo;. 👀
           </p>
           <p className="text-white text-xl font-bold">
-            השיטה לא מגיעה לבד. היא נלמדת. ועכשיו — היא כאן.
+            אבל אם את רוצה אחרת —
+            <br />
+            <span className="text-[#F9D0CF]">ביטחון, דיוק ושקט בראש —</span>
+            <br />
+            השיטה היא כאן.
           </p>
         </div>
       </Fade>
@@ -1015,6 +1086,10 @@ function Footer() {
         © {new Date().getFullYear()} סטודיו ברברה ברזין | Decorra Pro
         <br />
         כל הזכויות שמורות
+        <br />
+        <span className="text-white/70 text-xs mt-2 block">
+          * Decorra Pro הוא מדריך דיגיטלי מבית סטודיו ברברה ברזין — ולא קורס אישי של ברברה ברזין.
+        </span>
       </p>
     </footer>
   );
@@ -1053,10 +1128,11 @@ function VideoSection() {
   return (
     <section className="py-16 md:py-20 px-4 md:px-8 max-w-4xl mx-auto">
       <Fade className="text-center mb-10">
+        <p className="text-4xl mb-3">🎬</p>
         <h2 className="text-3xl md:text-4xl text-[#1A1218] mb-3" style={{ fontFamily: SERIF }}>
-          ראי את הסטודיו בפעולה
+          בוריס סולטנוב מסביר הכל
         </h2>
-        <p className="text-[#5A3F50] text-lg">45 שנה של ניסיון — מרוכזות בשיטה אחת ברורה</p>
+        <p className="text-[#5A3F50] text-lg">צפי ותחליטי בעצמך</p>
       </Fade>
       <Fade>
         <div
