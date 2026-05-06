@@ -130,7 +130,6 @@ function StaggerFade({ children, className = "" }: { children: React.ReactNode; 
 
 // ─── Shared UI ─────────────────────────────────────────────────────────────────
 
-const SERIF = "var(--font-playfair), 'Playfair Display', Georgia, serif";
 
 function CTAButton({ text = "הצטרפי עכשיו →" }: { text?: string }) {
   return (
@@ -164,11 +163,11 @@ function ChapterCard({ chapter }: { chapter: Chapter }) {
       className="bg-white rounded-xl p-6 border-r-4 border-[#6B1A47] shadow-sm hover:shadow-md transition-shadow duration-300"
     >
       <div className="flex items-start gap-4">
-        <span className="text-3xl font-bold text-[#6B1A47] flex-shrink-0 leading-none mt-1" style={{ fontFamily: SERIF }}>
+        <span className="text-3xl font-bold text-[#6B1A47] flex-shrink-0 leading-none mt-1">
           {chapter.number}
         </span>
         <div className="flex-1 min-w-0">
-          <h3 className="text-lg font-bold text-[#1A1218] mb-2 leading-snug" style={{ fontFamily: SERIF }}>
+          <h3 className="text-lg font-bold text-[#1A1218] mb-2 leading-snug">
             {chapter.name}
           </h3>
           <p className="text-[#5A3F50] mb-3 leading-relaxed text-sm md:text-base">{chapter.description}</p>
@@ -190,7 +189,7 @@ function LockedChapterCard({ name, index }: { name: string; index: number }) {
         <p className="text-[#6B1A47] font-semibold text-xs">בקרוב</p>
       </div>
       <div className="opacity-20">
-        <span className="text-lg font-bold text-[#6B1A47]" style={{ fontFamily: SERIF }}>{index + 7}</span>
+        <span className="text-lg font-bold text-[#6B1A47]">{index + 7}</span>
         <p className="text-[#1A1218] font-bold mt-1 text-xs">{name}</p>
       </div>
     </motion.div>
@@ -233,7 +232,7 @@ function NavBar() {
           הצטרפות →
         </a>
         <div className="text-center">
-          <p className="font-bold text-[#6B1A47] text-base" style={{ fontFamily: SERIF }}>Decorra Pro</p>
+          <p className="font-bold text-[#6B1A47] text-base">Decorra Pro</p>
           <p className="text-[#5A3F50] text-xs">סטודיו ברברה ברזין</p>
         </div>
       </div>
@@ -315,7 +314,7 @@ function AuthoritySection() {
   return (
     <section className="py-16 md:py-20 px-4 md:px-8 max-w-4xl mx-auto">
       <Fade className="text-center mb-10">
-        <h2 className="text-3xl md:text-4xl text-[#1A1218]" style={{ fontFamily: SERIF }}>
+        <h2 className="text-3xl md:text-4xl text-[#1A1218]">
           מי עומד מאחורי השיטה?
         </h2>
       </Fade>
@@ -323,7 +322,7 @@ function AuthoritySection() {
         {/* Boris Sultanov */}
         <motion.div variants={fadeUp} className="bg-white rounded-2xl overflow-hidden shadow-sm border border-[#E8DDD0]">
           <div className="bg-[#6B1A47] py-5 px-6">
-            <p className="text-white font-bold text-xl" style={{ fontFamily: SERIF }}>בוריס סולטנוב</p>
+            <p className="text-white font-bold text-xl">בוריס סולטנוב</p>
             <p className="text-[#F9D0CF] text-sm mt-1">מרצה בכיר | סטודיו ברברה ברזין</p>
           </div>
           <div className="p-6 space-y-3 text-[#5A3F50] leading-relaxed">
@@ -338,7 +337,7 @@ function AuthoritySection() {
         {/* Barbara Barzin */}
         <motion.div variants={fadeUp} className="bg-white rounded-2xl overflow-hidden shadow-sm border border-[#E8DDD0]">
           <div className="bg-[#6B1A47] py-5 px-6">
-            <p className="text-white font-bold text-xl" style={{ fontFamily: SERIF }}>ברברה ברזין</p>
+            <p className="text-white font-bold text-xl">ברברה ברזין</p>
             <p className="text-[#F9D0CF] text-sm mt-1">מייסדת הסטודיו | אוטוריטה מובילה בעיצוב פנים</p>
           </div>
           <div className="p-6 space-y-3 text-[#5A3F50] leading-relaxed">
@@ -398,7 +397,7 @@ function TruthSection() {
   return (
     <section className="py-16 md:py-20 px-4 md:px-8 max-w-3xl mx-auto text-center">
       <Fade className="space-y-6">
-        <h2 className="text-3xl md:text-4xl text-[#1A1218]" style={{ fontFamily: SERIF }}>
+        <h2 className="text-3xl md:text-4xl text-[#1A1218]">
           האמת הפשוטה
         </h2>
         <div className="space-y-1 text-[#5A3F50] text-xl leading-loose">
@@ -439,7 +438,7 @@ function NotACourseSection() {
     <section className="py-10 md:py-16 px-4 md:px-8 max-w-3xl mx-auto">
       <Fade>
         <div className="bg-white border border-[#E8DDD0] rounded-2xl p-8 shadow-sm">
-          <h2 className="text-2xl md:text-3xl text-[#6B1A47] font-bold mb-5 text-center" style={{ fontFamily: SERIF }}>
+          <h2 className="text-2xl md:text-3xl text-[#6B1A47] font-bold mb-5 text-center">
             חשוב להבין: זה לא קורס רגיל
           </h2>
           <div className="space-y-2 text-[#5A3F50] text-lg mb-6 text-center">
@@ -475,7 +474,7 @@ function WhatYouGetSection() {
     <section className="py-16 md:py-20 px-4 md:px-8 max-w-4xl mx-auto">
       <Fade className="text-center mb-10">
         <p className="text-[#5A3F50] text-lg mb-2">אז מה את מקבלת עכשיו?</p>
-        <h2 className="text-5xl md:text-6xl text-[#6B1A47] mb-2 tracking-wide" style={{ fontFamily: SERIF }}>
+        <h2 className="text-5xl md:text-6xl text-[#6B1A47] mb-2 tracking-wide">
           DECORRA PRO
         </h2>
         <p className="text-[#5A3F50] text-lg mb-4">מבית סטודיו ברברה ברזין</p>
@@ -493,7 +492,7 @@ function WhatYouGetSection() {
           {CHAPTERS.map((ch) => (
             <motion.div key={ch.number} variants={fadeUp} className="bg-white rounded-xl overflow-hidden shadow-sm border border-[#E8DDD0]">
               <div className="bg-[#6B1A47] py-3 px-5 flex items-center gap-3">
-                <span className="text-white font-bold text-2xl flex-shrink-0" style={{ fontFamily: SERIF }}>{ch.number}</span>
+                <span className="text-white font-bold text-2xl flex-shrink-0">{ch.number}</span>
                 <span className="text-[#F9D0CF] text-sm font-semibold leading-snug">{ch.name}</span>
               </div>
               <div className="p-5 space-y-3">
@@ -525,7 +524,7 @@ function ChaptersDetailSection() {
   return (
     <section className="py-16 md:py-20 px-4 md:px-8 max-w-4xl mx-auto">
       <Fade className="text-center mb-10">
-        <h2 className="text-3xl md:text-4xl text-[#1A1218]" style={{ fontFamily: SERIF }}>
+        <h2 className="text-3xl md:text-4xl text-[#1A1218]">
           מה מחכה לך בפנים?
         </h2>
       </Fade>
@@ -536,7 +535,7 @@ function ChaptersDetailSection() {
       </StaggerFade>
       <Fade>
         <div className="bg-[#FAF6F0] border border-[#E8DDD0] rounded-2xl p-6 md:p-8 text-center">
-          <p className="text-[#1A1218] font-bold text-xl mb-4" style={{ fontFamily: SERIF }}>
+          <p className="text-[#1A1218] font-bold text-xl mb-4">
             וזה רק ההתחלה!
           </p>
           <div className="space-y-2 mb-4">
@@ -567,7 +566,7 @@ function WhoIsItForSection() {
     <section className="py-16 md:py-20 px-4 md:px-8 max-w-3xl mx-auto">
       <Fade>
         <div className="bg-[#F9D0CF] rounded-2xl p-6 md:p-8 mb-8">
-          <p className="text-[#6B1A47] text-xl font-bold mb-5 text-center" style={{ fontFamily: SERIF }}>
+          <p className="text-[#6B1A47] text-xl font-bold mb-5 text-center">
             למי זה מתאים?
           </p>
           <ul className="space-y-3 mb-5">
@@ -620,7 +619,7 @@ function BenefitsSection() {
   return (
     <section className="py-16 md:py-20 px-4 md:px-8 max-w-3xl mx-auto">
       <Fade className="text-center mb-8">
-        <h2 className="text-3xl md:text-4xl text-[#1A1218]" style={{ fontFamily: SERIF }}>
+        <h2 className="text-3xl md:text-4xl text-[#1A1218]">
           כשיש שיטה — הכל משתנה
         </h2>
       </Fade>
@@ -652,7 +651,7 @@ function PricingSection() {
   return (
     <section id="form" className="py-16 md:py-20 px-4 md:px-8 max-w-3xl mx-auto">
       <Fade className="text-center mb-10">
-        <h2 className="text-3xl md:text-4xl text-[#1A1218] mb-3" style={{ fontFamily: SERIF }}>
+        <h2 className="text-3xl md:text-4xl text-[#1A1218] mb-3">
           מה תקבלי מיד אחרי ההצטרפות?
         </h2>
       </Fade>
@@ -660,7 +659,7 @@ function PricingSection() {
         <div className="bg-white rounded-2xl shadow-lg border border-[#E8DDD0] overflow-hidden">
           <div className="bg-[#6B1A47] py-8 px-6 text-center">
             <p className="text-[#F9D0CF] text-sm mb-2">מחיר השקה בלבד</p>
-            <p className="text-white text-5xl md:text-6xl font-bold" style={{ fontFamily: SERIF }}>₪450</p>
+            <p className="text-white text-5xl md:text-6xl font-bold">₪450</p>
             <p className="text-[#F9D0CF] text-sm mt-2">יעלה עם השקת החלקים הבאים</p>
           </div>
           <div className="p-6 md:p-8">
@@ -706,7 +705,7 @@ function FAQSection() {
   return (
     <section className="py-12 md:py-16 px-4 md:px-8 max-w-3xl mx-auto">
       <Fade className="text-center mb-8">
-        <h2 className="text-3xl md:text-4xl text-[#1A1218]" style={{ fontFamily: SERIF }}>
+        <h2 className="text-3xl md:text-4xl text-[#1A1218]">
           שאלות נפוצות
         </h2>
       </Fade>
@@ -726,7 +725,7 @@ function UrgencySection() {
     <section className="py-16 md:py-24 px-4 md:px-8 max-w-3xl mx-auto text-center">
       <Fade>
         <div className="bg-[#1A1218] text-white rounded-2xl p-8 md:p-12 mb-8">
-          <p className="text-3xl md:text-4xl mb-6" style={{ fontFamily: SERIF }}>
+          <p className="text-3xl md:text-4xl mb-6">
             אם לא תעשי שינוי עכשיו…
           </p>
           <p className="text-[#F9D0CF] text-lg md:text-xl leading-loose mb-6">
