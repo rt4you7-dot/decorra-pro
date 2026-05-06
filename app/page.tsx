@@ -11,18 +11,6 @@ interface Chapter {
   description: string;
   transformation: string;
 }
-interface Founder {
-  name: string;
-  title: string;
-  leadStat?: string;
-  credentials: string[];
-  quote: string;
-}
-interface Testimonial {
-  name: string;
-  title: string;
-  quote: string;
-}
 interface FAQItem {
   q: string;
   a: string;
@@ -35,117 +23,68 @@ const CHAPTERS: Chapter[] = [
     number: 1,
     name: "שיח עומק: עיצוב עם כוונה",
     description:
-      'תקבלי הבנה על מה שבאמת מניע את הבחירות שלך בבית — ואיך לחבר בין הדרך שאת רוצה לחיות לבין החלל שמקיף אותך. זה משפיע על כל החלטה עיצובית שתקבלי אחרי זה.',
+      'ברברה ברזין ובוריס סולטנוב ילמדו אותך להתחיל מהתמונה הגדולה: איך נראים "חיים טובים" ואיך זה מתבטא בבית שלך.',
     transformation: 'אחרי הפרק הזה תפסיקי לעצב "יפה" — ותתחילי לעצב עם כוונה.',
   },
   {
     number: 2,
     name: "סידור מדף: שינוי מיידי בעיניים",
-    description:
-      "תקבלי עקרונות של קומפוזיציה וסידור אלמנטים בחלל — וזה משפיע על היכולת שלך לראות כל משטח בבית ולדעת מיד מה עובד, מה לא, ומה צריך לשנות.",
+    description: "שיטה פשוטה לקומפוזיציה שעובדת תוך דקות — על כל משטח, בכל חדר.",
     transformation: "אחרי הפרק הזה תסתכלי אחרת על כל משטח בבית.",
   },
   {
     number: 3,
     name: "צבע: להפסיק לפחד מטעויות",
-    description:
-      "תקבלי שפה שמסבירה איך צבע עובד בחלל — לא רק 'איזה גוון יפה'. זה משפיע על הביטחון שלך לקבל החלטות צבע בלי לחשוש מטעות יקרה.",
+    description: "איך לבחור צבע נכון — גם בלי להיות מומחית, גם בלי תואר.",
     transformation: "אחרי הפרק הזה תדעי לקבל החלטות צבע בלי להתחרט.",
   },
   {
     number: 4,
     name: "שרטוטים: להבין תכנית העמדה בלי להיות טכנית",
-    description:
-      "תקבלי בסיס לקריאת תוכנית כנקודת מוצא לבחירות מדויקות — וזה משפיע על כל קנייה שתעשי מעכשיו: פחות ניחושים, יותר דיוק.",
-    transformation: "אחרי הפרק הזה תפסיקי לנחש גדלים.",
+    description: "איך לקרוא תוכנית ולהשתמש בה לבחירות מדויקות — בלי ניחוש.",
+    transformation: 'אחרי הפרק הזה תפסיקי "לנחש גדלים".',
   },
   {
     number: 5,
     name: "שיטת הבצל: להבין מה לא עובד",
-    description:
-      "תקבלי כלי חשיבה לניתוח חלל שכבה אחרי שכבה — וזה משפיע על היכולת שלך לזהות בדיוק למה משהו 'לא יושב' ומאיפה מתחילים לשנות.",
-    transformation: "אחרי הפרק הזה תלמדי דרך לחשוב על חלל — לא רק להרגיש אותו.",
+    description: "איך לזהות בעיות בחלל ואיפה מתחילים לתקן — שכבה אחרי שכבה.",
+    transformation: "אחרי הפרק הזה תלמדי דרך לחשוב — לא רק להרגיש.",
   },
   {
     number: 6,
     name: "סיור באולם תצוגה: לבחור כמו מקצוענית",
-    description:
-      "תקבלי זווית חדשה על איך חנות עובדת ואיך להיכנס אליה עם ראש של מקצוענית — וזה משפיע על כל קנייה עתידית: פחות פריטים שנגנזים, יותר תמונה שלמה.",
-    transformation: "אחרי הפרק הזה תראי את הבית כולו — לא רק פריט אחד.",
+    description: "איך להפסיק לקנות פריטים בודדים שלא מתחברים — ולצאת עם תמונה שלמה.",
+    transformation: "אחרי הפרק הזה תראי את התמונה השלמה — לא רק פריט.",
   },
 ];
 
-const FOUNDERS: Founder[] = [
-  {
-    name: "ברברה ברזין",
-    title: "מעצבת פנים בכירה | מייסדת הסטודיו הוותיק בישראל להכשרת מתכנני פנים",
-    leadStat: "70% ממעצבי הפנים העובדים בישראל היום — הוכשרו על ידה.",
-    credentials: [
-      "45 שנות ניסיון בשטח — 3,600+ פרויקטים בארץ ובעולם",
-      "הסטודיו הוותיק בישראל להכשרת מתכנני פנים — מאז 1998",
-      "בוגרת הסדנא לעיצוב ואדריכלות | שותפה בצוות תכנון בית המשפט העליון",
-      "מרצה מבוקשת | מאמרים וטורים במגזיני עיצוב מובילים",
-      "מנחה-שותפה בפודקאסט עיצוב הפנים המוביל בישראל",
-    ],
-    quote:
-      "ראיתי כבר כל טעות אפשרית, כל תרגיל של קבלן, כל כשל בתכנון. Decorra Pro הוא 45 שנה דחוסות לשיטה שכל אחת יכולה ללמוד.",
-  },
-  {
-    name: "בוריס סולטנוב",
-    title: "מעצב פנים בכיר | רכז המחלקה הבינלאומית | חוקר תרבות יפן",
-    credentials: [
-      "מעל 20 שנה כמעצב פנים ומרצה בכיר בסטודיו ברברה ברזין",
-      "חוקר תרבות יפן ומומחה לפנג שואי ופילוסופיה סינית",
-      'מלמד בשיטת "האומן והשולייה" — ידע שעובר מיד ליד, לא מסלייד לסלייד',
-      "מנחה-שותף בפודקאסט עיצוב הפנים המוביל בישראל",
-    ],
-    quote: "עיצוב טוב הוא לא טרנד. הוא שפה. וכל שפה — אפשר ללמוד.",
-  },
-];
-
-const TESTIMONIALS: Testimonial[] = [
-  {
-    name: "רינת קינן",
-    title: "בוגרת הסטודיו",
-    quote:
-      "שנת ההתמחות המעשית מיישמת את מה שלמדת בתיאוריה דרך פרויקטים אמיתיים — ונותנת כלים מעשיים יקרי ערך להתמודד עם תהליכים מורכבים.",
-  },
-  {
-    name: "הדס בראון-שדות",
-    title: "מהנדסת אזרחית ← בוגרת הסטודיו ← בעלת סטודיו עצמאי",
-    quote:
-      "ברברה היא אישיות. למדתי ממנה לשים את האגו בצד ולזכור שאנחנו יוצרות בתים עבור אחרים — לא עבור השרטוטים שלנו.",
-  },
-  {
-    name: "צוף הלפרין",
-    title: "בוגרת הסטודיו ← בעלת סטודיו עצמאי",
-    quote:
-      "האינטראקציה האינטימית והגישה האישית גרמו לי לוודא שזה המקום הנכון. כל שיעור היה פיצוץ בלתי רגיל של אנרגיה וידע.",
-  },
-  {
-    name: "איריס סוכר",
-    title: "מעצבת גרפית ← בוגרת הסטודיו",
-    quote:
-      "אין קיצורי דרך — לא כסטודנטית ולא כבעלת סטודיו עצמאי בעולם האמיתי. הסטודיו נותן כלים של מקצועיות ואסרטיביות.",
-  },
+const LOCKED_CHAPTERS = [
+  "עיצוב עם תקציב",
+  "תאורה ואווירה",
+  "טקסטיל ורכות",
+  "שילוב סגנונות",
+  "פתרונות אחסון",
+  "עיצוב חדרי ילדים",
+  "גינה ומרפסת",
+  "חידוש ושדרוג",
 ];
 
 const FAQ_ITEMS: FAQItem[] = [
   {
     q: "6 פרקים — זה מספיק?",
-    a: "כל פרק נותן כלי עבודה אמיתי. יחד הם יוצרים שינוי תפיסתי מיידי — וזו כאמור רק ההתחלה 😊",
+    a: "כל פרק נותן כלי אמיתי. יחד הם יוצרים שינוי תפיסתי מיידי — וזו כאמור רק ההתחלה 😊",
   },
   {
-    q: "זה מתאים גם למתחילות לגמרי?",
-    a: "כן. הכל מוסבר בצורה פשוטה וברורה. לא צריך ידע קודם ולא רקע בעיצוב.",
+    q: "זה מתאים גם למתחילות?",
+    a: "כן. הכל מוסבר בצורה פשוטה וברורה.",
   },
   {
     q: "תוך כמה זמן רואים שינוי?",
-    a: "כבר תוך כדי צפייה. כל פרק נותן כלי שאפשר להשתמש בו — עוד באותו היום.",
+    a: "כבר תוך כדי צפייה.",
   },
   {
     q: "זה מתאים גם למעצבות?",
-    a: "מאוד. במיוחד למי שמרגישה חוסר ביטחון בהלבשה ובבחירות.",
+    a: "מאוד. במיוחד למי שמרגישה חוסר ביטחון בהלבשה.",
   },
   {
     q: "מה קורה עם החלקים הבאים?",
@@ -169,45 +108,21 @@ const stagger = {
   visible: { transition: { staggerChildren: 0.12 } },
 };
 
-function Fade({
-  children,
-  className = "",
-}: {
-  children: React.ReactNode;
-  className?: string;
-}) {
+function Fade({ children, className = "" }: { children: React.ReactNode; className?: string }) {
   const ref = useRef(null);
   const inView = useInView(ref, { once: true, margin: "-60px" });
   return (
-    <motion.div
-      ref={ref}
-      initial="hidden"
-      animate={inView ? "visible" : "hidden"}
-      variants={fadeUp}
-      className={className}
-    >
+    <motion.div ref={ref} initial="hidden" animate={inView ? "visible" : "hidden"} variants={fadeUp} className={className}>
       {children}
     </motion.div>
   );
 }
 
-function StaggerFade({
-  children,
-  className = "",
-}: {
-  children: React.ReactNode;
-  className?: string;
-}) {
+function StaggerFade({ children, className = "" }: { children: React.ReactNode; className?: string }) {
   const ref = useRef(null);
   const inView = useInView(ref, { once: true, margin: "-60px" });
   return (
-    <motion.div
-      ref={ref}
-      initial="hidden"
-      animate={inView ? "visible" : "hidden"}
-      variants={stagger}
-      className={className}
-    >
+    <motion.div ref={ref} initial="hidden" animate={inView ? "visible" : "hidden"} variants={stagger} className={className}>
       {children}
     </motion.div>
   );
@@ -217,7 +132,7 @@ function StaggerFade({
 
 const SERIF = "var(--font-playfair), 'Playfair Display', Georgia, serif";
 
-function CTAButton({ text = "אני מצטרפת עכשיו ב-₪450 →" }: { text?: string }) {
+function CTAButton({ text = "הצטרפי עכשיו →" }: { text?: string }) {
   return (
     <a
       href="#form"
@@ -238,42 +153,7 @@ function Divider() {
 
 function Highlight({ children }: { children: React.ReactNode }) {
   return (
-    <mark className="bg-[#F9D0CF] text-[#1A1218] px-1 rounded not-italic">
-      {children}
-    </mark>
-  );
-}
-
-function StatCard({ emoji, text }: { emoji: string; text: string }) {
-  return (
-    <motion.div
-      variants={fadeUp}
-      className="bg-[#FAF6F0] border border-[#F9D0CF] rounded-xl p-5 flex gap-3 items-start"
-    >
-      <span className="text-2xl flex-shrink-0">{emoji}</span>
-      <p className="text-[#1A1218] leading-relaxed text-base">{text}</p>
-    </motion.div>
-  );
-}
-
-function BadOptionCard({
-  title,
-  consequence,
-}: {
-  title: string;
-  consequence: string;
-}) {
-  return (
-    <motion.div
-      variants={fadeUp}
-      className="bg-white rounded-xl p-6 border border-[#E8DDD0] shadow-sm"
-    >
-      <div className="flex items-start gap-2 mb-2">
-        <span className="text-red-400 text-lg flex-shrink-0 mt-0.5">✗</span>
-        <h4 className="font-bold text-[#1A1218] text-lg leading-snug">{title}</h4>
-      </div>
-      <p className="text-[#5A3F50] leading-relaxed pr-6">{consequence}</p>
-    </motion.div>
+    <mark className="bg-[#F9D0CF] text-[#1A1218] px-1 rounded not-italic">{children}</mark>
   );
 }
 
@@ -284,78 +164,34 @@ function ChapterCard({ chapter }: { chapter: Chapter }) {
       className="bg-white rounded-xl p-6 border-r-4 border-[#6B1A47] shadow-sm hover:shadow-md transition-shadow duration-300"
     >
       <div className="flex items-start gap-4">
-        <span
-          className="text-3xl font-bold text-[#6B1A47] flex-shrink-0 leading-none mt-1"
-          style={{ fontFamily: SERIF }}
-        >
+        <span className="text-3xl font-bold text-[#6B1A47] flex-shrink-0 leading-none mt-1" style={{ fontFamily: SERIF }}>
           {chapter.number}
         </span>
         <div className="flex-1 min-w-0">
-          <h3
-            className="text-lg font-bold text-[#1A1218] mb-2 leading-snug"
-            style={{ fontFamily: SERIF }}
-          >
+          <h3 className="text-lg font-bold text-[#1A1218] mb-2 leading-snug" style={{ fontFamily: SERIF }}>
             {chapter.name}
           </h3>
-          <p className="text-[#5A3F50] mb-3 leading-relaxed text-sm md:text-base">
-            {chapter.description}
-          </p>
-          <p className="text-[#6B1A47] font-semibold text-sm">
-            ✅ {chapter.transformation}
-          </p>
+          <p className="text-[#5A3F50] mb-3 leading-relaxed text-sm md:text-base">{chapter.description}</p>
+          <p className="text-[#6B1A47] font-semibold text-sm">✅ {chapter.transformation}</p>
         </div>
       </div>
     </motion.div>
   );
 }
 
-function FounderCard({ founder }: { founder: Founder }) {
+function LockedChapterCard({ name, index }: { name: string; index: number }) {
   return (
     <motion.div
       variants={fadeUp}
-      className="bg-white rounded-2xl overflow-hidden shadow-md"
+      className="bg-white/60 rounded-xl p-5 border border-[#E8DDD0] relative overflow-hidden min-h-[90px]"
     >
-      <div className="bg-[#6B1A47] py-5 px-6">
-        <h3 className="text-white text-2xl md:text-3xl" style={{ fontFamily: SERIF }}>
-          {founder.name}
-        </h3>
-        <p className="text-[#F9D0CF] text-sm mt-1 leading-snug">{founder.title}</p>
+      <div className="absolute inset-0 bg-white/80 flex flex-col items-center justify-center gap-1 z-10">
+        <span className="text-xl">🔒</span>
+        <p className="text-[#6B1A47] font-semibold text-xs">בקרוב</p>
       </div>
-      <div className="p-6">
-        {founder.leadStat && (
-          <div className="bg-[#F9D0CF] text-[#1A1218] rounded-xl p-4 mb-5 flex gap-2 items-start">
-            <span className="text-xl flex-shrink-0">👀</span>
-            <p className="font-bold text-base leading-snug">{founder.leadStat}</p>
-          </div>
-        )}
-        <ul className="space-y-3 mb-5">
-          {founder.credentials.map((cred, i) => (
-            <li key={i} className="flex items-start gap-2 text-[#5A3F50] text-sm md:text-base">
-              <span className="text-[#6B1A47] flex-shrink-0 mt-0.5">✦</span>
-              <span>{cred}</span>
-            </li>
-          ))}
-        </ul>
-        <blockquote className="border-r-4 border-[#F9D0CF] pr-4 text-[#5A3F50] italic leading-relaxed text-sm md:text-base">
-          &ldquo;{founder.quote}&rdquo;
-        </blockquote>
-      </div>
-    </motion.div>
-  );
-}
-
-function TestimonialCard({ t }: { t: Testimonial }) {
-  return (
-    <motion.div
-      variants={fadeUp}
-      className="bg-white rounded-2xl p-6 shadow-sm border border-[#E8DDD0] flex flex-col"
-    >
-      <p className="text-[#5A3F50] leading-relaxed mb-5 italic flex-1">
-        &ldquo;{t.quote}&rdquo;
-      </p>
-      <div className="border-t border-[#E8DDD0] pt-4">
-        <p className="font-bold text-[#1A1218]">{t.name}</p>
-        <p className="text-sm text-[#6B1A47]">{t.title}</p>
+      <div className="opacity-20">
+        <span className="text-lg font-bold text-[#6B1A47]" style={{ fontFamily: SERIF }}>{index + 7}</span>
+        <p className="text-[#1A1218] font-bold mt-1 text-xs">{name}</p>
       </div>
     </motion.div>
   );
@@ -370,12 +206,8 @@ function FAQAccordionItem({ item }: { item: FAQItem }) {
         className="w-full py-5 flex justify-between items-center text-right gap-4"
         aria-expanded={open}
       >
-        <span className="font-semibold text-[#1A1218] text-base leading-snug text-right">
-          {item.q}
-        </span>
-        <span className="text-[#6B1A47] text-2xl flex-shrink-0 font-light w-6 text-center">
-          {open ? "−" : "+"}
-        </span>
+        <span className="font-semibold text-[#1A1218] text-base leading-snug text-right">{item.q}</span>
+        <span className="text-[#6B1A47] text-2xl flex-shrink-0 font-light w-6 text-center">{open ? "−" : "+"}</span>
       </button>
       {open && (
         <motion.p
@@ -391,7 +223,25 @@ function FAQAccordionItem({ item }: { item: FAQItem }) {
   );
 }
 
-// ─── Page Sections ─────────────────────────────────────────────────────────────
+// ─── NavBar ────────────────────────────────────────────────────────────────────
+
+function NavBar() {
+  return (
+    <nav className="sticky top-0 z-50 bg-white/95 backdrop-blur-sm border-b border-[#E8DDD0] py-3 px-4 md:px-8">
+      <div className="max-w-4xl mx-auto flex justify-between items-center">
+        <a href="#form" className="bg-[#6B1A47] text-white text-sm font-semibold px-5 py-2 rounded-lg hover:bg-[#4E1235] transition-colors">
+          הצטרפות →
+        </a>
+        <div className="text-center">
+          <p className="font-bold text-[#6B1A47] text-base" style={{ fontFamily: SERIF }}>Decorra Pro</p>
+          <p className="text-[#5A3F50] text-xs">סטודיו ברברה ברזין</p>
+        </div>
+      </div>
+    </nav>
+  );
+}
+
+// ─── Hero ──────────────────────────────────────────────────────────────────────
 
 function HeroSection() {
   return (
@@ -400,379 +250,209 @@ function HeroSection() {
         <p className="text-[#6B1A47] font-semibold text-sm uppercase tracking-widest mb-3">
           מבלבול וחוסר ביטחון לשיטה ברורה שעובדת
         </p>
-        <p className="text-[#5A3F50] text-base mb-6">
-          Decorra Pro מבית סטודיו ברברה ברזין
-        </p>
-        <h1
-          className="text-4xl md:text-5xl lg:text-6xl text-[#1A1218] leading-tight mb-6"
-          style={{ fontFamily: SERIF }}
-        >
+        <p className="text-[#5A3F50] text-base mb-6">Decorra Pro מבית סטודיו ברברה ברזין</p>
+        <h1 className="text-4xl md:text-5xl lg:text-6xl text-[#1A1218] leading-tight mb-6" style={{ fontFamily: SERIF }}>
           את לא מתבלבלת
-          <br />
-          כי אין לך טעם.
-          <br />
-          <span className="text-[#6B1A47]">את מתבלבלת</span>
-          <br />
-          כי אין לך שיטה.
+          <br />כי אין לך טעם.
+          <br /><span className="text-[#6B1A47]">את מתבלבלת</span>
+          <br />כי אין לך שיטה.
         </h1>
-        <div className="space-y-1 text-[#5A3F50] text-lg mb-8">
+        <div className="space-y-2 text-[#5A3F50] text-lg mb-6">
           <p>יש לך עין טובה. יש לך השראה. יש לך רצון.</p>
           <p className="font-semibold text-[#1A1218]">אבל כשצריך לבחור באמת? משהו נתקע.</p>
         </div>
-        <p className="text-[#5A3F50] text-lg mb-10 leading-relaxed max-w-xl mx-auto">
-          המדריך הדיגיטלי שילמד אותך לחשוב, לבחור ולעצב כמו מקצוענית!
-        </p>
-        <div className="flex justify-center">
-          <CTAButton text="אני רוצה שיטה ברורה →" />
+        <div className="space-y-1 text-[#5A3F50] text-lg mb-6">
+          <p>את מתלבטת. קונה פריטים שלא מתחברים.</p>
+          <p>מסדרת שוב ושוב — וזה עדיין &ldquo;כמעט&rdquo;.</p>
         </div>
+        <div className="bg-[#F9D0CF] rounded-2xl p-5 mb-8 max-w-md mx-auto">
+          <p className="text-[#1A1218] font-semibold text-lg leading-relaxed">
+            יפה… אבל לא מדויק.
+            <br />נעים… אבל לא מקצועי.
+          </p>
+          <p className="text-[#5A3F50] mt-2 text-base">ובפנים את יודעת: משהו פה לא יושב עד הסוף.</p>
+        </div>
+        <p className="text-[#5A3F50] text-lg mb-10">המדריך הדיגיטלי שילמד אותך לחשוב, לבחור ולעצב כמו מקצוענית!</p>
       </Fade>
     </section>
   );
 }
 
-function ProblemSection() {
+// ─── Video ─────────────────────────────────────────────────────────────────────
+
+function VideoSection() {
+  // ← החלפי את VIDEO_ID_HERE במזהה הסרטון שלך מ-YouTube
+  const youtubeId = "VIDEO_ID_HERE";
   return (
-    <section className="py-16 md:py-20 px-4 md:px-8 max-w-4xl mx-auto">
-      <Fade className="text-center mb-10">
-        <p className="text-[#6B1A47] font-semibold text-sm uppercase tracking-widest mb-4">
-          קצר ולעניין:
-        </p>
-        <p className="text-[#1A1218] text-xl md:text-2xl font-semibold leading-relaxed">
-          עד היום, מי שרצתה לעצב את הבית שלה עמדה בפני 2 אפשרויות בלבד.
-        </p>
-      </Fade>
-      <StaggerFade className="grid md:grid-cols-2 gap-6 mb-12">
-        <BadOptionCard
-          title="לשכור מעצבת פנים"
-          consequence="₪5,000–12,000 לחלל אחד. תוצאה יפה — אבל את עדיין לא מבינה למה זה עובד. ולפעם הבאה? חוזרת לאותה נקודת התחלה."
-        />
-        <BadOptionCard
-          title="לנסות לבד"
-          consequence="Pinterest, אינסטגרם, המון השראה — ובסוף: קנייה, אכזבה, ועוד פריט במחסן שלא 'התחבר'."
-        />
-      </StaggerFade>
-      <Fade className="bg-[#6B1A47] text-white rounded-2xl p-8 text-center mb-12">
-        <p className="text-lg md:text-xl font-semibold mb-2">בגלל זה בנינו את Decorra Pro.</p>
-        <p className="text-[#F9D0CF] mb-6">שיטה שמלמדת אותך:</p>
-        <div className="flex flex-col md:flex-row gap-4 justify-center">
-          {[
-            "לחשוב עם המבט של מקצוענית — כבר מהצעד הראשון",
-            "לבחור פריטים שמדברים אחד עם השני",
-            "לעצב עם כוונה — לא עם ניחוש",
-          ].map((p, i) => (
-            <div key={i} className="flex items-start gap-2 text-right">
-              <span className="text-[#F9D0CF] flex-shrink-0">✦</span>
-              <span className="text-sm md:text-base">{p}</span>
-            </div>
-          ))}
-        </div>
-      </Fade>
-      <StaggerFade className="grid sm:grid-cols-2 gap-4">
-        <StatCard
-          emoji="👈"
-          text="בישראל, עלות ייעוץ עיצוב לחלל אחד עומדת על ₪4,500–12,000 בממוצע — עבור שעות בודדות של עבודה."
-        />
-        <StatCard
-          emoji="👈"
-          text="מי שמנסה לעצב לבד בלי שיטה, מוציאה בממוצע 3–5 פעמים יותר כסף ממה שתכננה — על פריטים שנגנזים."
-        />
-        <StatCard
-          emoji="👈"
-          text='הסיבה מספר 1 לכך שחלל "לא יושב" — היא לא בחירת פריטים רעה. זו היעדר סדר פעולות.'
-        />
-        <StatCard
-          emoji="👈"
-          text='90% מהנשים שמרגישות שחסר להן "טעם" — מגלות עם השיטה הנכונה שהטעם היה שם כל הזמן.'
-        />
-      </StaggerFade>
-    </section>
-  );
-}
-
-function PainSection() {
-  return (
-    <section className="py-16 md:py-20 px-4 md:px-8 max-w-3xl mx-auto">
-      <Fade className="text-center mb-10">
-        <h2
-          className="text-3xl md:text-4xl text-[#1A1218] leading-tight mb-8"
-          style={{ fontFamily: SERIF }}
-        >
-          יפה… אבל לא מדויק.
-          <br />
-          <span className="text-[#6B1A47]">נעים… אבל לא מקצועי.</span>
-          <br />
-          ואת יודעת בדיוק במה מדובר.
-        </h2>
-        <div className="space-y-4 text-[#5A3F50] text-lg leading-loose">
-          <p>
-            זה לא הפריטים. הם יפים.
-            <br />
-            זה לא הצבעים. הם נחמדים.
-            <br />
-            זה לא הטעם שלך. הוא קיים.
-          </p>
-          <p>
-            הבעיה היא שבלי סדר פעולות ברור —
-            <br />
-            אפילו עיניים טובות לא יודעות מאיפה להתחיל.
-          </p>
-          <p>
-            אז את מסדרת. ומסדרת שוב. ומסדרת שוב.
-            <br />
-            ובכל פעם מחדש — משהו לא יושב עד הסוף.
-          </p>
-          <p className="font-bold text-[#1A1218] text-xl">
-            זה לא כישלון של טעם.
-            <br />
-            <Highlight>זה כישלון של שיטה.</Highlight>
-          </p>
-        </div>
-      </Fade>
-
-      <Fade className="text-center mb-8">
-        <p className="text-[#5A3F50] font-semibold">
-          ואת כנראה כבר ניסית את אחת מהאפשרויות האלה:
-        </p>
-      </Fade>
-
-      <StaggerFade className="space-y-4 mb-10">
-        <BadOptionCard
-          title="לשאול את כולם מה דעתם"
-          consequence="אמא אומרת אחד, החברה אומרת אחר, הבעל לא מבין מה ההבדל — ואת יוצאת מהשיחה מבולבלת יותר ממה שנכנסת אליה."
-        />
-        <BadOptionCard
-          title="לחפש השראה בפינטרסט ואינסטגרם"
-          consequence="שעה וחצי של גלילה. 47 תמונות שמורות. ואף אחת מהן לא מתאימה לחלל האמיתי שלך, לתקציב שלך, או לחיים שלך."
-        />
-        <BadOptionCard
-          title='לקנות "פריט מושלם" ולקוות שיעבוד'
-          consequence="הוא יושב בסלון. הוא יפה. אבל משהו לא מתחבר. שבוע אחרי — הוא במחסן. והכסף הלך."
-        />
-      </StaggerFade>
-
+    <section className="py-10 md:py-16 px-4 md:px-8 max-w-4xl mx-auto">
       <Fade>
-        <div className="bg-[#F9D0CF] rounded-2xl p-6 md:p-8 text-center">
-          <p className="text-[#1A1218] text-lg md:text-xl font-bold leading-relaxed">
-            הבעיה אף פעם לא הייתה הטעם שלך.
-            <br />
-            הבעיה הייתה שאף אחד לא לימד אותך את הסדר הנכון.
-          </p>
+        <div className="relative w-full rounded-2xl overflow-hidden shadow-xl bg-[#1A1218]" style={{ paddingTop: "56.25%" }}>
+          {youtubeId === "VIDEO_ID_HERE" ? (
+            <div className="absolute inset-0 flex flex-col items-center justify-center text-white gap-4">
+              <p className="text-6xl">🎬</p>
+              <p className="text-[#F9D0CF] text-xl font-semibold">וידאו בוריס סולטנוב</p>
+              <p className="text-white/50 text-sm">יתווסף בקרוב</p>
+            </div>
+          ) : (
+            <iframe
+              className="absolute inset-0 w-full h-full"
+              src={`https://www.youtube.com/embed/${youtubeId}`}
+              title="Decorra Pro"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+            />
+          )}
         </div>
+      </Fade>
+      <Fade className="text-center mt-8">
+        <CTAButton text="אני רוצה שיטה ברורה →" />
       </Fade>
     </section>
   );
 }
 
-function InlineCTA() {
-  return (
-    <div className="py-10 px-4 flex justify-center">
-      <CTAButton />
-    </div>
-  );
-}
+// ─── Truth ─────────────────────────────────────────────────────────────────────
 
-function TurningPointSection() {
+function TruthSection() {
   return (
     <section className="py-16 md:py-20 px-4 md:px-8 max-w-3xl mx-auto text-center">
       <Fade className="space-y-6">
-        <h2
-          className="text-3xl md:text-4xl text-[#1A1218]"
-          style={{ fontFamily: SERIF }}
-        >
-          אחרי 45 שנה — הבנתי שיש כאן בעיה רצינית.
-        </h2>
-        <div className="space-y-4 text-[#5A3F50] text-lg leading-loose">
-          <p>
-            לאורך ארבעה עשורים ויותר של עיצוב פנים,
-            <br />
-            פגשתי אלפי נשים עם עין מדהימה.
-          </p>
-          <p>
-            נשים שחיפשו, חלמו, שמרו תמונות —
-            <br />
-            וכשהגיע הרגע לבחור באמת? נתקעו.
-          </p>
-          <div className="bg-[#FAF6F0] border border-[#E8DDD0] rounded-2xl p-6 my-4 text-right">
-            <p className="text-[#1A1218] italic text-xl leading-relaxed">
-              &ldquo;אני לא יודעת מה חסר לי, ברברה.
-              <br />
-              יש לי טעם, אני יודעת מה יפה —
-              <br />
-              אבל כשצריך להחליט? משהו נתקע.&rdquo;
-            </p>
-            <p className="text-[#6B1A47] text-sm mt-3 font-semibold">
-              — המשפט שחזר אלפי פעמים
-            </p>
-          </div>
-          <p className="font-bold text-[#1A1218] text-xl">
-            הן לא צריכות מעצבת שתחליט במקומן.
-            <br />
-            <Highlight>הן צריכות שיטה שתלמד אותן לחשוב.</Highlight>
-          </p>
-        </div>
-
-        <div className="pt-4 space-y-4">
-          <h3
-            className="text-2xl md:text-3xl text-[#6B1A47]"
-            style={{ fontFamily: SERIF }}
-          >
-            זה הרגע שבו החלטתי לעשות משהו אחר לגמרי.
-          </h3>
-          <div className="space-y-3 text-[#5A3F50] text-lg leading-loose">
-            <p>לא עוד ייעוץ חד-פעמי שנגמר כשאני יוצאת מהדלת.</p>
-            <p>לא עוד &ldquo;תקני את זה ואת זה&rdquo; בלי להסביר למה.</p>
-            <p className="font-semibold text-[#1A1218]">
-              אלא שיטה שלמה שנבנתה מתוך 45 שנה של עבודה אמיתית בשטח —
-              <br />
-              שהופכת את ה&ldquo;כמעט&rdquo; ל
-              <Highlight>&ldquo;בדיוק כמו שדמיינתי&rdquo;</Highlight>.
-            </p>
-          </div>
-        </div>
-      </Fade>
-    </section>
-  );
-}
-
-function AuthoritySection() {
-  return (
-    <section className="py-16 md:py-20 px-4 md:px-8 max-w-4xl mx-auto">
-      <Fade className="text-center mb-12">
-        <h2
-          className="text-3xl md:text-4xl text-[#1A1218] mb-3"
-          style={{ fontFamily: SERIF }}
-        >
-          מי עומדת מאחורי השיטה?
-        </h2>
-        <p className="text-[#6B1A47] text-xl font-semibold">
-          האישה שעיצבה את תעשיית עיצוב הפנים בישראל.
-        </p>
-      </Fade>
-      <StaggerFade className="grid md:grid-cols-2 gap-8 mb-8">
-        {FOUNDERS.map((f) => (
-          <FounderCard key={f.name} founder={f} />
-        ))}
-      </StaggerFade>
-      <Fade>
-        <div className="bg-[#6B1A47] text-white rounded-2xl p-6 md:p-8 text-center">
-          <p
-            className="text-xl md:text-2xl font-bold leading-relaxed"
-            style={{ fontFamily: SERIF }}
-          >
-            65 שנות ניסיון משולב. מזרח ומערב. תיאוריה ושטח.
-          </p>
-          <p className="text-[#F9D0CF] text-lg mt-2">
-            ועכשיו — הכל דחוס לשיטה אחת ברורה.
-          </p>
-        </div>
-      </Fade>
-    </section>
-  );
-}
-
-function SolutionSection() {
-  return (
-    <section className="py-16 md:py-20 px-4 md:px-8 max-w-4xl mx-auto">
-      {/* האמת הפשוטה */}
-      <Fade className="text-center mb-12">
-        <h2 className="text-3xl md:text-4xl text-[#1A1218] mb-6" style={{ fontFamily: SERIF }}>
+        <h2 className="text-3xl md:text-4xl text-[#1A1218]" style={{ fontFamily: SERIF }}>
           האמת הפשוטה
         </h2>
-        <div className="space-y-3 text-[#5A3F50] text-lg leading-loose max-w-2xl mx-auto">
-          <p className="font-bold text-[#1A1218] text-xl">
-            עיצוב טוב הוא לא כישרון.
-            <br />הוא לא אינטואיציה.
-            <br /><Highlight>הוא שיטה.</Highlight>
+        <div className="space-y-1 text-[#5A3F50] text-xl leading-loose">
+          <p>עיצוב טוב הוא לא כישרון.</p>
+          <p>הוא לא אינטואיציה.</p>
+          <p className="font-bold text-[#1A1218] text-2xl"><Highlight>הוא שיטה.</Highlight></p>
+        </div>
+        <div className="bg-[#FAF6F0] border border-[#E8DDD0] rounded-2xl p-6 text-right">
+          <p className="text-[#6B1A47] font-semibold mb-3 text-center">שיטה שאומרת לך:</p>
+          {["מאיפה מתחילים", "מה עושים קודם", "איך בוחרים נכון", "ואיך הכל מתחבר לתוצאה אחת שלמה"].map((item, i) => (
+            <p key={i} className="text-[#1A1218] flex items-center gap-2 mb-2 text-lg">
+              <span className="text-[#6B1A47]">✦</span> {item}
+            </p>
+          ))}
+        </div>
+        <p className="text-[#1A1218] font-bold text-lg">בלי ניחושים. בלי בלבול. בלי טעויות יקרות.</p>
+        <div className="bg-[#6B1A47] text-white rounded-2xl p-6 md:p-8">
+          <p className="text-lg leading-relaxed mb-3">
+            אם גם את מרגישה שאת &ldquo;כמעט שם&rdquo;…
+            <br />אבל משהו לא מתחבר —
           </p>
-          <p>שיטה שאומרת לך:</p>
-          <div className="text-right space-y-2 bg-[#FAF6F0] rounded-2xl p-6 border border-[#E8DDD0]">
-            {["מאיפה מתחילים", "מה עושים קודם", "איך בוחרים נכון", "ואיך הכל מתחבר לתוצאה אחת שלמה"].map((item, i) => (
-              <p key={i} className="flex items-center gap-2 text-[#1A1218]">
-                <span className="text-[#6B1A47]">✦</span> {item}
-              </p>
-            ))}
-          </div>
-          <p className="text-[#1A1218] font-semibold">
-            בלי ניחושים. בלי בלבול. בלי טעויות יקרות.
+          <p className="text-[#F9D0CF] font-bold text-xl">
+            זה בדיוק המקום שבו רוב האנשים נתקעים.
+          </p>
+          <p className="text-white font-bold text-xl mt-2">
+            ופה Decorra Pro משנה את המשחק.
           </p>
         </div>
       </Fade>
+    </section>
+  );
+}
 
-      {/* זה לא קורס רגיל */}
-      <Fade className="mb-12">
-        <div className="bg-[#6B1A47] text-white rounded-2xl p-8 text-center">
-          <p className="text-2xl font-bold mb-4" style={{ fontFamily: SERIF }}>
+// ─── Not A Course ──────────────────────────────────────────────────────────────
+
+function NotACourseSection() {
+  return (
+    <section className="py-10 md:py-16 px-4 md:px-8 max-w-3xl mx-auto">
+      <Fade>
+        <div className="bg-white border border-[#E8DDD0] rounded-2xl p-8 shadow-sm">
+          <h2 className="text-2xl md:text-3xl text-[#6B1A47] font-bold mb-5 text-center" style={{ fontFamily: SERIF }}>
             חשוב להבין: זה לא קורס רגיל
-          </p>
-          <div className="space-y-2 text-[#F9D0CF] text-lg mb-6">
+          </h2>
+          <div className="space-y-2 text-[#5A3F50] text-lg mb-6 text-center">
             <p>זה לא מדריך שמתחיל באל״ף ומסתיים בתי״ו.</p>
             <p>זה לא ידע שצריך &ldquo;לסיים&rdquo; כדי להשתמש בו.</p>
           </div>
-          <div className="grid md:grid-cols-3 gap-4 text-center">
+          <div className="grid md:grid-cols-3 gap-4 mb-6">
             {[
               { icon: "🎯", text: "כל פרק = כלי עבודה אמיתי" },
               { icon: "💡", text: "כל חלק = שינוי בתפיסה" },
               { icon: "⚡", text: "כל צפייה = התקדמות מיידית" },
             ].map((item, i) => (
-              <div key={i} className="bg-white/10 rounded-xl p-4">
-                <p className="text-2xl mb-1">{item.icon}</p>
-                <p className="text-white font-semibold text-sm">{item.text}</p>
+              <div key={i} className="bg-[#FAF6F0] rounded-xl p-4 text-center border border-[#E8DDD0]">
+                <p className="text-3xl mb-2">{item.icon}</p>
+                <p className="text-[#1A1218] font-semibold text-sm">{item.text}</p>
               </div>
             ))}
           </div>
-          <p className="text-white font-bold text-lg mt-6">
+          <p className="text-[#1A1218] font-bold text-lg text-center">
             גם פרק אחד נותן לך יתרון.
-            <br />
-            <span className="text-[#F9D0CF]">וכשמחברים עוד חלקים? פתאום הכל מתחיל להסתדר.</span>
+            <br /><span className="text-[#6B1A47]">וכשמחברים עוד חלקים? פתאום הכל מתחיל להסתדר.</span>
           </p>
         </div>
       </Fade>
+    </section>
+  );
+}
 
-      <Fade className="text-center mb-12">
+// ─── What You Get ──────────────────────────────────────────────────────────────
+
+function WhatYouGetSection() {
+  return (
+    <section className="py-16 md:py-20 px-4 md:px-8 max-w-4xl mx-auto">
+      <Fade className="text-center mb-10">
         <p className="text-[#5A3F50] text-lg mb-2">אז מה את מקבלת עכשיו?</p>
-        <h2
-          className="text-5xl md:text-6xl text-[#6B1A47] mb-2 tracking-wide"
-          style={{ fontFamily: SERIF }}
-        >
+        <h2 className="text-5xl md:text-6xl text-[#6B1A47] mb-2 tracking-wide" style={{ fontFamily: SERIF }}>
           DECORRA PRO
         </h2>
         <p className="text-[#5A3F50] text-lg mb-4">מבית סטודיו ברברה ברזין</p>
-        <p className="text-[#1A1218] text-xl font-semibold max-w-2xl mx-auto leading-relaxed mb-2">
-          סנונית ראשונה ומופלאה מתוך המדריך המלא!
+        <p className="text-[#1A1218] text-xl font-bold mb-1">סנונית ראשונה ומופלאה מתוך המדריך המלא!</p>
+        <p className="text-[#5A3F50] text-lg mb-2">6 פרקים. 6 זוויות שונות. 6 קפיצות מדרגה בהבנה שלך.</p>
+        <p className="text-[#5A3F50] leading-relaxed max-w-xl mx-auto">
+          לא &ldquo;טעימה קטנה&rdquo; —{" "}
+          <Highlight>אלא בסיס חכם שמתחיל לבנות לך שיטה בראש.</Highlight>
         </p>
-        <p className="text-[#5A3F50] text-lg mb-8">
-          6 פרקים. 6 זוויות שונות. 6 קפיצות מדרגה בהבנה שלך.
-        </p>
-        {/* Stats bar */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-3 max-w-xl mx-auto">
-          {[
-            { num: "6", label: "פרקים" },
-            { num: "6", label: "כלי עבודה אמיתיים" },
-            { num: "גישה", label: "מיידית" },
-            { num: "כל", label: "הרמות" },
-          ].map((s) => (
-            <div key={s.label} className="bg-[#F9D0CF] rounded-xl p-3 text-center">
-              <p className="text-[#6B1A47] text-xl md:text-2xl font-bold leading-none">
-                {s.num}
-              </p>
-              <p className="text-[#5A3F50] text-xs md:text-sm mt-1">{s.label}</p>
-            </div>
-          ))}
-        </div>
       </Fade>
 
+      <div className="mb-4">
+        <p className="text-[#6B1A47] font-semibold text-center mb-4">6 הפרקים הזמינים עכשיו:</p>
+        <StaggerFade className="grid grid-cols-2 md:grid-cols-3 gap-3 mb-6">
+          {CHAPTERS.map((ch) => (
+            <motion.div key={ch.number} variants={fadeUp} className="bg-[#6B1A47] text-white rounded-xl p-4 text-center">
+              <p className="text-2xl font-bold mb-1" style={{ fontFamily: SERIF }}>{ch.number}</p>
+              <p className="text-[#F9D0CF] text-xs leading-snug">{ch.name.split(":")[0]}</p>
+            </motion.div>
+          ))}
+        </StaggerFade>
+
+        <p className="text-[#5A3F50] font-semibold text-center mb-4">+ 8 פרקים נוספים שבדרך:</p>
+        <StaggerFade className="grid grid-cols-2 md:grid-cols-4 gap-3">
+          {LOCKED_CHAPTERS.map((name, i) => (
+            <LockedChapterCard key={i} name={name} index={i} />
+          ))}
+        </StaggerFade>
+      </div>
+
+      <Fade className="text-center mt-10">
+        <CTAButton text="אני רוצה להתחיל →" />
+      </Fade>
+    </section>
+  );
+}
+
+// ─── Chapters Detail ───────────────────────────────────────────────────────────
+
+function ChaptersDetailSection() {
+  return (
+    <section className="py-16 md:py-20 px-4 md:px-8 max-w-4xl mx-auto">
+      <Fade className="text-center mb-10">
+        <h2 className="text-3xl md:text-4xl text-[#1A1218]" style={{ fontFamily: SERIF }}>
+          מה מחכה לך בפנים?
+        </h2>
+      </Fade>
       <StaggerFade className="grid md:grid-cols-2 gap-5 mb-8">
         {CHAPTERS.map((ch) => (
           <ChapterCard key={ch.number} chapter={ch} />
         ))}
       </StaggerFade>
-
       <Fade>
         <div className="bg-[#FAF6F0] border border-[#E8DDD0] rounded-2xl p-6 md:p-8 text-center">
           <p className="text-[#1A1218] font-bold text-xl mb-4" style={{ fontFamily: SERIF }}>
             וזה רק ההתחלה!
           </p>
-          <div className="space-y-2 mb-5">
+          <div className="space-y-2 mb-4">
             {[
               { icon: "🔹", text: 'עוד "סנוניות" — זוויות חדשות' },
               { icon: "🔹", text: "מודולי עומק — כניסה לעומק אמיתי" },
@@ -783,7 +463,7 @@ function SolutionSection() {
               </p>
             ))}
           </div>
-          <p className="text-[#5A3F50] leading-relaxed">
+          <p className="text-[#5A3F50]">
             את לא נכנסת לקורס סגור.{" "}
             <Highlight>את נכנסת למערכת שמתפתחת איתך.</Highlight>
           </p>
@@ -793,240 +473,139 @@ function SolutionSection() {
   );
 }
 
-function TestimonialsSection() {
-  return (
-    <section className="py-16 md:py-20 px-4 md:px-8 max-w-4xl mx-auto">
-      <Fade className="text-center mb-10">
-        <h2
-          className="text-3xl md:text-4xl text-[#1A1218] mb-2"
-          style={{ fontFamily: SERIF }}
-        >
-          מה אומרות מי שלמדו עם ברברה ובוריס
-        </h2>
-        <p className="text-[#6B1A47] font-semibold">בוגרות סטודיו ברברה ברזין</p>
-      </Fade>
-      <StaggerFade className="grid sm:grid-cols-2 gap-6 mb-6">
-        {TESTIMONIALS.map((t) => (
-          <TestimonialCard key={t.name} t={t} />
-        ))}
-      </StaggerFade>
-      <Fade>
-        <p className="text-center text-[#5A3F50] text-sm italic">
-          * עדויות אלו הן של בוגרות הסטודיו המקצועי של ברברה ברזין.
-          <br />
-          Decorra Pro הוא מוצר חדש — והעדויות הראשונות שלו בדרך.
-        </p>
-      </Fade>
-    </section>
-  );
-}
+// ─── Who Is It For ─────────────────────────────────────────────────────────────
 
-function UrgencySection() {
-  return (
-    <section className="py-16 md:py-20 px-4 md:px-8 max-w-3xl mx-auto text-center">
-      <Fade>
-        <div className="bg-[#1A1218] text-white rounded-2xl p-8 md:p-12">
-          <p className="text-3xl md:text-4xl mb-6" style={{ fontFamily: SERIF }}>
-            אם לא תעשי שינוי עכשיו…
-          </p>
-          <p className="text-[#F9D0CF] text-lg md:text-xl leading-loose mb-6">
-            סביר שתמשיכי:
-            <br />
-            להתלבט,
-            <br />
-            לבזבז כסף,
-            <br />
-            ולהישאר עם בית &ldquo;כמעט&rdquo;. 👀
-          </p>
-          <p className="text-white text-xl font-bold">
-            אבל אם את רוצה אחרת —
-            <br />
-            <span className="text-[#F9D0CF]">ביטחון, דיוק ושקט בראש —</span>
-            <br />
-            השיטה היא כאן.
-          </p>
-        </div>
-      </Fade>
-    </section>
-  );
-}
-
-function WhyStorySection() {
+function WhoIsItForSection() {
   return (
     <section className="py-16 md:py-20 px-4 md:px-8 max-w-3xl mx-auto">
-      <Fade className="text-center space-y-5">
-        <h2
-          className="text-3xl md:text-4xl text-[#1A1218]"
-          style={{ fontFamily: SERIF }}
-        >
-          למה יצרנו את Decorra Pro?
-        </h2>
-        <div className="space-y-4 text-[#5A3F50] text-lg leading-loose">
-          <p>
-            לאורך 45 שנה, ראיתי אלפי נשים עם עין מדהימה — שנתקעו.
-            <br />
-            לא מחוסר כישרון.{" "}
-            <strong className="text-[#1A1218]">מחוסר שיטה.</strong>
+      <Fade>
+        <div className="bg-[#F9D0CF] rounded-2xl p-6 md:p-8 mb-8">
+          <p className="text-[#6B1A47] text-xl font-bold mb-5 text-center" style={{ fontFamily: SERIF }}>
+            למי זה מתאים?
           </p>
-          <p>
-            ייעוץ עיצוב אישי עולה אלפי שקלים. קורס מקצועי לוקח שנים.
-            <br />
-            ואת, שרק רוצה שהבית שלך ייראה כמו שדמיינת —<br />
-            נשארת לבד עם Pinterest וניחושים.
-          </p>
-          <p className="font-bold text-[#1A1218]">
-            זה לא הוגן. וזה מה שהניע אותי ליצור את Decorra Pro.
-          </p>
-          <p>
-            לדחוס 45 שנה של עבודה אמיתית בשטח —
-            <br />
-            לכלים פשוטים, ברורים ומיידיים.
-            <br />
-            שכל אחת יכולה ללמוד, להפנים, ולהשתמש בהם —{" "}
-            <Highlight>עוד היום.</Highlight>
-          </p>
-        </div>
-      </Fade>
-
-      <Fade className="mt-12">
-        <div className="bg-[#F9D0CF] rounded-2xl p-6 md:p-8">
-          <p
-            className="text-[#6B1A47] text-xl font-bold mb-6 text-center"
-            style={{ fontFamily: SERIF }}
-          >
-            Decorra Pro מתאים לך אם:
-          </p>
-          <ul className="space-y-4">
+          <ul className="space-y-3 mb-5">
             {[
-              "את מרגישה שיש לך טעם — אבל חסר לך ביטחון בבחירות",
-              "את מתבלבלת בין אפשרויות ולא יודעת מה לבחור",
-              "קנית פריטים שלא עבדו — ולא הבנת למה",
-              "את רוצה בית שנראה מחובר, מדויק ומקצועי",
-              "את בתחילת הדרך — ורוצה להתחיל נכון",
-              "את כבר בתחום — ומרגישה שחסר לך סדר",
+              "מרגישה שיש לך טעם — אבל חסר לך ביטחון בבחירות",
+              "מתבלבלת בין אפשרויות ולא יודעת מה לבחור",
+              "קונה ולא מרוצה עד הסוף",
+              "רוצה בית שנראה מקצועי באמת",
             ].map((item, i) => (
-              <li key={i} className="flex items-start gap-3 text-[#1A1218]">
-                <span className="text-[#6B1A47] flex-shrink-0 mt-0.5 text-xl">✦</span>
-                <span className="text-lg">{item}</span>
+              <li key={i} className="flex items-start gap-3 text-[#1A1218] text-lg">
+                <span className="text-[#6B1A47] flex-shrink-0 text-xl mt-0.5">✦</span>
+                <span>{item}</span>
               </li>
             ))}
           </ul>
-          <p className="mt-6 text-center text-[#5A3F50] leading-relaxed">
-            גם אם לא עיצבת בחיים.
-            <br />
-            גם אם ניסית כבר ולא הצלחת.
-            <br />
-            <strong className="text-[#1A1218]">
-              השיטה עובדת — כי היא לא מבוססת על כישרון. היא מבוססת על סדר.
-            </strong>
+          <p className="text-center text-[#1A1218] font-bold text-lg">
+            זה בדיוק בשבילך.
+          </p>
+          <p className="text-center text-[#5A3F50] mt-1">
+            גם אם את בתחילת הדרך. וגם אם את כבר בתחום — אבל חסר לך סדר.
+          </p>
+        </div>
+      </Fade>
+
+      <Fade className="space-y-5 text-center">
+        <p className="text-[#1A1218] font-bold text-xl">כי בואי נדבר תכל&apos;ס:</p>
+        <div className="space-y-2 text-[#5A3F50] text-lg leading-loose">
+          <p>כמה פעמים קנית משהו — והוא פשוט לא עבד?</p>
+          <p>כמה כסף הלך על טעויות? כמה זמן על התלבטויות?</p>
+          <p className="italic text-[#1A1218]">&ldquo;אני לא מצליחה לשים את האצבע על הבעיה…&rdquo;</p>
+        </div>
+        <div className="bg-[#FAF6F0] border border-[#E8DDD0] rounded-2xl p-6">
+          <p className="text-[#1A1218] font-bold text-xl mb-2">
+            את לא צריכה לדעת הכל.
+            <br />את רק צריכה להתחיל נכון.
+          </p>
+          <p className="text-[#5A3F50] text-lg">
+            וששת הפרקים האלה —
+            <br /><Highlight>הם בדיוק ההתחלה שאת צריכה.</Highlight>
           </p>
         </div>
       </Fade>
     </section>
   );
 }
+
+// ─── Benefits ──────────────────────────────────────────────────────────────────
+
+function BenefitsSection() {
+  return (
+    <section className="py-16 md:py-20 px-4 md:px-8 max-w-3xl mx-auto">
+      <Fade className="text-center mb-8">
+        <h2 className="text-3xl md:text-4xl text-[#1A1218]" style={{ fontFamily: SERIF }}>
+          כשיש שיטה — הכל משתנה
+        </h2>
+      </Fade>
+      <Fade>
+        <div className="bg-[#6B1A47] text-white rounded-2xl p-8 mb-8">
+          <ul className="space-y-4">
+            {[
+              "הבחירות נהיות ברורות",
+              "הבית נראה מחובר ומדויק",
+              "את מפסיקה לנחש",
+              "את חוסכת כסף",
+              "ואת מרגישה שליטה",
+            ].map((item, i) => (
+              <li key={i} className="flex items-center gap-3 text-lg">
+                <span className="text-[#F9D0CF] text-xl font-bold flex-shrink-0">✔</span>
+                <span>{item}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </Fade>
+    </section>
+  );
+}
+
+// ─── Pricing / Form ────────────────────────────────────────────────────────────
 
 function PricingSection() {
   return (
     <section id="form" className="py-16 md:py-20 px-4 md:px-8 max-w-3xl mx-auto">
       <Fade className="text-center mb-10">
-        <h2
-          className="text-3xl md:text-4xl text-[#1A1218] mb-4"
-          style={{ fontFamily: SERIF }}
-        >
-          כמה זה עולה?
+        <h2 className="text-3xl md:text-4xl text-[#1A1218] mb-3" style={{ fontFamily: SERIF }}>
+          מה תקבלי מיד אחרי ההצטרפות?
         </h2>
-        <div className="inline-block bg-[#FAF6F0] border border-[#E8DDD0] rounded-xl px-5 py-4 mb-6">
-          <p className="text-[#5A3F50] line-through text-base">
-            ייעוץ עיצוב פנים לחלל אחד: ₪4,500–12,000
-          </p>
-          <p className="text-[#5A3F50] text-sm mt-1">
-            (ואת עדיין לא יודעת למה זה עובד)
-          </p>
-        </div>
       </Fade>
-
       <Fade>
         <div className="bg-white rounded-2xl shadow-lg border border-[#E8DDD0] overflow-hidden">
-          {/* Price header */}
           <div className="bg-[#6B1A47] py-8 px-6 text-center">
-            <p className="text-[#F9D0CF] text-sm mb-2">
-              ב-Decorra Pro חלק 1 את מקבלת:
-            </p>
-            <p className="text-white text-5xl md:text-6xl font-bold" style={{ fontFamily: SERIF }}>
-              ₪450
-            </p>
-            <p className="text-[#F9D0CF] text-sm mt-2">
-              מחיר השקה בלבד — יעלה עם השקת החלקים הבאים
-            </p>
+            <p className="text-[#F9D0CF] text-sm mb-2">מחיר השקה בלבד</p>
+            <p className="text-white text-5xl md:text-6xl font-bold" style={{ fontFamily: SERIF }}>₪450</p>
+            <p className="text-[#F9D0CF] text-sm mt-2">יעלה עם השקת החלקים הבאים</p>
           </div>
-
-          {/* Included */}
           <div className="p-6 md:p-8">
             <ul className="space-y-4 mb-8">
               {[
-                "גישה מיידית ל-6 הפרקים",
-                "6 כלי עבודה שתשתמשי בהם כל חיים",
+                "גישה מיידית ל־6 הפרקים",
+                "צפייה בקצב שלך מכל מכשיר",
                 "ליווי בקבוצת וואטסאפ",
-                "גישה להמשך פיתוח המדריך",
+                "גישה להמשך התפתחות המדריך",
                 "מחיר מועדף על חלקי הקורס הבאים",
               ].map((item) => (
                 <li key={item} className="flex items-start gap-3">
-                  <span className="text-[#6B1A47] font-bold text-xl flex-shrink-0 leading-snug">
-                    ✔
-                  </span>
-                  <span className="text-[#1A1218] text-lg leading-snug">{item}</span>
+                  <span className="text-[#6B1A47] font-bold text-xl flex-shrink-0">✔</span>
+                  <span className="text-[#1A1218] text-lg">{item}</span>
                 </li>
               ))}
             </ul>
-
-            {/* Form */}
             <form
               className="space-y-4"
-              onSubmit={(e) => {
-                e.preventDefault();
-                alert("תודה! נחזור אלייך בקרוב.");
-              }}
+              onSubmit={(e) => { e.preventDefault(); alert("תודה! נחזור אלייך בקרוב."); }}
             >
-              <input
-                type="text"
-                placeholder="שם מלא *"
-                required
-                dir="rtl"
-                className="w-full border border-[#E8DDD0] rounded-xl px-4 py-4 text-[#1A1218] bg-[#FAF6F0] focus:outline-none focus:border-[#6B1A47] text-right text-base transition-colors"
-              />
-              <input
-                type="email"
-                placeholder="כתובת מייל *"
-                required
-                dir="rtl"
-                className="w-full border border-[#E8DDD0] rounded-xl px-4 py-4 text-[#1A1218] bg-[#FAF6F0] focus:outline-none focus:border-[#6B1A47] text-right text-base transition-colors"
-              />
-              <input
-                type="tel"
-                placeholder="טלפון נייד *"
-                required
-                dir="ltr"
-                style={{ textAlign: "right" }}
-                className="w-full border border-[#E8DDD0] rounded-xl px-4 py-4 text-[#1A1218] bg-[#FAF6F0] focus:outline-none focus:border-[#6B1A47] text-base transition-colors"
-              />
-              <button
-                type="submit"
-                className="w-full bg-[#6B1A47] hover:bg-[#4E1235] active:scale-[0.99] text-white text-xl font-bold py-5 rounded-xl transition-all duration-300 shadow-lg hover:shadow-xl"
-              >
-                אני מצטרפת עכשיו ב-₪450 →
+              <input type="text" placeholder="שם מלא *" required dir="rtl"
+                className="w-full border border-[#E8DDD0] rounded-xl px-4 py-4 text-[#1A1218] bg-[#FAF6F0] focus:outline-none focus:border-[#6B1A47] text-right text-base transition-colors" />
+              <input type="email" placeholder="כתובת מייל *" required dir="rtl"
+                className="w-full border border-[#E8DDD0] rounded-xl px-4 py-4 text-[#1A1218] bg-[#FAF6F0] focus:outline-none focus:border-[#6B1A47] text-right text-base transition-colors" />
+              <input type="tel" placeholder="טלפון נייד *" required dir="ltr" style={{ textAlign: "right" }}
+                className="w-full border border-[#E8DDD0] rounded-xl px-4 py-4 text-[#1A1218] bg-[#FAF6F0] focus:outline-none focus:border-[#6B1A47] text-base transition-colors" />
+              <button type="submit"
+                className="w-full bg-[#6B1A47] hover:bg-[#4E1235] active:scale-[0.99] text-white text-xl font-bold py-5 rounded-xl transition-all duration-300 shadow-lg hover:shadow-xl">
+                הצטרפי עכשיו →
               </button>
             </form>
-
-            <p className="text-center text-[#5A3F50] text-sm mt-5 leading-relaxed">
-              זהו מחיר ההשקה של Decorra Pro חלק 1.
-              <br />
-              ברגע שיושקו החלקים הבאים — המחיר עולה.
-              <br />
-              <strong className="text-[#6B1A47]">
-                מי שנכנסת עכשיו, נכנסת ראשונה ובמחיר הכי טוב שיהיה.
-              </strong>
-            </p>
           </div>
         </div>
       </Fade>
@@ -1034,14 +613,13 @@ function PricingSection() {
   );
 }
 
+// ─── FAQ ───────────────────────────────────────────────────────────────────────
+
 function FAQSection() {
   return (
     <section className="py-12 md:py-16 px-4 md:px-8 max-w-3xl mx-auto">
       <Fade className="text-center mb-8">
-        <h2
-          className="text-3xl md:text-4xl text-[#1A1218]"
-          style={{ fontFamily: SERIF }}
-        >
+        <h2 className="text-3xl md:text-4xl text-[#1A1218]" style={{ fontFamily: SERIF }}>
           שאלות נפוצות
         </h2>
       </Fade>
@@ -1054,154 +632,51 @@ function FAQSection() {
   );
 }
 
-function FinalCTASection() {
+// ─── Urgency CTA ───────────────────────────────────────────────────────────────
+
+function UrgencySection() {
   return (
     <section className="py-16 md:py-24 px-4 md:px-8 max-w-3xl mx-auto text-center">
       <Fade>
-        <h2
-          className="text-3xl md:text-4xl text-[#1A1218] mb-4"
-          style={{ fontFamily: SERIF }}
-        >
-          מוכנה להפסיק לנחש?
-        </h2>
-        <p className="text-[#5A3F50] text-xl mb-10 leading-relaxed">
-          הצטרפי עכשיו במחיר ההשקה
-          <br />
-          ותתחילי לעצב עם שיטה — כבר מהפרק הראשון.
-        </p>
-        <div className="flex justify-center mb-6">
-          <CTAButton />
+        <div className="bg-[#1A1218] text-white rounded-2xl p-8 md:p-12 mb-8">
+          <p className="text-3xl md:text-4xl mb-6" style={{ fontFamily: SERIF }}>
+            אם לא תעשי שינוי עכשיו…
+          </p>
+          <p className="text-[#F9D0CF] text-lg md:text-xl leading-loose mb-6">
+            סביר שתמשיכי:
+            <br />להתלבט,
+            <br />לבזבז כסף,
+            <br />ולהישאר עם בית &ldquo;כמעט&rdquo;.
+          </p>
+          <p className="text-white text-xl font-bold mb-1">אבל אם את רוצה אחרת —</p>
+          <p className="text-[#F9D0CF] text-lg">ביטחון, דיוק ושקט בראש —</p>
         </div>
-        <p className="text-[#5A3F50] text-sm">
-          ₪450 · גישה מיידית · מחיר השקה · Decorra Pro חלק 1
+        <p className="text-[#5A3F50] text-lg mb-1 font-semibold">Decorra Pro מבית סטודיו ברברה ברזין</p>
+        <p className="text-[#1A1218] text-xl font-bold mb-8">
+          היא השיטה שתלמד אותך לעצב נכון — כבר מהצעד הראשון
         </p>
+        <div className="flex justify-center">
+          <CTAButton text="הצטרפי עכשיו →" />
+        </div>
       </Fade>
     </section>
   );
 }
+
+// ─── Footer ────────────────────────────────────────────────────────────────────
 
 function Footer() {
   return (
     <footer className="bg-[#6B1A47] text-white py-8 px-4 text-center">
       <p className="text-[#F9D0CF] text-sm leading-relaxed">
         © {new Date().getFullYear()} סטודיו ברברה ברזין | Decorra Pro
+        <br />כל הזכויות שמורות
         <br />
-        כל הזכויות שמורות
-        <br />
-        <span className="text-white/70 text-xs mt-2 block">
+        <span className="text-white/60 text-xs mt-2 block">
           * Decorra Pro הוא מדריך דיגיטלי מבית סטודיו ברברה ברזין — ולא קורס אישי של ברברה ברזין.
         </span>
       </p>
     </footer>
-  );
-}
-
-// ─── Nav Bar ───────────────────────────────────────────────────────────────────
-
-function NavBar() {
-  return (
-    <nav className="sticky top-0 z-50 bg-white/95 backdrop-blur-sm border-b border-[#E8DDD0] py-3 px-4 md:px-8">
-      <div className="max-w-4xl mx-auto flex justify-between items-center">
-        <a
-          href="#form"
-          className="bg-[#6B1A47] text-white text-sm font-semibold px-5 py-2 rounded-lg hover:bg-[#4E1235] transition-colors"
-        >
-          הצטרפות →
-        </a>
-        <div className="text-center">
-          <p className="font-bold text-[#6B1A47] text-base" style={{ fontFamily: SERIF }}>
-            Decorra Pro
-          </p>
-          <p className="text-[#5A3F50] text-xs">סטודיו ברברה ברזין</p>
-        </div>
-      </div>
-    </nav>
-  );
-}
-
-// ─── Video Section ─────────────────────────────────────────────────────────────
-
-function VideoSection() {
-  // ← החלפי את VIDEO_ID_HERE במזהה הסרטון שלך מ-YouTube
-  // לדוגמה: youtube.com/watch?v=abc123  →  youtubeId = "abc123"
-  const youtubeId = "VIDEO_ID_HERE";
-
-  return (
-    <section className="py-16 md:py-20 px-4 md:px-8 max-w-4xl mx-auto">
-      <Fade className="text-center mb-10">
-        <p className="text-4xl mb-3">🎬</p>
-        <h2 className="text-3xl md:text-4xl text-[#1A1218] mb-3" style={{ fontFamily: SERIF }}>
-          בוריס סולטנוב מסביר הכל
-        </h2>
-        <p className="text-[#5A3F50] text-lg">צפי ותחליטי בעצמך</p>
-      </Fade>
-      <Fade>
-        <div
-          className="relative w-full rounded-2xl overflow-hidden shadow-xl bg-[#1A1218]"
-          style={{ paddingTop: "56.25%" }}
-        >
-          {youtubeId === "VIDEO_ID_HERE" ? (
-            <div className="absolute inset-0 flex flex-col items-center justify-center text-white gap-4">
-              <div className="w-20 h-20 rounded-full bg-[#6B1A47] flex items-center justify-center text-3xl">
-                ▶
-              </div>
-              <p className="text-[#F9D0CF] text-lg font-semibold">הסרטון יתווסף בקרוב</p>
-            </div>
-          ) : (
-            <iframe
-              className="absolute inset-0 w-full h-full"
-              src={`https://www.youtube.com/embed/${youtubeId}`}
-              title="Decorra Pro - סטודיו ברברה ברזין"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowFullScreen
-            />
-          )}
-        </div>
-      </Fade>
-    </section>
-  );
-}
-
-// ─── Gallery Section ───────────────────────────────────────────────────────────
-
-function GallerySection() {
-  const tiles = [
-    { label: "סלון", bg: "#F9D0CF" },
-    { label: "חדר שינה", bg: "#E8DDD0" },
-    { label: "מטבח", bg: "#F9D0CF" },
-    { label: "פינת אוכל", bg: "#E8DDD0" },
-    { label: "חלל עבודה", bg: "#F9D0CF" },
-    { label: "כניסה לבית", bg: "#E8DDD0" },
-  ];
-
-  return (
-    <section className="py-16 md:py-20 px-4 md:px-8 max-w-4xl mx-auto">
-      <Fade className="text-center mb-10">
-        <h2 className="text-3xl md:text-4xl text-[#1A1218] mb-3" style={{ fontFamily: SERIF }}>
-          מתוך עבודות הסטודיו
-        </h2>
-        <p className="text-[#5A3F50] text-lg">3,600+ פרויקטים. כל אחד — עם כוונה.</p>
-      </Fade>
-      <StaggerFade className="grid grid-cols-2 md:grid-cols-3 gap-4 mb-6">
-        {tiles.map((tile, i) => (
-          <motion.div
-            key={i}
-            variants={fadeUp}
-            className="aspect-square rounded-xl overflow-hidden flex flex-col items-center justify-center shadow-sm gap-2"
-            style={{ backgroundColor: tile.bg }}
-          >
-            <span className="text-3xl">🏠</span>
-            <p className="text-[#6B1A47] font-semibold text-sm">{tile.label}</p>
-            <p className="text-[#5A3F50] text-xs">תמונה בקרוב</p>
-          </motion.div>
-        ))}
-      </StaggerFade>
-      <Fade>
-        <p className="text-center text-[#5A3F50] text-sm italic">
-          תמונות פרויקטים מהסטודיו יתווספו בקרוב
-        </p>
-      </Fade>
-    </section>
   );
 }
 
@@ -1210,41 +685,31 @@ function GallerySection() {
 export default function DecoraProPage() {
   return (
     <main dir="rtl" className="bg-[#FAF6F0] text-[#1A1218] overflow-x-hidden">
-      {/* Announcement bar */}
       <div className="bg-[#6B1A47] text-white text-center py-3 px-4 text-sm font-medium">
         🎉 מחיר השקה | Decorra Pro חלק 1 | ₪450 בלבד — לזמן מוגבל
       </div>
-
       <NavBar />
       <HeroSection />
       <Divider />
-      <ProblemSection />
-      <Divider />
-      <PainSection />
-      <InlineCTA />
-      <Divider />
-      <TurningPointSection />
-      <Divider />
-      <AuthoritySection />
-      <Divider />
       <VideoSection />
       <Divider />
-      <SolutionSection />
+      <TruthSection />
       <Divider />
-      <GallerySection />
-      <InlineCTA />
+      <NotACourseSection />
       <Divider />
-      <TestimonialsSection />
+      <WhatYouGetSection />
       <Divider />
-      <UrgencySection />
+      <ChaptersDetailSection />
       <Divider />
-      <WhyStorySection />
+      <WhoIsItForSection />
+      <Divider />
+      <BenefitsSection />
       <Divider />
       <PricingSection />
       <Divider />
       <FAQSection />
       <Divider />
-      <FinalCTASection />
+      <UrgencySection />
       <Footer />
     </main>
   );
