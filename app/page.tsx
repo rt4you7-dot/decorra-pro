@@ -58,12 +58,30 @@ const CHAPTERS: Chapter[] = [
 ];
 
 const FAQ_ITEMS: FAQItem[] = [
-  { q: "6 פרקים — זה מספיק?", a: "כל פרק נותן כלי אמיתי. יחד הם יוצרים שינוי תפיסתי מיידי — וזו כאמור רק ההתחלה 😊" },
-  { q: "זה מתאים גם למתחילות?", a: "כן. הכל מוסבר בצורה פשוטה וברורה." },
-  { q: "תוך כמה זמן רואים שינוי?", a: "כבר תוך כדי צפייה." },
-  { q: "זה מתאים גם למעצבות?", a: "מאוד. במיוחד למי שמרגישה חוסר ביטחון בהלבשה." },
-  { q: "מה קורה עם החלקים הבאים?", a: "Decorra Pro מתפתח כמו מערכת — עוד חלקים בדרך. מי שנכנסת עכשיו תקבל גישה לחלקים הבאים במחיר מועדף." },
-  { q: "איך ניגשים לתוכן אחרי הרכישה?", a: "גישה מיידית מיד אחרי ביצוע התשלום. צפי בקצב שלך, מכל מכשיר, בכל שעה." },
+  {
+    q: "6 פרקים — זה מספיק?",
+    a: "הפרקים האלה נבחרו בקפידה כנקודות הפתיחה הכי משפיעות. כל פרק נותן כלי שאפשר להשתמש בו כבר היום — על הבית שלך, על הפינה שמציקה לך, על הרכישה הבאה שלך. לא מדובר ב'חומר' שגומרים — מדובר בתפיסה שתתחיל לעבוד בשבילך מהרגע הראשון. ויש עוד הרבה בדרך 😊",
+  },
+  {
+    q: "זה מתאים גם למתחילות?",
+    a: "בהחלט. Decorra Pro נבנה עבור מי שמרגישה שיש לה עין — אבל חסרה לה שיטה. אין צורך בידע מוקדם, אין מונחים טכניים מסובכים. הכל מוסבר בצורה פשוטה וברורה, עם דוגמאות מהחיים האמיתיים.",
+  },
+  {
+    q: "תוך כמה זמן רואים שינוי?",
+    a: "כבר תוך כדי הצפייה. הפרקים בנויים כך שכל אחד נותן לך זווית חדשה שאפשר להפעיל מיד. מי שצפתה בפרק על סידור מדף — יצאה ועשתה את זה עוד באותו ערב.",
+  },
+  {
+    q: "זה מתאים גם למעצבות?",
+    a: "מאוד. במיוחד למי שמרגישה חוסר ביטחון בהלבשה ובקומפוזיציה, או למי שמחפשת שפה ברורה להסביר ללקוחות למה הבחירות שלה נכונות. הכלים כאן מחדדים את החשיבה המקצועית.",
+  },
+  {
+    q: "מה קורה עם החלקים הבאים?",
+    a: "Decorra Pro בנוי כמערכת שמתפתחת — כל חלק מוסיף שכבה עמוקה יותר. מי שנכנסת עכשיו תקבל גישה לחלקים הבאים במחיר מועדף לפני עליית מחיר, עדכון אוטומטי בכל פרק חדש, וליווי בקבוצת וואטסאפ לאורך כל הדרך.",
+  },
+  {
+    q: "איך ניגשים לתוכן אחרי הרכישה?",
+    a: "מיד אחרי ביצוע התשלום תקבלי לינק גישה ישירות למייל. הצפייה מכל מכשיר — טלפון, טאבלט, מחשב — בכל שעה שנוחה לך. אין תוכנה להוריד, אין חשבון מורכב ליצור.",
+  },
 ];
 
 // ─── Animation helpers ─────────────────────────────────────────────────────────
@@ -270,38 +288,6 @@ function AuthoritySection() {
   );
 }
 
-// ─── Marketing Video ──────────────────────────────────────── bg: dark ─────────
-
-function MarketingVideoSection() {
-  const youtubeId = "MARKETING_VIDEO_ID_HERE";
-  return (
-    <section className="relative bg-[#1A1218] py-14 md:py-20 px-4 md:px-8">
-      <img src="/images/BG-NEW.jpg" alt="" aria-hidden="true" className="absolute inset-0 w-full h-full object-cover opacity-30 pointer-events-none" />
-      <div className="relative z-10 max-w-4xl mx-auto">
-        <Fade>
-          <div className="relative w-full rounded-2xl overflow-hidden" style={{ paddingTop: "56.25%" }}>
-            {youtubeId === "MARKETING_VIDEO_ID_HERE" ? (
-              <div className="absolute inset-0 flex flex-col items-center justify-center text-white gap-3 bg-white/5">
-                <p className="text-5xl">🎬</p>
-                <p className="text-[#F9D0CF] text-xl font-semibold">סרטון שיווקי</p>
-                <p className="text-white/40 text-base">יתווסף בקרוב</p>
-              </div>
-            ) : (
-              <iframe
-                className="absolute inset-0 w-full h-full"
-                src={`https://www.youtube.com/embed/${youtubeId}`}
-                title="Decorra Pro - Marketing"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowFullScreen
-              />
-            )}
-          </div>
-        </Fade>
-      </div>
-    </section>
-  );
-}
-
 // ─── Truth ────────────────────────────────────────────────── bg: white ────────
 
 function TruthSection() {
@@ -489,32 +475,41 @@ function ChaptersDetailSection() {
   return (
     <section className="bg-white py-16 md:py-20 px-4 md:px-8">
       <div className="max-w-3xl mx-auto">
-        <Fade className="text-center mb-10">
+        <Fade className="text-center mb-12">
           <h2 className="text-2xl md:text-3xl text-[#1A1218] font-bold">מה מחכה לך בפנים?</h2>
+          <p className="text-[#5A3F50] text-lg mt-2">כל פרק בנוי סביב כלי אחד — ברור, ישיר, עם תוצאה מיידית</p>
         </Fade>
-        <StaggerFade className="space-y-0">
+        <StaggerFade className="space-y-6">
           {CHAPTERS.map((ch, i) => (
             <motion.div
               key={ch.number}
               variants={fadeUp}
-              className={`flex gap-5 py-6 ${i < CHAPTERS.length - 1 ? "border-b border-[#E8DDD0]" : ""}`}
+              className="flex gap-5 items-start"
             >
-              <span className="text-3xl font-bold text-[#6B1A47] flex-shrink-0 w-8 text-right leading-tight mt-0.5">
+              <div className={`flex-shrink-0 w-14 h-14 rounded-2xl flex items-center justify-center font-bold text-2xl shadow-sm ${i % 2 === 0 ? "bg-[#6B1A47] text-white" : "bg-[#F9D0CF] text-[#6B1A47]"}`}>
                 {ch.number}
-              </span>
-              <div className="flex-1">
-                <p className="font-bold text-[#1A1218] text-lg mb-1">{ch.name}</p>
-                <p className="text-[#5A3F50] text-lg leading-relaxed mb-2">{ch.description}</p>
-                <p className="text-[#6B1A47] text-base font-semibold">✅ {ch.transformation}</p>
+              </div>
+              <div className="flex-1 pt-1">
+                <p className="font-bold text-[#1A1218] text-xl mb-1">{ch.name}</p>
+                <p className="text-[#5A3F50] text-lg leading-relaxed mb-3">{ch.description}</p>
+                <span className="inline-flex items-center gap-2 bg-[#FAF6F0] border border-[#E8DDD0] rounded-full px-4 py-1.5">
+                  <span className="text-base">✅</span>
+                  <span className="text-[#6B1A47] text-base font-semibold">{ch.transformation}</span>
+                </span>
               </div>
             </motion.div>
           ))}
         </StaggerFade>
-        <Fade className="mt-8 text-center">
-          <p className="text-[#5A3F50] text-base">
-            את לא נכנסת לקורס סגור.{" "}
-            <Highlight>את נכנסת למערכת שמתפתחת איתך.</Highlight>
-          </p>
+
+        <Fade className="mt-12">
+          <div className="bg-[#6B1A47] rounded-2xl px-8 py-7 text-center">
+            <p className="text-white text-xl md:text-2xl font-bold leading-relaxed">
+              את לא נכנסת לקורס סגור.
+            </p>
+            <p className="text-[#F9D0CF] text-xl md:text-2xl font-bold leading-relaxed mt-1">
+              את נכנסת למערכת שמתפתחת איתך.
+            </p>
+          </div>
         </Fade>
       </div>
     </section>
@@ -720,7 +715,6 @@ export default function DecoraProPage() {
       <HeroSection />
       <VideoSection />
       <AuthoritySection />
-      <MarketingVideoSection />
       <TruthSection />
       <NotACourseSection />
       <WhatYouGetSection />
