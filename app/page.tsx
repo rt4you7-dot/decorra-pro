@@ -165,10 +165,7 @@ function NavBar() {
         <a href="#form" className="bg-[#6B1A47] text-white text-sm font-semibold px-5 py-2 rounded-lg hover:bg-[#4E1235] transition-colors">
           הצטרפות →
         </a>
-        <div className="text-center">
-          <p className="font-bold text-[#6B1A47] text-base">Decorra Pro</p>
-          <p className="text-[#5A3F50] text-xs">סטודיו ברברה ברזין</p>
-        </div>
+        <img src="/images/Full_Logo.svg" alt="Decorra Pro" className="h-9" />
       </div>
     </nav>
   );
@@ -194,11 +191,7 @@ function HeroSection() {
             את מתלבטת. קונה פריטים שלא מתחברים. מסדרת שוב ושוב — וזה עדיין &ldquo;כמעט&rdquo;.
           </p>
           <div className="mb-10">
-            <ImagePlaceholder
-              label="תמונת אווירה — חדר מעוצב"
-              aspect="16/9"
-              hint="סלון / חדר שינה מעוצב ברמה מקצועית | WebP, 1200×675px"
-            />
+            <img src="/images/BG-NEW.jpg" alt="עיצוב פנים מקצועי" className="w-full rounded-xl object-cover max-h-96" />
           </div>
           <p className="text-[#5A3F50] text-base mb-8">המדריך הדיגיטלי שילמד אותך לחשוב, לבחור ולעצב כמו מקצוענית</p>
           <CTAButton text="אני רוצה שיטה ברורה →" />
@@ -252,7 +245,7 @@ function AuthoritySection() {
           {/* Boris */}
           <motion.div variants={fadeUp} className="flex gap-5">
             <img
-              src="/images/BORIS-802x1024.jpg"
+              src="/images/BORIS.jpg"
               alt="בוריס סולטנוב"
               className="w-16 h-16 rounded-full object-cover flex-shrink-0"
             />
@@ -265,9 +258,11 @@ function AuthoritySection() {
           </motion.div>
           {/* Barbara */}
           <motion.div variants={fadeUp} className="flex gap-5">
-            <div className="w-16 h-16 rounded-full bg-[#E8DDD0] flex-shrink-0 flex items-center justify-center text-[#5A3F50] text-xs text-center leading-tight">
-              80×80
-            </div>
+            <img
+              src="/images/barbara.jpg"
+              alt="ברברה ברזין"
+              className="w-16 h-16 rounded-full object-cover flex-shrink-0"
+            />
             <div>
               <p className="font-bold text-[#1A1218] text-lg">ברברה ברזין</p>
               <p className="text-[#6B1A47] text-sm font-semibold mb-2">מייסדת הסטודיו | אוטוריטה מובילה בעיצוב פנים</p>
@@ -573,8 +568,8 @@ function BenefitsSection() {
           <h2 className="text-2xl md:text-3xl text-white font-bold">כשיש שיטה — הכל משתנה</h2>
         </Fade>
         <div className="grid grid-cols-2 gap-3 mb-10">
-          <ImagePlaceholder label="לפני" aspect="4/3" hint="חלל לפני עיצוב" />
-          <ImagePlaceholder label="אחרי" aspect="4/3" hint="חלל אחרי עיצוב" />
+          <img src="/images/room-2.png" alt="עיצוב פנים" className="w-full rounded-xl object-cover aspect-[4/3]" />
+          <img src="/images/room-1.jpg" alt="עיצוב פנים" className="w-full rounded-xl object-cover aspect-[4/3]" />
         </div>
         <Fade>
           <ul className="grid md:grid-cols-2 gap-3">
