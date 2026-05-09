@@ -222,6 +222,21 @@ function FAQAccordionItem({ item }: { item: FAQItem }) {
   );
 }
 
+// ─── Image Placeholder ────────────────────────────────────────────────────────
+
+function ImagePlaceholder({ label, aspect = "16/9", hint = "" }: { label: string; aspect?: string; hint?: string }) {
+  return (
+    <div
+      className="w-full rounded-2xl bg-[#E8DDD0] flex flex-col items-center justify-center gap-2 text-[#5A3F50] py-10"
+      style={{ aspectRatio: aspect }}
+    >
+      <p className="text-4xl">🖼️</p>
+      <p className="font-semibold text-base">{label}</p>
+      {hint && <p className="text-xs text-center px-6 opacity-60">{hint}</p>}
+    </div>
+  );
+}
+
 // ─── NavBar ────────────────────────────────────────────────────────────────────
 
 function NavBar() {
@@ -250,7 +265,7 @@ function HeroSection() {
           מבלבול וחוסר ביטחון לשיטה ברורה שעובדת
         </p>
         <p className="text-[#5A3F50] text-base mb-6">Decorra Pro מבית סטודיו ברברה ברזין</p>
-        <h1 className="text-5xl md:text-6xl lg:text-7xl text-[#1A1218] leading-tight mb-6 font-bold">
+        <h1 className="text-2xl md:text-3xl lg:text-5xl text-[#1A1218] leading-tight mb-6 font-bold">
           את לא מתבלבלת כי אין לך טעם.
           <br /><span className="text-[#6B1A47]">את מתבלבלת כי אין לך שיטה.</span>
         </h1>
@@ -269,7 +284,14 @@ function HeroSection() {
           </p>
           <p className="text-[#5A3F50] mt-2 text-base">ובפנים את יודעת: משהו פה לא יושב עד הסוף.</p>
         </div>
-        <p className="text-[#5A3F50] text-lg mb-10">המדריך הדיגיטלי שילמד אותך לחשוב, לבחור ולעצב כמו מקצוענית!</p>
+        <p className="text-[#5A3F50] text-lg mb-8">המדריך הדיגיטלי שילמד אותך לחשוב, לבחור ולעצב כמו מקצוענית!</p>
+        <div className="mb-10">
+          <ImagePlaceholder
+            label="תמונת אווירה — חדר מעוצב"
+            aspect="16/9"
+            hint="סלון / חדר שינה מעוצב ברמה מקצועית | WebP, 1200×675px"
+          />
+        </div>
       </Fade>
     </section>
   );
@@ -314,16 +336,21 @@ function AuthoritySection() {
   return (
     <section className="py-16 md:py-20 px-4 md:px-8 max-w-4xl mx-auto">
       <Fade className="text-center mb-10">
-        <h2 className="text-3xl md:text-4xl text-[#1A1218] font-bold">
+        <h2 className="text-2xl md:text-3xl text-[#1A1218] font-bold">
           מי עומד מאחורי השיטה?
         </h2>
       </Fade>
       <StaggerFade className="grid md:grid-cols-2 gap-6 mb-8">
         {/* Boris Sultanov */}
         <motion.div variants={fadeUp} className="bg-white rounded-2xl overflow-hidden shadow-sm border border-[#E8DDD0]">
-          <div className="bg-[#6B1A47] py-5 px-6">
-            <p className="text-white font-bold text-xl">בוריס סולטנוב</p>
-            <p className="text-[#F9D0CF] text-sm mt-1">מרצה בכיר | סטודיו ברברה ברזין</p>
+          <div className="bg-[#6B1A47] py-5 px-6 flex items-center gap-4">
+            <div className="w-16 h-16 rounded-full bg-[#4E1235] flex-shrink-0 flex items-center justify-center text-white/40 text-xs text-center leading-tight">
+              תמונה<br/>80×80
+            </div>
+            <div>
+              <p className="text-white font-bold text-xl">בוריס סולטנוב</p>
+              <p className="text-[#F9D0CF] text-sm mt-1">מרצה בכיר | סטודיו ברברה ברזין</p>
+            </div>
           </div>
           <div className="p-6 space-y-3 text-[#5A3F50] leading-relaxed">
             <p>מייסד מחלקת הום סטיילינג והמחלקה הבינלאומית של הסטודיו.</p>
@@ -336,9 +363,14 @@ function AuthoritySection() {
 
         {/* Barbara Barzin */}
         <motion.div variants={fadeUp} className="bg-white rounded-2xl overflow-hidden shadow-sm border border-[#E8DDD0]">
-          <div className="bg-[#6B1A47] py-5 px-6">
-            <p className="text-white font-bold text-xl">ברברה ברזין</p>
-            <p className="text-[#F9D0CF] text-sm mt-1">מייסדת הסטודיו | אוטוריטה מובילה בעיצוב פנים</p>
+          <div className="bg-[#6B1A47] py-5 px-6 flex items-center gap-4">
+            <div className="w-16 h-16 rounded-full bg-[#4E1235] flex-shrink-0 flex items-center justify-center text-white/40 text-xs text-center leading-tight">
+              תמונה<br/>80×80
+            </div>
+            <div>
+              <p className="text-white font-bold text-xl">ברברה ברזין</p>
+              <p className="text-[#F9D0CF] text-sm mt-1">מייסדת הסטודיו | אוטוריטה מובילה בעיצוב פנים</p>
+            </div>
           </div>
           <div className="p-6 space-y-3 text-[#5A3F50] leading-relaxed">
             <p>45+ שנה בתחום עיצוב הפנים בישראל — מהשמות הגדולים והוותיקים בענף.</p>
@@ -397,7 +429,7 @@ function TruthSection() {
   return (
     <section className="py-16 md:py-20 px-4 md:px-8 max-w-3xl mx-auto text-center">
       <Fade className="space-y-6">
-        <h2 className="text-3xl md:text-4xl text-[#1A1218] font-bold">
+        <h2 className="text-2xl md:text-3xl text-[#1A1218] font-bold">
           האמת הפשוטה
         </h2>
         <div className="space-y-1 text-[#5A3F50] text-xl leading-loose">
@@ -438,7 +470,7 @@ function NotACourseSection() {
     <section className="py-10 md:py-16 px-4 md:px-8 max-w-3xl mx-auto">
       <Fade>
         <div className="bg-white border border-[#E8DDD0] rounded-2xl p-8 shadow-sm">
-          <h2 className="text-3xl md:text-4xl text-[#6B1A47] font-bold mb-5 text-center">
+          <h2 className="text-2xl md:text-3xl text-[#6B1A47] font-bold mb-5 text-center">
             חשוב להבין: זה לא קורס רגיל
           </h2>
           <div className="space-y-2 text-[#5A3F50] text-lg mb-6 text-center">
@@ -474,7 +506,7 @@ function WhatYouGetSection() {
     <section className="py-16 md:py-20 px-4 md:px-8 max-w-4xl mx-auto">
       <Fade className="text-center mb-10">
         <p className="text-[#5A3F50] text-lg mb-2">אז מה את מקבלת עכשיו?</p>
-        <h2 className="text-3xl md:text-4xl text-[#6B1A47] mb-2 font-bold">
+        <h2 className="text-2xl md:text-3xl text-[#6B1A47] mb-2 font-bold">
           DECORRA PRO
         </h2>
         <p className="text-[#5A3F50] text-lg mb-4">מבית סטודיו ברברה ברזין</p>
@@ -524,7 +556,7 @@ function ChaptersDetailSection() {
   return (
     <section className="py-16 md:py-20 px-4 md:px-8 max-w-4xl mx-auto">
       <Fade className="text-center mb-10">
-        <h2 className="text-3xl md:text-4xl text-[#1A1218] font-bold">
+        <h2 className="text-2xl md:text-3xl text-[#1A1218] font-bold">
           מה מחכה לך בפנים?
         </h2>
       </Fade>
@@ -566,7 +598,7 @@ function WhoIsItForSection() {
     <section className="py-16 md:py-20 px-4 md:px-8 max-w-3xl mx-auto">
       <Fade>
         <div className="bg-[#F9D0CF] rounded-2xl p-6 md:p-8 mb-8">
-          <h2 className="text-3xl md:text-4xl text-[#6B1A47] font-bold mb-5 text-center">
+          <h2 className="text-2xl md:text-3xl text-[#6B1A47] font-bold mb-5 text-center">
             למי זה מתאים?
           </h2>
           <ul className="space-y-3 mb-5">
@@ -619,11 +651,15 @@ function BenefitsSection() {
   return (
     <section className="py-16 md:py-20 px-4 md:px-8 max-w-3xl mx-auto">
       <Fade className="text-center mb-8">
-        <h2 className="text-3xl md:text-4xl text-[#1A1218] font-bold">
+        <h2 className="text-2xl md:text-3xl text-[#1A1218] font-bold">
           כשיש שיטה — הכל משתנה
         </h2>
       </Fade>
       <Fade>
+        <div className="grid grid-cols-2 gap-3 mb-6">
+          <ImagePlaceholder label="לפני" aspect="4/3" hint="חלל לפני עיצוב" />
+          <ImagePlaceholder label="אחרי" aspect="4/3" hint="חלל אחרי עיצוב" />
+        </div>
         <div className="bg-[#6B1A47] text-white rounded-2xl p-8 mb-8">
           <ul className="space-y-4">
             {[
@@ -651,7 +687,7 @@ function PricingSection() {
   return (
     <section id="form" className="py-16 md:py-20 px-4 md:px-8 max-w-3xl mx-auto">
       <Fade className="text-center mb-10">
-        <h2 className="text-3xl md:text-4xl text-[#1A1218] font-bold mb-3">
+        <h2 className="text-2xl md:text-3xl text-[#1A1218] font-bold mb-3">
           מה תקבלי מיד אחרי ההצטרפות?
         </h2>
       </Fade>
@@ -705,7 +741,7 @@ function FAQSection() {
   return (
     <section className="py-12 md:py-16 px-4 md:px-8 max-w-3xl mx-auto">
       <Fade className="text-center mb-8">
-        <h2 className="text-3xl md:text-4xl text-[#1A1218] font-bold">
+        <h2 className="text-2xl md:text-3xl text-[#1A1218] font-bold">
           שאלות נפוצות
         </h2>
       </Fade>
@@ -725,7 +761,7 @@ function UrgencySection() {
     <section className="py-16 md:py-24 px-4 md:px-8 max-w-3xl mx-auto text-center">
       <Fade>
         <div className="bg-[#1A1218] text-white rounded-2xl p-8 md:p-12 mb-8">
-          <h2 className="text-3xl md:text-4xl font-bold mb-6">
+          <h2 className="text-2xl md:text-3xl font-bold mb-6">
             אם לא תעשי שינוי עכשיו…
           </h2>
           <p className="text-[#F9D0CF] text-lg md:text-xl leading-loose mb-6">
