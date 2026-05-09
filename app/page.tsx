@@ -263,45 +263,79 @@ function AuthoritySection() {
   return (
     <section className="bg-[#F9D0CF] py-16 md:py-20 px-4 md:px-8">
       <div className="max-w-4xl mx-auto">
-        <Fade className="text-center mb-12">
-          <h2 className="text-2xl md:text-3xl text-[#1A1218] font-bold">מי עומד מאחורי השיטה?</h2>
+
+        {/* Title */}
+        <Fade className="text-center mb-10">
+          <p className="text-[#6B1A47] text-sm font-semibold uppercase tracking-widest mb-2">מי מלמד אותך?</p>
+          <h2 className="text-2xl md:text-3xl text-[#1A1218] font-bold">המרצה המוביל. הידע של האגדה.</h2>
         </Fade>
-        <StaggerFade className="grid md:grid-cols-2 gap-6 mb-10">
-          {/* Boris */}
-          <motion.div variants={fadeUp} className="bg-white rounded-2xl overflow-hidden shadow-md">
-            <div className="h-72 overflow-hidden">
-              <img src="/images/BORIS.jpg" alt="בוריס סולטנוב" className="w-full h-full object-cover object-top" />
+
+        {/* Boris card — editorial layout */}
+        <Fade>
+          <div className="bg-white rounded-2xl overflow-hidden shadow-md mb-8">
+            <div className="md:flex">
+              {/* Photo */}
+              <div className="md:w-80 flex-shrink-0 h-72 md:h-auto overflow-hidden">
+                <img src="/images/BORIS.jpg" alt="בוריס סולטנוב" className="w-full h-full object-cover object-top" />
+              </div>
+              {/* Content */}
+              <div className="flex-1 flex flex-col">
+                <div className="bg-[#6B1A47] px-6 py-4">
+                  <p className="text-white font-bold text-xl">בוריס סולטנוב</p>
+                  <p className="text-[#F9D0CF] text-base">המרצה המוביל | סטודיו ברברה ברזין</p>
+                </div>
+                <div className="px-6 py-5 space-y-4 flex-1">
+                  <div className="space-y-2">
+                    {[
+                      "20+ שנות ניסיון בהוראה ועיצוב פנים",
+                      "מייסד המחלקה הבינלאומית של הסטודיו",
+                      "מוביל משלחות לימוד למרכזי עיצוב בעולם",
+                      "הסמכה בינלאומית בפילוסופיה סינית ופנג שואי",
+                      "מטפל NLP | בוגר הסטודיו בהצטיינות יתרה",
+                      "בעלים של סטודיו עצמאי מתמחה בפרויקטים מורכבים",
+                    ].map((item, i) => (
+                      <p key={i} className="text-[#5A3F50] text-base flex items-start gap-2">
+                        <span className="text-[#6B1A47] mt-1 flex-shrink-0">✦</span> {item}
+                      </p>
+                    ))}
+                  </div>
+                  <blockquote className="border-r-4 border-[#6B1A47] pr-4 mt-2">
+                    <p className="text-[#1A1218] text-base italic leading-relaxed">
+                      &ldquo;עיצוב הוא השתקפות של חוויה אישית ואינדיווידואלית בעולם קוסמופוליטי נטול גבולות&rdquo;
+                    </p>
+                  </blockquote>
+                </div>
+              </div>
             </div>
-            <div className="bg-[#6B1A47] px-5 py-4">
-              <p className="text-white font-bold text-xl">בוריס סולטנוב</p>
-              <p className="text-[#F9D0CF] text-base">מרצה בכיר | סטודיו ברברה ברזין</p>
-            </div>
-            <div className="px-5 py-5 space-y-3">
-              <p className="text-[#5A3F50] text-lg leading-relaxed">מייסד מחלקת הום סטיילינג והמחלקה הבינלאומית. 20+ שנות ניסיון בעיצוב פנים ובהוראה.</p>
-              <p className="text-[#1A1218] font-semibold text-lg">מלמד אותך לראות את החלל — לא רק להסתכל עליו.</p>
-            </div>
-          </motion.div>
-          {/* Barbara */}
-          <motion.div variants={fadeUp} className="bg-white rounded-2xl overflow-hidden shadow-md">
-            <div className="h-72 overflow-hidden">
-              <img src="/images/barbara.jpg" alt="ברברה ברזין" className="w-full h-full object-cover object-top" />
-            </div>
-            <div className="bg-[#6B1A47] px-5 py-4">
-              <p className="text-white font-bold text-xl">ברברה ברזין</p>
-              <p className="text-[#F9D0CF] text-base">מייסדת הסטודיו | אוטוריטה מובילה בעיצוב פנים</p>
-            </div>
-            <div className="px-5 py-5 space-y-3">
-              <p className="text-[#5A3F50] text-lg leading-relaxed">45+ שנה בתחום עיצוב הפנים בישראל. מנטורית של אלפי מעצבים ובוגרים ברחבי הארץ.</p>
-              <p className="text-[#1A1218] font-semibold text-lg">בנתה שיטה — לא סתם תוכן. זו המתודולוגיה שמאחורי Decorra Pro.</p>
-            </div>
-          </motion.div>
-        </StaggerFade>
-        <Fade className="text-center">
-          <p className="text-[#5A3F50] text-lg">
-            Decorra Pro נבנתה מתוך ניסיון אמיתי בשטח —{" "}
-            <span className="font-bold text-[#6B1A47]">לא תאוריה. לא ניחושים.</span>
-          </p>
+          </div>
         </Fade>
+
+        {/* Barbara → Boris → You connector */}
+        <Fade>
+          <div className="bg-[#6B1A47] rounded-2xl px-6 md:px-10 py-7 text-center">
+            <p className="text-[#F9D0CF] text-sm uppercase tracking-widest mb-4">מה שמאחורי Decorra Pro</p>
+            <div className="flex flex-col md:flex-row items-center justify-center gap-3 md:gap-6 mb-5">
+              <div className="text-center">
+                <p className="text-white font-bold text-lg">ברברה ברזין</p>
+                <p className="text-[#F9D0CF] text-sm">45+ שנה של ידע וניסיון</p>
+              </div>
+              <span className="text-[#F9D0CF] text-2xl md:rotate-0 rotate-90">→</span>
+              <div className="text-center">
+                <p className="text-white font-bold text-lg">בוריס סולטנוב</p>
+                <p className="text-[#F9D0CF] text-sm">מזקק ומגיש את השיטה</p>
+              </div>
+              <span className="text-[#F9D0CF] text-2xl md:rotate-0 rotate-90">→</span>
+              <div className="text-center">
+                <p className="text-white font-bold text-lg">את</p>
+                <p className="text-[#F9D0CF] text-sm">מקבלת את השניים יחד</p>
+              </div>
+            </div>
+            <p className="text-white text-lg font-semibold leading-relaxed max-w-2xl mx-auto">
+              Decorra Pro הוא הידע המזוקק של ברברה — עשורים של ניסיון אמיתי בשטח — בהגשה של אחד המרצים המובילים בתחום.
+            </p>
+          </div>
+        </Fade>
+
       </div>
     </section>
   );
