@@ -270,71 +270,93 @@ function AuthoritySection() {
           <h2 className="text-2xl md:text-3xl text-[#1A1218] font-bold">המרצה המוביל. הידע של האגדה.</h2>
         </Fade>
 
-        {/* Boris card — large photo top, content below */}
+        {/* Boris card — premium editorial */}
         <Fade>
-          <div className="bg-white rounded-2xl shadow-md mb-8 overflow-hidden">
-            {/* Large photo — full width, tall crop */}
-            <div className="relative h-72 md:h-96 overflow-hidden">
+          <div className="bg-white rounded-2xl shadow-lg mb-8 overflow-hidden">
+            {/* Photo with dramatic name overlay */}
+            <div className="relative h-80 md:h-[26rem] overflow-hidden">
               <img
                 src="/images/boris1234.jpg"
                 alt="בוריס סולטנוב"
                 className="w-full h-full object-cover object-top"
                 style={{ filter: "brightness(1.12) contrast(0.97)" }}
               />
-              {/* Gradient overlay bottom for name */}
-              <div className="absolute inset-x-0 bottom-0 h-28 bg-gradient-to-t from-[#6B1A47]/80 to-transparent" />
-              <div className="absolute bottom-4 right-6">
-                <p className="text-white font-bold text-2xl leading-tight">בוריס סולטנוב</p>
-                <p className="text-[#F9D0CF] text-sm font-medium">המרצה המוביל | סטודיו ברברה ברזין</p>
+              <div className="absolute inset-0 bg-gradient-to-t from-[#3a0d26]/90 via-[#6B1A47]/20 to-transparent" />
+              <div className="absolute bottom-0 right-0 left-0 px-7 pb-7">
+                <p className="text-[#F9D0CF] text-xs font-semibold uppercase tracking-[0.2em] mb-1">המרצה המוביל | סטודיו ברברה ברזין</p>
+                <p className="text-white font-bold text-4xl md:text-5xl leading-tight">בוריס סולטנוב</p>
               </div>
             </div>
-            {/* Credentials */}
-            <div className="px-6 md:px-8 py-6 space-y-2.5">
+
+            {/* Stats row */}
+            <div className="grid grid-cols-3 border-b border-[#E8DDD0]">
               {[
-                "20+ שנות ניסיון בהוראה ועיצוב פנים",
-                "מייסד המחלקה הבינלאומית של הסטודיו",
-                "מוביל משלחות לימוד למרכזי עיצוב מובילים בעולם",
-                "הסמכה בינלאומית בפילוסופיה סינית ופנג שואי",
-                "מטפל NLP | בוגר הסטודיו בהצטיינות יתרה",
-                "בעלים של סטודיו עצמאי המתמחה בפרויקטים מורכבים",
-              ].map((item, i) => (
-                <p key={i} className="text-[#5A3F50] text-base flex items-start gap-2">
-                  <span className="text-[#6B1A47] mt-1 flex-shrink-0">✦</span> {item}
-                </p>
+                { num: "20+", label: "שנות ניסיון" },
+                { num: "15+", label: "שנות הוראה בסטודיו" },
+                { num: "100+", label: "פרויקטים מורכבים" },
+              ].map((s, i) => (
+                <div key={i} className={`py-5 text-center ${i < 2 ? "border-l border-[#E8DDD0]" : ""}`}>
+                  <p className="text-[#6B1A47] font-bold text-2xl md:text-3xl">{s.num}</p>
+                  <p className="text-[#5A3F50] text-sm mt-0.5">{s.label}</p>
+                </div>
               ))}
             </div>
+
+            {/* Credentials */}
+            <div className="px-6 md:px-8 py-6 space-y-3">
+              {[
+                { icon: "🎓", text: "מייסד המחלקה הבינלאומית של הסטודיו" },
+                { icon: "✈️", text: "מוביל משלחות לימוד למרכזי עיצוב מובילים בעולם" },
+                { icon: "☯️", text: "הסמכה בינלאומית בפילוסופיה סינית ופנג שואי" },
+                { icon: "🧠", text: "מטפל NLP — מבין את הפסיכולוגיה של החלל" },
+                { icon: "🏢", text: "סטודיו עצמאי המתמחה בפרויקטים מסחריים ופרטיים מורכבים" },
+              ].map((item, i) => (
+                <div key={i} className="flex items-start gap-3">
+                  <span className="text-lg flex-shrink-0 mt-0.5">{item.icon}</span>
+                  <p className="text-[#5A3F50] text-base leading-snug">{item.text}</p>
+                </div>
+              ))}
+            </div>
+
             {/* Quote */}
-            <div className="mx-6 md:mx-8 mb-6 border-r-4 border-[#F9D0CF] pr-5 bg-[#FAF6F0] rounded-xl py-4 px-5">
-              <p className="text-[#1A1218] text-base italic leading-relaxed">
+            <div className="mx-6 md:mx-8 mb-7 rounded-2xl bg-[#6B1A47] px-6 py-5">
+              <p className="text-[#F9D0CF] text-sm uppercase tracking-widest mb-2">בלשונו</p>
+              <p className="text-white text-base md:text-lg italic leading-relaxed">
                 &ldquo;עיצוב הוא השתקפות של חוויה אישית ואינדיווידואלית בעולם קוסמופוליטי נטול גבולות&rdquo;
               </p>
             </div>
           </div>
         </Fade>
 
-        {/* Barbara → Boris → You connector */}
+        {/* Barbara → Boris → You — redesigned as origin story */}
         <Fade>
-          <div className="bg-[#6B1A47] rounded-2xl px-6 md:px-10 py-7 text-center">
-            <p className="text-[#F9D0CF] text-sm uppercase tracking-widest mb-4">מה שמאחורי Decorra Pro</p>
-            <div className="flex flex-col md:flex-row items-center justify-center gap-3 md:gap-6 mb-5">
-              <div className="text-center">
-                <p className="text-white font-bold text-lg">ברברה ברזין</p>
-                <p className="text-[#F9D0CF] text-sm">45+ שנה של ידע וניסיון</p>
-              </div>
-              <span className="text-[#F9D0CF] text-2xl md:rotate-0 rotate-90">→</span>
-              <div className="text-center">
-                <p className="text-white font-bold text-lg">בוריס סולטנוב</p>
-                <p className="text-[#F9D0CF] text-sm">מזקק ומגיש את השיטה</p>
-              </div>
-              <span className="text-[#F9D0CF] text-2xl md:rotate-0 rotate-90">→</span>
-              <div className="text-center">
-                <p className="text-white font-bold text-lg">את</p>
-                <p className="text-[#F9D0CF] text-sm">מקבלת את השניים יחד</p>
-              </div>
+          <div className="rounded-2xl overflow-hidden mb-2">
+            <div className="bg-[#1A1218] px-6 md:px-10 py-5 text-center">
+              <p className="text-[#F9D0CF] text-xs font-semibold uppercase tracking-[0.2em]">ה-DNA של Decorra Pro</p>
             </div>
-            <p className="text-white text-lg font-semibold leading-relaxed max-w-2xl mx-auto">
-              Decorra Pro הוא הידע המזוקק של ברברה — עשורים של ניסיון אמיתי בשטח — בהגשה של אחד המרצים המובילים בתחום.
-            </p>
+            <div className="bg-[#6B1A47] px-6 md:px-10 py-8">
+              <div className="grid md:grid-cols-3 gap-6 mb-7">
+                {[
+                  { name: "ברברה ברזין", sub: "45+ שנות ניסיון", desc: "המייסדת. השיטה שלה עיצבה דורות של מעצבים בישראל." },
+                  { name: "בוריס סולטנוב", sub: "המרצה המוביל", desc: "לוקח את הידע של ברברה ומגיש אותו בצורה ברורה, מעשית ומדויקת." },
+                  { name: "את", sub: "בת הקורס", desc: "מקבלת 45 שנות חוכמה דרך אחד המרצים החדים ביותר בתחום." },
+                ].map((item, i) => (
+                  <div key={i} className="text-center">
+                    {i > 0 && (
+                      <div className="hidden md:flex justify-start items-center absolute -right-4 top-1/2 -translate-y-1/2 text-[#F9D0CF] text-2xl">→</div>
+                    )}
+                    <div className="bg-white/10 rounded-xl px-5 py-5 h-full">
+                      <p className="text-white font-bold text-xl mb-1">{item.name}</p>
+                      <p className="text-[#F9D0CF] text-xs uppercase tracking-widest mb-3">{item.sub}</p>
+                      <p className="text-white/80 text-sm leading-relaxed">{item.desc}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+              <p className="text-white text-center text-lg md:text-xl font-semibold leading-relaxed max-w-2xl mx-auto">
+                זה לא קורס רגיל. זה עשורים של ניסיון אמיתי — <span className="text-[#F9D0CF]">מזוקק, ממוקד, ומוגש בצורה שעובדת.</span>
+              </p>
+            </div>
           </div>
         </Fade>
 
