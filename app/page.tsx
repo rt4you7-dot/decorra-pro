@@ -566,12 +566,39 @@ function WhatYouGetSection() {
           ))}
         </StaggerFade>
 
-        <p className="text-[#5A3F50] font-semibold text-center mb-4">+ 8 פרקים נוספים שבדרך:</p>
-        <StaggerFade className="grid grid-cols-2 md:grid-cols-4 gap-3">
-          {LOCKED_CHAPTERS.map((name, i) => (
-            <LockedChapterCard key={i} name={name} index={i} />
-          ))}
-        </StaggerFade>
+        <div className="mt-8 bg-[#FAF6F0] border border-[#E8DDD0] rounded-2xl p-6">
+          <div className="text-center mb-5">
+            <p className="text-[#6B1A47] font-bold text-base mb-1">✦ עוד פרקים בדרך ✦</p>
+            <p className="text-[#5A3F50] text-sm">המדריך מתפתח — הנה טעימה ממה שמגיע</p>
+          </div>
+          <StaggerFade className="grid grid-cols-2 md:grid-cols-4 gap-3">
+            {[
+              { num: 7, name: "עיצוב עם תקציב" },
+              { num: 8, name: "תאורה ואווירה" },
+              { num: 9, name: "טקסטיל ורכות" },
+              { num: 10, name: "שילוב סגנונות" },
+            ].map((ch) => (
+              <motion.div key={ch.num} variants={fadeUp} className="rounded-xl overflow-hidden border border-[#E8DDD0] shadow-sm">
+                <div className="bg-[#1A1218] relative" style={{ paddingTop: "62%" }}>
+                  <div className="absolute inset-0 flex flex-col items-center justify-center gap-2">
+                    <div className="w-9 h-9 rounded-full bg-white/10 border border-white/20 flex items-center justify-center">
+                      <svg viewBox="0 0 24 24" fill="white" className="w-4 h-4 translate-x-0.5">
+                        <path d="M8 5v14l11-7z" />
+                      </svg>
+                    </div>
+                    <span className="bg-[#F9D0CF] text-[#6B1A47] text-xs font-bold px-2.5 py-0.5 rounded-full">
+                      בקרוב
+                    </span>
+                  </div>
+                  <div className="absolute top-2 right-2 text-white/25 font-bold text-xs">{ch.num}</div>
+                </div>
+                <div className="bg-white px-3 py-2.5 text-center">
+                  <p className="text-[#1A1218] font-semibold text-xs">{ch.name}</p>
+                </div>
+              </motion.div>
+            ))}
+          </StaggerFade>
+        </div>
       </div>
 
       <Fade className="text-center mt-10">
