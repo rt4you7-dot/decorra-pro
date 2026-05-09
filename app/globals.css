@@ -62,3 +62,9 @@ mark {
 *:focus:not(:focus-visible) {
   outline: none;
 }
+
+/* Card inner border — white 60% opacity, 10px wide inset */
+.card-frame {
+  outline: 10px solid rgba(255, 255, 255, 0.6);
+  outline-offset: -10px;
+}

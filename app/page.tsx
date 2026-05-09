@@ -242,7 +242,7 @@ function HeroSection() {
             את מתלבטת. קונה פריטים שלא מתחברים. מסדרת שוב ושוב — וזה עדיין &ldquo;כמעט&rdquo;.
           </p>
           <p className="text-[#5A3F50] text-lg mb-6">המדריך הדיגיטלי שילמד אותך לחשוב, לבחור ולעצב כמו מקצוענית</p>
-          <div className="mb-8 rounded-2xl overflow-hidden shadow-lg border border-[#E8DDD0]">
+          <div className="mb-8 rounded-xl card-frame overflow-hidden shadow-lg border border-[#E8DDD0]">
             <video
               src="/images/video1.mp4"
               controls
@@ -272,7 +272,7 @@ function AuthoritySection() {
 
         {/* Boris card — premium editorial */}
         <Fade>
-          <div className="bg-white rounded-2xl shadow-lg mb-8 overflow-hidden">
+          <div className="bg-white rounded-xl card-frame shadow-lg mb-8 overflow-hidden">
             {/* Photo with dramatic name overlay */}
             <div className="relative h-80 md:h-[26rem] overflow-hidden">
               <img
@@ -311,7 +311,7 @@ function AuthoritySection() {
             </div>
 
             {/* Quote */}
-            <div className="mx-6 md:mx-8 mb-7 rounded-2xl bg-[#6B1A47] px-6 py-6">
+            <div className="mx-6 md:mx-8 mb-7 rounded-xl card-frame bg-[#6B1A47] px-6 py-6">
               <p className="text-[#F9D0CF]/60 text-xs mb-3 text-center">משפט לדוגמא</p>
               <p className="text-white text-lg md:text-xl leading-relaxed font-medium text-center">
                 &ldquo;רוב האנשים קונים פריטים. מעצבים בונים חוויה. ההבדל ביניהם הוא לא תקציב ולא טעם — הוא שיטת חשיבה. וזה בדיוק מה שאפשר ללמוד.&rdquo;
@@ -322,7 +322,7 @@ function AuthoritySection() {
 
         {/* DNA block */}
         <Fade>
-          <div className="rounded-2xl overflow-hidden mb-2">
+          <div className="rounded-xl card-frame overflow-hidden mb-2">
 
             {/* Header */}
             <div className="relative bg-[#1A1218] px-6 md:px-10 py-8 text-center overflow-hidden">
@@ -363,7 +363,7 @@ function AuthoritySection() {
                   { name: "ברברה ברזין", sub: "45+ שנות ניסיון", desc: "המייסדת. השיטה שלה עיצבה דורות של מעצבים ומעצבות בישראל. עשרות שנים של עשייה אמיתית בשטח — מזוקקת לתוך שיטה אחת ברורה." },
                   { name: "בוריס סולטנוב", sub: "המרצה המוביל", desc: "לוקח את הידע של ברברה ומגיש אותו בצורה ברורה, מעשית ומדויקת. מעשרות שנות הוראה — הוא יודע בדיוק איפה את נתקעת ואיך לפתוח את זה." },
                 ].map((item, i) => (
-                  <div key={i} className="bg-white/10 rounded-xl px-6 py-6">
+                  <div key={i} className="bg-white/10 rounded-xl card-frame px-6 py-6">
                     <p className="text-white font-bold text-xl mb-0.5">{item.name}</p>
                     <p className="text-[#F9D0CF] text-xs uppercase tracking-widest mb-3">{item.sub}</p>
                     <p className="text-white/85 text-base leading-relaxed">{item.desc}</p>
@@ -372,7 +372,7 @@ function AuthoritySection() {
               </div>
 
               {/* "Not anywhere else" block */}
-              <div className="bg-white/10 rounded-xl px-6 py-5 mb-7">
+              <div className="bg-white/10 rounded-xl card-frame px-6 py-5 mb-7">
                 <p className="text-[#F9D0CF] text-xs font-semibold uppercase tracking-widest mb-4 text-center">מה שלא תמצאי בשום מקום אחר</p>
                 <div className="space-y-3">
                   {[
@@ -495,10 +495,10 @@ function NotACourseSection() {
         <div className="grid md:grid-cols-3 gap-5 mb-12">
           {features.map((item, i) => (
             <Fade key={i}>
-              <div className="group relative bg-[#FAF6F0] rounded-2xl overflow-hidden border border-[#6B1A47]/20 hover:border-[#1A1218]/20 transition-all duration-300 shadow-lg">
+              <div className="group relative bg-[#FAF6F0] rounded-xl card-frame overflow-hidden border border-[#6B1A47]/20 hover:border-[#1A1218]/20 transition-all duration-300 shadow-lg">
                 <div className="absolute top-4 left-4 text-[#6B1A47]/10 font-bold text-4xl select-none">{item.label}</div>
                 <div className="p-8 flex flex-col items-center text-center gap-5">
-                  <div className="w-24 h-24 rounded-2xl bg-gradient-to-br from-[#6B1A47] to-[#A0285C] flex items-center justify-center text-white shadow-xl">
+                  <div className="w-24 h-24 rounded-xl card-frame bg-gradient-to-br from-[#6B1A47] to-[#A0285C] flex items-center justify-center text-white shadow-xl">
                     {item.icon}
                   </div>
                   <div>
@@ -539,7 +539,7 @@ function WhatYouGetSection() {
           <p className="text-[#6B1A47] font-semibold text-lg text-center mb-5">6 הפרקים הזמינים עכשיו:</p>
           <StaggerFade className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
             {CHAPTERS.map((ch) => (
-              <motion.div key={ch.number} variants={fadeUp} className="group bg-white rounded-2xl overflow-hidden border border-[#E8DDD0] hover:-translate-y-1 transition-transform duration-300 shadow-sm">
+              <motion.div key={ch.number} variants={fadeUp} className="group bg-white rounded-xl card-frame overflow-hidden border border-[#E8DDD0] hover:-translate-y-1 transition-transform duration-300 shadow-sm">
                 <div className="relative bg-[#6B1A47] py-5 px-5 overflow-hidden">
                   <span className="absolute left-2 top-1/2 -translate-y-1/2 text-[5.5rem] font-black text-white/[0.07] leading-none select-none pointer-events-none">{ch.number}</span>
                   <span className="relative z-10 text-[#F9D0CF] text-lg font-bold leading-snug block">{ch.name}</span>
@@ -554,7 +554,7 @@ function WhatYouGetSection() {
             ))}
           </StaggerFade>
 
-          <div className="bg-white rounded-2xl border border-[#E8DDD0] overflow-hidden shadow-sm">
+          <div className="bg-white rounded-xl card-frame border border-[#E8DDD0] overflow-hidden shadow-sm">
             <div className="px-6 py-4 text-center border-b border-[#E8DDD0]">
               <p className="text-[#6B1A47] font-bold text-base mb-0.5">✦ עוד פרקים בדרך ✦</p>
               <p className="text-[#5A3F50] text-base">המדריך מתפתח — הנה טעימה ממה שמגיע</p>
@@ -566,7 +566,7 @@ function WhatYouGetSection() {
                 { num: 9, name: "טקסטיל ורכות" },
                 { num: 10, name: "שילוב סגנונות" },
               ].map((ch) => (
-                <motion.div key={ch.num} variants={fadeUp} className="rounded-2xl overflow-hidden border border-[#E8DDD0] shadow-sm">
+                <motion.div key={ch.num} variants={fadeUp} className="rounded-xl card-frame overflow-hidden border border-[#E8DDD0] shadow-sm">
                   <div className="relative bg-[#6B1A47] overflow-hidden" style={{ paddingTop: "80%" }}>
                     <span className="absolute left-2 bottom-0 text-[5rem] font-black text-white/[0.07] leading-none select-none pointer-events-none">{ch.num}</span>
                     <div className="absolute inset-0 flex flex-col items-center justify-center gap-3">
@@ -623,7 +623,7 @@ function ChaptersDetailSection() {
           <motion.div
             key={ch.number}
             variants={fadeUp}
-            className={`relative overflow-hidden rounded-2xl px-7 py-7 ${i % 2 === 0 ? "bg-[#6B1A47]" : "bg-[#FAF6F0]"}`}
+            className={`relative overflow-hidden rounded-xl card-frame px-7 py-7 ${i % 2 === 0 ? "bg-[#6B1A47]" : "bg-[#FAF6F0]"}`}
           >
             <span
               className="absolute left-3 bottom-0 text-[9rem] font-black leading-none select-none pointer-events-none"
@@ -643,7 +643,7 @@ function ChaptersDetailSection() {
       </StaggerFade>
 
       <Fade className="max-w-3xl mx-auto px-4 md:px-8 mt-10">
-        <div className="bg-[#6B1A47] rounded-2xl px-8 py-7 text-center">
+        <div className="bg-[#6B1A47] rounded-xl card-frame px-8 py-7 text-center">
           <p className="text-white text-xl md:text-2xl font-bold leading-relaxed">
             את לא נכנסת לקורס סגור.
           </p>
@@ -673,7 +673,7 @@ function WhoIsItForSection() {
               "קונה ולא מרוצה עד הסוף",
               "רוצה בית שנראה מקצועי באמת",
             ].map((item, i) => (
-              <li key={i} className="flex items-start gap-3 text-[#1A1218] text-lg bg-white/60 rounded-xl px-4 py-4">
+              <li key={i} className="flex items-start gap-3 text-[#1A1218] text-lg bg-white/60 rounded-xl card-frame px-4 py-4">
                 <span className="text-[#6B1A47] flex-shrink-0 mt-0.5 font-bold">✦</span>
                 <span>{item}</span>
               </li>
@@ -714,7 +714,7 @@ function BenefitsSection() {
               "את חוסכת כסף",
               "ואת מרגישה שליטה",
             ].map((item, i) => (
-              <li key={i} className="flex items-center gap-3 text-white text-lg bg-white/10 rounded-xl px-4 py-3">
+              <li key={i} className="flex items-center gap-3 text-white text-lg bg-white/10 rounded-xl card-frame px-4 py-3">
                 <span className="text-[#F9D0CF] font-bold flex-shrink-0">✔</span>
                 <span>{item}</span>
               </li>
@@ -736,7 +736,7 @@ function PricingSection() {
           <h2 className="text-2xl md:text-3xl text-[#1A1218] font-bold mb-2">מה תקבלי מיד אחרי ההצטרפות?</h2>
         </Fade>
         <Fade>
-          <div className="border border-[#E8DDD0] rounded-2xl overflow-hidden">
+          <div className="border border-[#E8DDD0] rounded-xl card-frame overflow-hidden">
             <div className="bg-[#6B1A47] py-8 px-6 text-center">
               <p className="text-[#F9D0CF] text-sm mb-2 uppercase tracking-widest">מחיר השקה בלבד</p>
               <p className="text-white text-5xl font-bold">₪450</p>
@@ -789,7 +789,7 @@ function FAQSection() {
         <Fade className="text-center mb-8">
           <h2 className="text-2xl md:text-3xl text-[#1A1218] font-bold">שאלות נפוצות</h2>
         </Fade>
-        <div className="bg-white rounded-2xl px-6 md:px-8 py-2 shadow-md">
+        <div className="bg-white rounded-xl card-frame px-6 md:px-8 py-2 shadow-md">
           {FAQ_ITEMS.map((item, i) => (
             <FAQAccordionItem key={i} item={item} />
           ))}
