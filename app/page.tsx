@@ -277,7 +277,7 @@ function AuthoritySection() {
             <div className="flex justify-center mb-4">
               <div className="w-40 h-40 md:w-52 md:h-52 rounded-full overflow-hidden shadow-lg"
                 style={{ border: "5px solid rgba(255,255,255,0.3)", outline: "3px solid #6B1A47" }}>
-                <img src="/images/BORIS.jpg" alt="בוריס סולטנוב" className="w-full h-full object-cover object-top scale-110" />
+                <img src="/images/boris1234.jpg" alt="בוריס סולטנוב" className="w-full h-full object-cover object-top scale-110" />
               </div>
             </div>
             {/* Name + title */}
