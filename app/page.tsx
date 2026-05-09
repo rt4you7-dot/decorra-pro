@@ -325,11 +325,19 @@ function AuthoritySection() {
           <div className="rounded-2xl overflow-hidden mb-2">
 
             {/* Header */}
-            <div className="bg-[#1A1218] px-6 md:px-10 py-6 text-center">
-              <p className="text-[#F9D0CF] text-xs font-semibold uppercase tracking-[0.2em] mb-2">ה-DNA של Decorra Pro</p>
-              <p className="text-white text-xl md:text-2xl font-semibold leading-snug">
-                את מקבלת 45 שנות חוכמה דרך אחד המרצים החדים ביותר בתחום.
-              </p>
+            <div className="relative bg-[#1A1218] px-6 md:px-10 py-8 text-center overflow-hidden">
+              {/* Decorative transparent elements */}
+              <span className="absolute top-3 right-6 text-white/5 text-[7rem] font-black leading-none select-none pointer-events-none">✦</span>
+              <span className="absolute bottom-2 left-5 text-white/5 text-[5rem] font-black leading-none select-none pointer-events-none">◈</span>
+              <span className="absolute top-1/2 left-1/4 -translate-y-1/2 text-white/[0.03] text-[9rem] font-black leading-none select-none pointer-events-none">D</span>
+              <div className="relative z-10">
+                <p className="text-white text-3xl md:text-4xl font-bold tracking-wide mb-3">
+                  ה-DNA של <span className="text-[#F9D0CF]">Decorra Pro</span>
+                </p>
+                <p className="text-white/60 text-sm md:text-base font-normal leading-snug max-w-lg mx-auto">
+                  את מקבלת 45 שנות חוכמה דרך אחד המרצים החדים ביותר בתחום.
+                </p>
+              </div>
             </div>
 
             {/* Proof bar */}
