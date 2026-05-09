@@ -168,7 +168,7 @@ function CTAButton({ text = "הצטרפי עכשיו →" }: { text?: string }) 
   return (
     <a
       href="#form"
-      className="inline-block bg-[#6B1A47] hover:bg-[#4E1235] active:scale-95 text-white text-lg font-bold py-4 px-10 transition-all duration-300 hover:-translate-y-0.5 text-center w-full md:w-auto cursor-pointer select-none"
+      className="inline-block bg-[#6B1A47] hover:bg-[#4E1235] active:scale-95 text-white text-lg font-bold py-4 px-10 rounded-full transition-all duration-300 hover:-translate-y-0.5 text-center w-full md:w-auto cursor-pointer select-none"
     >
       {text}
     </a>
@@ -768,7 +768,7 @@ function PricingSection() {
                 <input type="tel" placeholder="טלפון נייד *" required dir="ltr" style={{ textAlign: "right" }}
                   className="w-full border border-[#E8DDD0] px-4 py-3.5 text-[#1A1218] bg-[#FAF6F0] focus:outline-none focus:border-[#6B1A47] text-lg transition-colors" />
                 <button type="submit"
-                  className="w-full bg-[#6B1A47] hover:bg-[#4E1235] active:scale-[0.99] text-white text-xl font-bold py-4 transition-all duration-300">
+                  className="w-full bg-[#6B1A47] hover:bg-[#4E1235] active:scale-[0.99] text-white text-xl font-bold py-4 rounded-full transition-all duration-300">
                   הצטרפי עכשיו →
                 </button>
               </form>
