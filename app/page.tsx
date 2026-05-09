@@ -438,7 +438,7 @@ function NotACourseSection() {
     <section className="py-10 md:py-16 px-4 md:px-8 max-w-3xl mx-auto">
       <Fade>
         <div className="bg-white border border-[#E8DDD0] rounded-2xl p-8 shadow-sm">
-          <h2 className="text-2xl md:text-3xl text-[#6B1A47] font-bold mb-5 text-center">
+          <h2 className="text-3xl md:text-4xl text-[#6B1A47] font-bold mb-5 text-center">
             חשוב להבין: זה לא קורס רגיל
           </h2>
           <div className="space-y-2 text-[#5A3F50] text-lg mb-6 text-center">
@@ -474,7 +474,7 @@ function WhatYouGetSection() {
     <section className="py-16 md:py-20 px-4 md:px-8 max-w-4xl mx-auto">
       <Fade className="text-center mb-10">
         <p className="text-[#5A3F50] text-lg mb-2">אז מה את מקבלת עכשיו?</p>
-        <h2 className="text-5xl md:text-6xl text-[#6B1A47] mb-2 tracking-wide">
+        <h2 className="text-3xl md:text-4xl text-[#6B1A47] mb-2 font-bold">
           DECORRA PRO
         </h2>
         <p className="text-[#5A3F50] text-lg mb-4">מבית סטודיו ברברה ברזין</p>
