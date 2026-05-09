@@ -57,6 +57,52 @@ const CHAPTERS: Chapter[] = [
   },
 ];
 
+interface ChapterDetail {
+  number: number;
+  name: string;
+  deep: string;
+  takeaway: string;
+}
+
+const CHAPTER_DETAILS: ChapterDetail[] = [
+  {
+    number: 1,
+    name: "שיח עומק: עיצוב עם כוונה",
+    deep: "לפני שבוחרים כיסא אחד, צריך לדעת מה את רוצה לחוות בבית. הפרק הזה מלמד אותך לשאול את השאלות הנכונות — ולענות עליהן בצורה שתנחה כל בחירה שתבואי אחריה.",
+    takeaway: "יוצאת עם תמונה ברורה של הבית שאת רוצה — לא רק יפה, אלא נכון לך.",
+  },
+  {
+    number: 2,
+    name: "סידור מדף: שינוי מיידי בעיניים",
+    deep: "קומפוזיציה היא לא כישרון — היא חוק. הפרק הזה מלמד אותך 3 עקרונות שעובדים על כל מדף, מזנון, שולחן עבודה, ואפילו אדן חלון.",
+    takeaway: "תוכלי לסדר כל משטח בבית — ולדעת למה זה עובד.",
+  },
+  {
+    number: 3,
+    name: "צבע: להפסיק לפחד מטעויות",
+    deep: "70% מהשגיאות בעיצוב מגיעות מבחירת צבע לא נכונה. הפרק הזה נותן לך מתודה ברורה לבחירת צבע שמתאים לחלל — לא לפי תחושה, לפי כללים.",
+    takeaway: "לא תצטרכי 'לנסות ולראות' — תדעי מה נכון לפני שצובעים.",
+  },
+  {
+    number: 4,
+    name: "שרטוטים: להבין תכנית העמדה",
+    deep: "מעצבת מסתכלת על תכנית ורואה את החדר הגמור. הפרק הזה מלמד אותך לקרוא תכנית העמדה, לדמיין גדלים בפועל, ולהשתמש בה לקבלת החלטות מדויקות.",
+    takeaway: "תגיעי לפגישה עם הקבלן מוכנה — ולא תאמיני כמה זה ישנה הכל.",
+  },
+  {
+    number: 5,
+    name: "שיטת הבצל: להבין מה לא עובד",
+    deep: "כשמשהו בחלל לא עובד — בדרך כלל שמים אצבע על הדבר הלא נכון. הפרק הזה מלמד אותך לפרק את החלל לשכבות ולזהות בדיוק מה צריך לשנות.",
+    takeaway: "לא תבזבזי כסף על 'פתרונות' שלא פותרים את הבעיה האמיתית.",
+  },
+  {
+    number: 6,
+    name: "סיור באולם תצוגה: לבחור כמו מקצוענית",
+    deep: "מגיעים לאולם תצוגה בלי שיטה — יוצאים עם המון פריטים שלא מתחברים. הפרק הזה נותן לך כלי עבודה ורשימת ביקורת ברורה לבחירת פריטים שיחיו ביחד.",
+    takeaway: "הקנייה הבאה שלך תרגיש שונה לגמרי — מכוונת, ברורה, ומחוברת לתמונה השלמה.",
+  },
+];
+
 const FAQ_ITEMS: FAQItem[] = [
   {
     q: "6 פרקים — זה מספיק?",
@@ -473,45 +519,48 @@ function WhatYouGetSection() {
 
 function ChaptersDetailSection() {
   return (
-    <section className="bg-white py-16 md:py-20 px-4 md:px-8">
-      <div className="max-w-3xl mx-auto">
-        <Fade className="text-center mb-12">
+    <section className="bg-white py-16 md:py-20">
+      <div className="max-w-3xl mx-auto px-4 md:px-8 mb-10">
+        <Fade className="text-center">
           <h2 className="text-2xl md:text-3xl text-[#1A1218] font-bold">מה מחכה לך בפנים?</h2>
           <p className="text-[#5A3F50] text-lg mt-2">כל פרק בנוי סביב כלי אחד — ברור, ישיר, עם תוצאה מיידית</p>
         </Fade>
-        <StaggerFade className="space-y-6">
-          {CHAPTERS.map((ch, i) => (
-            <motion.div
-              key={ch.number}
-              variants={fadeUp}
-              className="flex gap-5 items-start"
-            >
-              <div className={`flex-shrink-0 w-14 h-14 rounded-2xl flex items-center justify-center font-bold text-2xl shadow-sm ${i % 2 === 0 ? "bg-[#6B1A47] text-white" : "bg-[#F9D0CF] text-[#6B1A47]"}`}>
-                {ch.number}
-              </div>
-              <div className="flex-1 pt-1">
-                <p className="font-bold text-[#1A1218] text-xl mb-1">{ch.name}</p>
-                <p className="text-[#5A3F50] text-lg leading-relaxed mb-3">{ch.description}</p>
-                <span className="inline-flex items-center gap-2 bg-[#FAF6F0] border border-[#E8DDD0] rounded-full px-4 py-1.5">
-                  <span className="text-base">✅</span>
-                  <span className="text-[#6B1A47] text-base font-semibold">{ch.transformation}</span>
-                </span>
-              </div>
-            </motion.div>
-          ))}
-        </StaggerFade>
-
-        <Fade className="mt-12">
-          <div className="bg-[#6B1A47] rounded-2xl px-8 py-7 text-center">
-            <p className="text-white text-xl md:text-2xl font-bold leading-relaxed">
-              את לא נכנסת לקורס סגור.
-            </p>
-            <p className="text-[#F9D0CF] text-xl md:text-2xl font-bold leading-relaxed mt-1">
-              את נכנסת למערכת שמתפתחת איתך.
-            </p>
-          </div>
-        </Fade>
       </div>
+
+      <StaggerFade className="max-w-3xl mx-auto px-4 md:px-8 space-y-4">
+        {CHAPTER_DETAILS.map((ch, i) => (
+          <motion.div
+            key={ch.number}
+            variants={fadeUp}
+            className={`relative overflow-hidden rounded-2xl px-7 py-7 ${i % 2 === 0 ? "bg-[#6B1A47]" : "bg-[#FAF6F0]"}`}
+          >
+            <span
+              className="absolute left-3 bottom-0 text-[9rem] font-black leading-none select-none pointer-events-none"
+              style={{ opacity: 0.07, color: i % 2 === 0 ? "#fff" : "#6B1A47" }}
+            >
+              {ch.number}
+            </span>
+            <div className="relative z-10">
+              <p className={`font-bold text-xl mb-2 ${i % 2 === 0 ? "text-white" : "text-[#1A1218]"}`}>{ch.name}</p>
+              <p className={`text-lg leading-relaxed mb-4 ${i % 2 === 0 ? "text-white/80" : "text-[#5A3F50]"}`}>{ch.deep}</p>
+              <span className={`inline-flex items-center gap-2 rounded-full px-4 py-1.5 text-base font-semibold ${i % 2 === 0 ? "bg-[#F9D0CF] text-[#6B1A47]" : "bg-[#6B1A47] text-white"}`}>
+                ✅ {ch.takeaway}
+              </span>
+            </div>
+          </motion.div>
+        ))}
+      </StaggerFade>
+
+      <Fade className="max-w-3xl mx-auto px-4 md:px-8 mt-10">
+        <div className="bg-[#6B1A47] rounded-2xl px-8 py-7 text-center">
+          <p className="text-white text-xl md:text-2xl font-bold leading-relaxed">
+            את לא נכנסת לקורס סגור.
+          </p>
+          <p className="text-[#F9D0CF] text-xl md:text-2xl font-bold leading-relaxed mt-1">
+            את נכנסת למערכת שמתפתחת איתך.
+          </p>
+        </div>
+      </Fade>
     </section>
   );
 }
@@ -718,8 +767,8 @@ export default function DecoraProPage() {
       <TruthSection />
       <NotACourseSection />
       <WhatYouGetSection />
-      <ChaptersDetailSection />
       <WhoIsItForSection />
+      <ChaptersDetailSection />
       <BenefitsSection />
       <PricingSection />
       <FAQSection />
