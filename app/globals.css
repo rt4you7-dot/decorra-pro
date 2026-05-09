@@ -63,8 +63,7 @@ mark {
   outline: none;
 }
 
-/* Card inner border — white 60% opacity, 10px wide inset */
+/* Card border — 5px white 60% opacity */
 .card-frame {
-  outline: 10px solid rgba(255, 255, 255, 0.6);
-  outline-offset: -10px;
+  border: 5px solid rgba(255, 255, 255, 0.6) !important;
 }
