@@ -241,33 +241,33 @@ function AuthoritySection() {
         <Fade className="text-center mb-12">
           <h2 className="text-2xl md:text-3xl text-[#1A1218] font-bold">מי עומד מאחורי השיטה?</h2>
         </Fade>
-        <StaggerFade className="grid md:grid-cols-2 gap-8 mb-10">
+        <StaggerFade className="grid md:grid-cols-2 gap-6 mb-10">
           {/* Boris */}
-          <motion.div variants={fadeUp} className="flex gap-5">
-            <img
-              src="/images/BORIS.jpg"
-              alt="בוריס סולטנוב"
-              className="w-16 h-16 rounded-full object-cover flex-shrink-0"
-            />
-            <div>
-              <p className="font-bold text-[#1A1218] text-lg">בוריס סולטנוב</p>
-              <p className="text-[#6B1A47] text-sm font-semibold mb-2">מרצה בכיר | סטודיו ברברה ברזין</p>
+          <motion.div variants={fadeUp} className="bg-white rounded-2xl overflow-hidden border border-[#E8DDD0]">
+            <div className="h-72 overflow-hidden">
+              <img src="/images/BORIS.jpg" alt="בוריס סולטנוב" className="w-full h-full object-cover object-top" />
+            </div>
+            <div className="bg-[#6B1A47] px-5 py-4">
+              <p className="text-white font-bold text-lg">בוריס סולטנוב</p>
+              <p className="text-[#F9D0CF] text-sm">מרצה בכיר | סטודיו ברברה ברזין</p>
+            </div>
+            <div className="px-5 py-4 space-y-2">
               <p className="text-[#5A3F50] text-sm leading-relaxed">מייסד מחלקת הום סטיילינג והמחלקה הבינלאומית. 20+ שנות ניסיון בעיצוב פנים ובהוראה.</p>
-              <p className="text-[#1A1218] font-semibold text-sm mt-2">מלמד אותך לראות את החלל — לא רק להסתכל עליו.</p>
+              <p className="text-[#1A1218] font-semibold text-sm">מלמד אותך לראות את החלל — לא רק להסתכל עליו.</p>
             </div>
           </motion.div>
           {/* Barbara */}
-          <motion.div variants={fadeUp} className="flex gap-5">
-            <img
-              src="/images/barbara.jpg"
-              alt="ברברה ברזין"
-              className="w-16 h-16 rounded-full object-cover flex-shrink-0"
-            />
-            <div>
-              <p className="font-bold text-[#1A1218] text-lg">ברברה ברזין</p>
-              <p className="text-[#6B1A47] text-sm font-semibold mb-2">מייסדת הסטודיו | אוטוריטה מובילה בעיצוב פנים</p>
+          <motion.div variants={fadeUp} className="bg-white rounded-2xl overflow-hidden border border-[#E8DDD0]">
+            <div className="h-72 overflow-hidden">
+              <img src="/images/barbara.jpg" alt="ברברה ברזין" className="w-full h-full object-cover object-top" />
+            </div>
+            <div className="bg-[#6B1A47] px-5 py-4">
+              <p className="text-white font-bold text-lg">ברברה ברזין</p>
+              <p className="text-[#F9D0CF] text-sm">מייסדת הסטודיו | אוטוריטה מובילה בעיצוב פנים</p>
+            </div>
+            <div className="px-5 py-4 space-y-2">
               <p className="text-[#5A3F50] text-sm leading-relaxed">45+ שנה בתחום עיצוב הפנים בישראל. מנטורית של אלפי מעצבים ובוגרים ברחבי הארץ.</p>
-              <p className="text-[#1A1218] font-semibold text-sm mt-2">בנתה שיטה — לא סתם תוכן. זו המתודולוגיה שמאחורי Decorra Pro.</p>
+              <p className="text-[#1A1218] font-semibold text-sm">בנתה שיטה — לא סתם תוכן. זו המתודולוגיה שמאחורי Decorra Pro.</p>
             </div>
           </motion.div>
         </StaggerFade>
