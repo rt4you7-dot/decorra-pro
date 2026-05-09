@@ -251,9 +251,11 @@ function AuthoritySection() {
         <StaggerFade className="grid md:grid-cols-2 gap-8 mb-10">
           {/* Boris */}
           <motion.div variants={fadeUp} className="flex gap-5">
-            <div className="w-16 h-16 rounded-full bg-[#E8DDD0] flex-shrink-0 flex items-center justify-center text-[#5A3F50] text-xs text-center leading-tight">
-              80×80
-            </div>
+            <img
+              src="/images/BORIS-802x1024.jpg"
+              alt="בוריס סולטנוב"
+              className="w-16 h-16 rounded-full object-cover flex-shrink-0"
+            />
             <div>
               <p className="font-bold text-[#1A1218] text-lg">בוריס סולטנוב</p>
               <p className="text-[#6B1A47] text-sm font-semibold mb-2">מרצה בכיר | סטודיו ברברה ברזין</p>
