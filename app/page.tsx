@@ -302,26 +302,30 @@ function AuthoritySection() {
               ))}
             </div>
 
-            {/* Credentials */}
-            <div className="px-6 md:px-8 py-6 space-y-3">
+            {/* Credentials — 2-col grid cards */}
+            <div className="px-6 md:px-8 py-6 grid grid-cols-1 md:grid-cols-2 gap-3">
               {[
-                { icon: "🎓", text: "מייסד המחלקה הבינלאומית של הסטודיו" },
-                { icon: "✈️", text: "מוביל משלחות לימוד למרכזי עיצוב מובילים בעולם" },
-                { icon: "☯️", text: "הסמכה בינלאומית בפילוסופיה סינית ופנג שואי" },
-                { icon: "🧠", text: "מטפל NLP — מבין את הפסיכולוגיה של החלל" },
-                { icon: "🏢", text: "סטודיו עצמאי המתמחה בפרויקטים מסחריים ופרטיים מורכבים" },
+                { icon: "🎓", title: "מייסד המחלקה הבינלאומית", sub: "של סטודיו ברברה ברזין" },
+                { icon: "✈️", title: "מוביל משלחות לימוד", sub: "למרכזי עיצוב מובילים בעולם" },
+                { icon: "☯️", title: "הסמכה בינלאומית", sub: "פילוסופיה סינית ופנג שואי" },
+                { icon: "🧠", title: "מטפל NLP", sub: "מבין את הפסיכולוגיה של החלל" },
+                { icon: "🏢", title: "סטודיו עצמאי", sub: "פרויקטים מסחריים ופרטיים מורכבים" },
+                { icon: "🌍", title: "ניסיון בינלאומי", sub: "השתלמויות באסיה, אירופה וצפון אפריקה" },
               ].map((item, i) => (
-                <div key={i} className="flex items-start gap-3">
-                  <span className="text-lg flex-shrink-0 mt-0.5">{item.icon}</span>
-                  <p className="text-[#5A3F50] text-base leading-snug">{item.text}</p>
+                <div key={i} className="flex items-start gap-3 bg-[#FAF6F0] rounded-xl px-4 py-4 border border-[#E8DDD0]">
+                  <span className="text-2xl flex-shrink-0">{item.icon}</span>
+                  <div>
+                    <p className="text-[#1A1218] font-bold text-lg leading-tight">{item.title}</p>
+                    <p className="text-[#5A3F50] text-base mt-0.5">{item.sub}</p>
+                  </div>
                 </div>
               ))}
             </div>
 
             {/* Quote */}
-            <div className="mx-6 md:mx-8 mb-7 rounded-2xl bg-[#6B1A47] px-6 py-5">
-              <p className="text-[#F9D0CF] text-sm uppercase tracking-widest mb-2">בלשונו</p>
-              <p className="text-white text-base md:text-lg italic leading-relaxed">
+            <div className="mx-6 md:mx-8 mb-7 rounded-2xl bg-[#6B1A47] px-6 py-6">
+              <p className="text-[#F9D0CF] text-xs font-semibold uppercase tracking-widest mb-3">בלשונו</p>
+              <p className="text-white text-lg md:text-xl italic leading-relaxed font-medium">
                 &ldquo;עיצוב הוא השתקפות של חוויה אישית ואינדיווידואלית בעולם קוסמופוליטי נטול גבולות&rdquo;
               </p>
             </div>
