@@ -270,21 +270,26 @@ function AuthoritySection() {
           <h2 className="text-2xl md:text-3xl text-[#1A1218] font-bold">המרצה המוביל. הידע של האגדה.</h2>
         </Fade>
 
-        {/* Boris card — centered circle photo then details */}
+        {/* Boris card — large photo top, content below */}
         <Fade>
-          <div className="bg-white rounded-2xl shadow-md mb-8 px-6 md:px-10 py-8 text-center">
-            {/* Circle photo centered */}
-            <div className="flex justify-center mb-4">
-              <div className="w-40 h-40 md:w-52 md:h-52 rounded-full overflow-hidden shadow-lg"
-                style={{ border: "5px solid rgba(255,255,255,0.3)", outline: "3px solid #6B1A47" }}>
-                <img src="/images/boris1234.jpg" alt="בוריס סולטנוב" className="w-full h-full object-cover object-top scale-110" />
+          <div className="bg-white rounded-2xl shadow-md mb-8 overflow-hidden">
+            {/* Large photo — full width, tall crop */}
+            <div className="relative h-72 md:h-96 overflow-hidden">
+              <img
+                src="/images/boris1234.jpg"
+                alt="בוריס סולטנוב"
+                className="w-full h-full object-cover object-top"
+                style={{ filter: "brightness(1.12) contrast(0.97)" }}
+              />
+              {/* Gradient overlay bottom for name */}
+              <div className="absolute inset-x-0 bottom-0 h-28 bg-gradient-to-t from-[#6B1A47]/80 to-transparent" />
+              <div className="absolute bottom-4 right-6">
+                <p className="text-white font-bold text-2xl leading-tight">בוריס סולטנוב</p>
+                <p className="text-[#F9D0CF] text-sm font-medium">המרצה המוביל | סטודיו ברברה ברזין</p>
               </div>
             </div>
-            {/* Name + title */}
-            <p className="text-[#1A1218] font-bold text-2xl mb-1">בוריס סולטנוב</p>
-            <p className="text-[#6B1A47] text-base font-medium mb-6">המרצה המוביל | סטודיו ברברה ברזין</p>
             {/* Credentials */}
-            <div className="text-right space-y-2.5 mb-6 max-w-lg mx-auto">
+            <div className="px-6 md:px-8 py-6 space-y-2.5">
               {[
                 "20+ שנות ניסיון בהוראה ועיצוב פנים",
                 "מייסד המחלקה הבינלאומית של הסטודיו",
@@ -299,8 +304,8 @@ function AuthoritySection() {
               ))}
             </div>
             {/* Quote */}
-            <div className="border-r-4 border-[#F9D0CF] pr-5 bg-[#FAF6F0] rounded-xl py-4 px-5 text-right">
-              <p className="text-[#1A1218] text-base md:text-lg italic leading-relaxed">
+            <div className="mx-6 md:mx-8 mb-6 border-r-4 border-[#F9D0CF] pr-5 bg-[#FAF6F0] rounded-xl py-4 px-5">
+              <p className="text-[#1A1218] text-base italic leading-relaxed">
                 &ldquo;עיצוב הוא השתקפות של חוויה אישית ואינדיווידואלית בעולם קוסמופוליטי נטול גבולות&rdquo;
               </p>
             </div>
