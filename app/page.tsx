@@ -249,7 +249,7 @@ function HeroSection() {
     <section className="bg-white py-20 md:py-28 px-4 md:px-8">
       <div className="max-w-2xl mx-auto text-center">
         <Fade>
-          <p className="text-[#6B1A47] font-semibold text-sm uppercase tracking-widest mb-4">
+          <p className="text-[#6B1A47] font-semibold text-[20px] uppercase tracking-widest mb-4">
             מבלבול וחוסר ביטחון לשיטה ברורה שעובדת
           </p>
           <h1 className="text-3xl md:text-4xl lg:text-5xl text-[#1A1218] leading-tight mb-5 font-bold">
