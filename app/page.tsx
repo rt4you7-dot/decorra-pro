@@ -312,9 +312,8 @@ function AuthoritySection() {
 
             {/* Quote */}
             <div className="mx-6 md:mx-8 mb-7 rounded-2xl bg-[#6B1A47] px-6 py-6">
-              <p className="text-[#F9D0CF]/60 text-xs mb-1">משפט לדוגמא</p>
-              <p className="text-[#F9D0CF] text-xs font-semibold uppercase tracking-widest mb-3">בלשונו</p>
-              <p className="text-white text-lg md:text-xl italic leading-relaxed font-medium">
+              <p className="text-[#F9D0CF]/60 text-xs mb-3 text-center">משפט לדוגמא</p>
+              <p className="text-white text-lg md:text-xl leading-relaxed font-medium text-center">
                 &ldquo;רוב האנשים קונים פריטים. מעצבים בונים חוויה. ההבדל ביניהם הוא לא תקציב ולא טעם — הוא שיטת חשיבה. וזה בדיוק מה שאפשר ללמוד.&rdquo;
               </p>
             </div>
