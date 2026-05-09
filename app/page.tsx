@@ -305,15 +305,15 @@ function AuthoritySection() {
             {/* Credentials — 2-col grid cards */}
             <div className="px-6 md:px-8 py-6 grid grid-cols-1 md:grid-cols-2 gap-3">
               {[
-                { icon: "🎓", title: "מייסד המחלקה הבינלאומית", sub: "של סטודיו ברברה ברזין" },
-                { icon: "✈️", title: "מוביל משלחות לימוד", sub: "למרכזי עיצוב מובילים בעולם" },
-                { icon: "☯️", title: "הסמכה בינלאומית", sub: "פילוסופיה סינית ופנג שואי" },
-                { icon: "🧠", title: "מטפל NLP", sub: "מבין את הפסיכולוגיה של החלל" },
-                { icon: "🏢", title: "סטודיו עצמאי", sub: "פרויקטים מסחריים ופרטיים מורכבים" },
-                { icon: "🌍", title: "ניסיון בינלאומי", sub: "השתלמויות באסיה, אירופה וצפון אפריקה" },
+                { title: "מייסד המחלקה הבינלאומית", sub: "של סטודיו ברברה ברזין" },
+                { title: "מוביל משלחות לימוד", sub: "למרכזי עיצוב מובילים בעולם" },
+                { title: "הסמכה בינלאומית", sub: "פילוסופיה סינית ופנג שואי" },
+                { title: "מטפל NLP", sub: "מבין את הפסיכולוגיה של החלל" },
+                { title: "סטודיו עצמאי", sub: "פרויקטים מסחריים ופרטיים מורכבים" },
+                { title: "ניסיון בינלאומי", sub: "השתלמויות באסיה, אירופה וצפון אפריקה" },
               ].map((item, i) => (
-                <div key={i} className="flex items-start gap-3 bg-[#FAF6F0] rounded-xl px-4 py-4 border border-[#E8DDD0]">
-                  <span className="text-2xl flex-shrink-0">{item.icon}</span>
+                <div key={i} className="flex items-start gap-4 bg-[#FAF6F0] rounded-xl px-4 py-4 border border-[#E8DDD0]">
+                  <span className="flex-shrink-0 mt-1 w-2 h-2 rounded-full bg-[#6B1A47] ring-4 ring-[#6B1A47]/15" />
                   <div>
                     <p className="text-[#1A1218] font-bold text-lg leading-tight">{item.title}</p>
                     <p className="text-[#5A3F50] text-base mt-0.5">{item.sub}</p>
