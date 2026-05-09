@@ -320,28 +320,25 @@ function AuthoritySection() {
           </div>
         </Fade>
 
-        {/* Barbara → Boris → You — redesigned as origin story */}
+        {/* DNA block */}
         <Fade>
           <div className="rounded-2xl overflow-hidden mb-2">
             <div className="bg-[#1A1218] px-6 md:px-10 py-5 text-center">
-              <p className="text-[#F9D0CF] text-xs font-semibold uppercase tracking-[0.2em]">ה-DNA של Decorra Pro</p>
+              <p className="text-[#F9D0CF] text-xs font-semibold uppercase tracking-[0.2em] mb-2">ה-DNA של Decorra Pro</p>
+              <p className="text-white text-lg md:text-xl font-semibold leading-snug">
+                את מקבלת 45 שנות חוכמה דרך אחד המרצים החדים ביותר בתחום.
+              </p>
             </div>
             <div className="bg-[#6B1A47] px-6 md:px-10 py-8">
-              <div className="grid md:grid-cols-3 gap-6 mb-7">
+              <div className="grid md:grid-cols-2 gap-5 mb-7">
                 {[
-                  { name: "ברברה ברזין", sub: "45+ שנות ניסיון", desc: "המייסדת. השיטה שלה עיצבה דורות של מעצבים בישראל." },
-                  { name: "בוריס סולטנוב", sub: "המרצה המוביל", desc: "לוקח את הידע של ברברה ומגיש אותו בצורה ברורה, מעשית ומדויקת." },
-                  { name: "את", sub: "בת הקורס", desc: "מקבלת 45 שנות חוכמה דרך אחד המרצים החדים ביותר בתחום." },
+                  { name: "ברברה ברזין", sub: "45+ שנות ניסיון", desc: "המייסדת. השיטה שלה עיצבה דורות של מעצבים ומעצבות בישראל. עשרות שנים של עשייה אמיתית בשטח — מזוקקת לתוך שיטה אחת ברורה." },
+                  { name: "בוריס סולטנוב", sub: "המרצה המוביל", desc: "לוקח את הידע של ברברה ומגיש אותו בצורה ברורה, מעשית ומדויקת. מעשרות שנות הוראה — הוא יודע בדיוק איפה את נתקעת ואיך לפתוח את זה." },
                 ].map((item, i) => (
-                  <div key={i} className="text-center">
-                    {i > 0 && (
-                      <div className="hidden md:flex justify-start items-center absolute -right-4 top-1/2 -translate-y-1/2 text-[#F9D0CF] text-2xl">→</div>
-                    )}
-                    <div className="bg-white/10 rounded-xl px-5 py-5 h-full">
-                      <p className="text-white font-bold text-xl mb-1">{item.name}</p>
-                      <p className="text-[#F9D0CF] text-xs uppercase tracking-widest mb-3">{item.sub}</p>
-                      <p className="text-white/80 text-sm leading-relaxed">{item.desc}</p>
-                    </div>
+                  <div key={i} className="bg-white/10 rounded-xl px-6 py-6">
+                    <p className="text-white font-bold text-xl mb-0.5">{item.name}</p>
+                    <p className="text-[#F9D0CF] text-xs uppercase tracking-widest mb-3">{item.sub}</p>
+                    <p className="text-white/85 text-base leading-relaxed">{item.desc}</p>
                   </div>
                 ))}
               </div>
