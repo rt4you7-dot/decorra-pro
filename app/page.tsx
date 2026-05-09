@@ -181,6 +181,26 @@ function Highlight({ children }: { children: React.ReactNode }) {
   );
 }
 
+// Brand name typographic style — Playfair Display with generous tracking
+const BRAND_STYLE: React.CSSProperties = {
+  fontFamily: "var(--font-playfair), 'Playfair Display', serif",
+  letterSpacing: "0.12em",
+  fontWeight: 700,
+};
+
+function withBrand(text: string) {
+  const parts = text.split(/(Decorra Pro|DECORRA PRO)/g);
+  return (
+    <>
+      {parts.map((p, i) =>
+        p === "Decorra Pro" || p === "DECORRA PRO" ? (
+          <span key={i} style={BRAND_STYLE}>{p}</span>
+        ) : p
+      )}
+    </>
+  );
+}
+
 function FAQAccordionItem({ item }: { item: FAQItem }) {
   const [open, setOpen] = useState(false);
   return (
@@ -200,7 +220,7 @@ function FAQAccordionItem({ item }: { item: FAQItem }) {
           transition={{ duration: 0.25 }}
           className="pb-5 text-[#5A3F50] text-lg leading-relaxed"
         >
-          {item.a}
+          {withBrand(item.a)}
         </motion.p>
       )}
     </div>
@@ -261,7 +281,7 @@ function HeroSection() {
 
 function AuthoritySection() {
   return (
-    <section className="bg-[#F9D0CF] py-16 md:py-20 px-4 md:px-8">
+    <section className="bg-[#FBDDDD] py-16 md:py-20 px-4 md:px-8">
       <div className="max-w-4xl mx-auto">
 
         {/* Title */}
@@ -324,20 +344,14 @@ function AuthoritySection() {
         <Fade>
           <div className="card-frame overflow-hidden mb-2">
 
-            {/* Header */}
-            <div className="relative bg-[#1A1218] px-6 md:px-10 py-8 text-center overflow-hidden">
-              {/* Decorative transparent elements */}
-              <span className="absolute top-3 right-6 text-white/5 text-[7rem] font-black leading-none select-none pointer-events-none">✦</span>
-              <span className="absolute bottom-2 left-5 text-white/5 text-[5rem] font-black leading-none select-none pointer-events-none">◈</span>
-              <span className="absolute top-1/2 left-1/4 -translate-y-1/2 text-white/[0.03] text-[9rem] font-black leading-none select-none pointer-events-none">D</span>
-              <div className="relative z-10">
-                <p className="text-white text-3xl md:text-4xl font-bold tracking-wide mb-3">
-                  ה-DNA של <span className="text-[#F9D0CF]">Decorra Pro</span>
-                </p>
-                <p className="text-white/60 text-sm md:text-base font-normal leading-snug max-w-lg mx-auto">
-                  את מקבלת 45 שנות חוכמה דרך אחד המרצים החדים ביותר בתחום.
-                </p>
-              </div>
+            {/* Header — white */}
+            <div className="bg-white px-6 md:px-10 py-8 text-center border-b border-[#E8DDD0]">
+              <p className="text-[#1A1218] text-3xl md:text-4xl font-bold tracking-wide mb-3">
+                ה-DNA של <span className="text-[#6B1A47]" style={BRAND_STYLE}>Decorra Pro</span>
+              </p>
+              <p className="text-[#5A3F50] text-sm md:text-base leading-snug max-w-lg mx-auto">
+                את מקבלת 45 שנות חוכמה דרך אחד המרצים החדים ביותר בתחום.
+              </p>
             </div>
 
             {/* Proof bar */}
@@ -355,62 +369,57 @@ function AuthoritySection() {
               ))}
             </div>
 
-            <div className="bg-[#6B1A47] px-6 md:px-10 py-8">
-
-              {/* Barbara + Boris cards */}
-              <div className="grid md:grid-cols-2 gap-5 mb-7">
+            {/* Barbara + Boris cards — cream bg, large centered photos */}
+            <div className="bg-[#FAF6F0] px-6 md:px-10 py-10">
+              <div className="grid md:grid-cols-2 gap-10">
                 {[
                   { name: "ברברה ברזין", sub: "45+ שנות ניסיון", desc: "המייסדת. השיטה שלה עיצבה דורות של מעצבים ומעצבות בישראל. עשרות שנים של עשייה אמיתית בשטח — מזוקקת לתוך שיטה אחת ברורה.", img: "/images/barbara.jpg" },
                   { name: "בוריס סולטנוב", sub: "המרצה המוביל", desc: "לוקח את הידע של ברברה ומגיש אותו בצורה ברורה, מעשית ומדויקת. מעשרות שנות הוראה — הוא יודע בדיוק איפה את נתקעת ואיך לפתוח את זה.", img: "/images/boris1234.jpg" },
                 ].map((item, i) => (
-                  <div key={i} className="bg-white/10 px-6 py-6">
-                    <div className="flex items-center gap-3 mb-3">
-                      <div className="w-12 h-12 rounded-full overflow-hidden flex-shrink-0 border-2 border-[#F9D0CF]/50">
-                        <img src={item.img} alt={item.name} className="w-full h-full object-cover object-top" />
-                      </div>
-                      <div>
-                        <p className="text-white font-bold text-xl leading-tight">{item.name}</p>
-                        <p className="text-[#F9D0CF] text-xs uppercase tracking-widest">{item.sub}</p>
-                      </div>
+                  <div key={i} className="flex flex-col items-center text-center">
+                    <div className="w-[220px] h-[220px] rounded-full overflow-hidden border-4 border-[#F9D0CF] mb-5 flex-shrink-0 shadow-md">
+                      <img src={item.img} alt={item.name} className="w-full h-full object-cover object-top" />
                     </div>
-                    <p className="text-white/85 text-base leading-relaxed">{item.desc}</p>
+                    <p className="text-[#1A1218] font-bold text-2xl leading-tight mb-1">{item.name}</p>
+                    <p className="text-[#6B1A47] text-xs font-semibold uppercase tracking-widest mb-4">{item.sub}</p>
+                    <p className="text-[#5A3F50] text-base leading-relaxed max-w-xs">{item.desc}</p>
                   </div>
                 ))}
               </div>
-
-              {/* "Not anywhere else" block */}
-              <div className="bg-white/10 px-6 py-5 mb-7">
-                <p className="text-[#F9D0CF] text-xs font-semibold uppercase tracking-widest mb-4 text-center">מה שלא תמצאי בשום מקום אחר</p>
-                <div className="space-y-3">
-                  {[
-                    "לא תאוריה כללית — כל פרק הוא כלי עבודה שאפשר ליישם מיד",
-                    "לא קורס שנגמר — שיטה שמתפתחת ומלווה אותך הלאה",
-                    "לא ידע מפוזר — חומר מרוכז, מדויק ובנוי לפי סדר הגיוני",
-                    "לא נלמד בשום מקום בצורה כל כך מרוכזת ומעשית",
-                  ].map((item, i) => (
-                    <div key={i} className="flex items-start gap-3">
-                      <span className="text-[#F9D0CF] font-bold mt-0.5 flex-shrink-0">✗</span>
-                      <p className="text-white/85 text-base">{item}</p>
-                    </div>
-                  ))}
-                </div>
-              </div>
-
-              {/* Big quote */}
-              <div className="text-center border-t border-white/20 pt-7 space-y-4">
-                <p className="text-white text-xl md:text-2xl font-bold leading-relaxed max-w-2xl mx-auto">
-                  מה שסטודנטים לעיצוב פנים לומדים על הומסטיילינג לאורך שנות הלימודים —
-                  <span className="text-[#F9D0CF]"> את מקבלת כאן. ב-Decorra Pro.</span>
-                </p>
-                <p className="text-white/75 text-base md:text-lg leading-relaxed max-w-xl mx-auto">
-                  התוכן הכי מדויק והכי מזוקק שיש — מוגש בצורה פשוטה וברורה, עם חומר נגיש לכולן.
-                </p>
-                <p className="inline-block bg-[#F5F2E9] text-[#6B1A47] text-lg md:text-xl font-bold px-6 py-3 mt-2">
-                  בלי לבזבז שנים כדי ללמוד אותו.
-                </p>
-              </div>
-
             </div>
+
+            {/* "Not anywhere else" — contained plum band */}
+            <div className="bg-[#6B1A47] px-6 md:px-10 py-7">
+              <p className="text-[#F9D0CF] text-xs font-semibold uppercase tracking-widest mb-4 text-center">מה שלא תמצאי בשום מקום אחר</p>
+              <div className="space-y-3 max-w-lg mx-auto">
+                {[
+                  "לא תאוריה כללית — כל פרק הוא כלי עבודה שאפשר ליישם מיד",
+                  "לא קורס שנגמר — שיטה שמתפתחת ומלווה אותך הלאה",
+                  "לא ידע מפוזר — חומר מרוכז, מדויק ובנוי לפי סדר הגיוני",
+                  "לא נלמד בשום מקום בצורה כל כך מרוכזת ומעשית",
+                ].map((item, i) => (
+                  <div key={i} className="flex items-start gap-3">
+                    <span className="text-[#F9D0CF] font-bold mt-0.5 flex-shrink-0">✗</span>
+                    <p className="text-white/85 text-base">{item}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* Big quote — cream bg */}
+            <div className="bg-[#F5F2E9] px-6 md:px-10 py-10 text-center space-y-4">
+              <p className="text-[#1A1218] text-xl md:text-2xl font-bold leading-relaxed max-w-2xl mx-auto">
+                מה שסטודנטים לעיצוב פנים לומדים על הומסטיילינג לאורך שנות הלימודים —
+                <span className="text-[#6B1A47]"> את מקבלת כאן. ב-<span style={BRAND_STYLE}>Decorra Pro</span>.</span>
+              </p>
+              <p className="text-[#5A3F50] text-base md:text-lg leading-relaxed max-w-xl mx-auto">
+                התוכן הכי מדויק והכי מזוקק שיש — מוגש בצורה פשוטה וברורה, עם חומר נגיש לכולן.
+              </p>
+              <p className="inline-block bg-[#6B1A47] text-white text-lg md:text-xl font-bold px-6 py-3">
+                בלי לבזבז שנים כדי ללמוד אותו.
+              </p>
+            </div>
+
           </div>
         </Fade>
 
@@ -423,12 +432,11 @@ function AuthoritySection() {
 
 function TruthSection() {
   return (
-    <section className="bg-white py-16 md:py-24 px-4 md:px-8">
+    <section className="bg-[#FBDDDD] py-16 md:py-24 px-4 md:px-8">
       <div className="max-w-3xl mx-auto">
         <Fade className="text-center mb-10">
-          <p className="text-[16px] font-semibold uppercase tracking-widest mb-5">
-            <span className="text-[#6B1A47]">האמת </span>
-            <span className="text-[#C9A84C]">הפשוטה</span>
+          <p className="text-[25px] font-semibold uppercase tracking-widest mb-5 text-[#6B1A47]">
+            האמת הפשוטה
           </p>
           <div className="space-y-3">
             <p className="text-2xl md:text-3xl text-[#1A1218] font-bold leading-snug">
@@ -438,37 +446,42 @@ function TruthSection() {
           </div>
         </Fade>
 
-        {/* 4 method steps — alternating plum/cream */}
-        <StaggerFade className="space-y-3 mb-10">
+        {/* 4 method steps — same light background */}
+        <StaggerFade className="space-y-0 mb-10">
           {[
-            { text: "מאיפה מתחילים", dark: true },
-            { text: "מה עושים קודם", dark: false },
-            { text: "איך בוחרים נכון", dark: true },
-            { text: "ואיך הכל מתחבר לתוצאה אחת שלמה", dark: false },
-          ].map((item, i, arr) => (
+            "מאיפה מתחילים",
+            "מה עושים קודם",
+            "איך בוחרים נכון",
+            "ואיך הכל מתחבר לתוצאה אחת שלמה",
+          ].map((text, i, arr) => (
             <div key={i}>
               <motion.div variants={fadeUp}
-                className={`px-8 py-5 text-center ${item.dark ? "bg-[#6B1A47]" : "bg-[#F5F2E9]"}`}>
-                <p className={`font-semibold text-xl ${item.dark ? "text-white" : "text-[#1A1218]"}`}>
-                  {item.text}
-                </p>
+                className="px-8 py-5 text-center bg-[#F5F2E9]">
+                <p className="font-semibold text-xl text-[#6B1A47]">{text}</p>
               </motion.div>
               {i < arr.length - 1 && (
-                <div className="flex justify-center py-1">
-                  <span className="text-[#6B1A47]/30 text-2xl leading-none">↓</span>
+                <div className="flex justify-center" style={{ lineHeight: 0 }}>
+                  {/* Wide downward-pointing triangle in bg color at 50% opacity */}
+                  <div style={{
+                    width: 0,
+                    height: 0,
+                    borderLeft: "48px solid transparent",
+                    borderRight: "48px solid transparent",
+                    borderTop: "28px solid rgba(107, 26, 71, 0.3)",
+                  }} />
                 </div>
               )}
             </div>
           ))}
         </StaggerFade>
 
-        {/* Closing — highlighted */}
+        {/* Closing */}
         <Fade>
-          <div className="mt-8 border-r-4 border-[#6B1A47] pr-5 bg-[#FAF6F0] px-6 py-6 text-right">
-            <p className="text-[#5A3F50] text-lg leading-relaxed mb-2">
+          <div className="mt-8 text-center">
+            <p className="text-[#6B1A47] text-lg leading-relaxed mb-1">
               אם גם את מרגישה שאת &ldquo;כמעט שם&rdquo; — אבל משהו לא מתחבר —
             </p>
-            <p className="text-[#6B1A47] font-bold text-xl">פה Decorra Pro משנה את המשחק.</p>
+            <p className="text-[#6B1A47] text-xl">פה <span style={BRAND_STYLE}>Decorra Pro</span> <strong>משנה את המשחק.</strong></p>
           </div>
         </Fade>
       </div>
@@ -514,25 +527,26 @@ function NotACourseSection() {
   ];
 
   return (
-    <section className="relative bg-[#6B1A47] py-16 md:py-24 px-4 md:px-8">
-      <img src="/images/BG-NEW.jpg" alt="" aria-hidden="true" className="absolute inset-0 w-full h-full object-cover opacity-20 pointer-events-none" />
-      <div className="relative z-10 max-w-4xl mx-auto">
+    <section className="bg-[#6B1A47] py-16 md:py-24 px-4 md:px-8">
+      <div className="max-w-4xl mx-auto">
         <Fade className="text-center mb-4">
           <h2 className="text-2xl md:text-3xl text-white font-bold mb-4">חשוב להבין: זה לא קורס רגיל</h2>
           <div className="space-y-1 text-white/70 text-lg md:text-xl mb-12">
-            <p>זה לא מדריך שמתחיל באל״ף ומסתיים בתי״ו.</p>
-            <p>זה לא ידע שצריך ״לסיים״ כדי להשתמש בו.</p>
+            <p>זה לא מדריך שמתחיל בא׳ ומסתיים בת׳.</p>
+            <p>זה לא ידע שצריך &ldquo;לסיים&rdquo; כדי להשתמש בו.</p>
+            <p className="text-white font-semibold pt-1">זו שיטה שנבנית אחרת:</p>
           </div>
         </Fade>
         <div className="grid md:grid-cols-3 gap-5 mb-12">
           {features.map((item, i) => (
             <Fade key={i}>
-              <div className="group relative bg-[#FAF6F0] card-frame overflow-hidden border border-[#6B1A47]/20 hover:border-[#1A1218]/20 transition-all duration-300 shadow-lg">
+              <div className="group relative bg-[#FAF6F0] card-frame overflow-hidden border border-[#6B1A47]/20 transition-all duration-300 shadow-lg">
                 <div className="absolute top-4 left-4 text-[#6B1A47]/10 font-bold text-4xl select-none">{item.label}</div>
-                <div className="p-8 flex flex-col items-center text-center gap-5">
-                  <div className="w-24 h-24 bg-gradient-to-br from-[#6B1A47] to-[#A0285C] flex items-center justify-center text-white shadow-xl">
+                <div className="p-8 flex flex-col items-center text-center gap-4">
+                  <div className="text-[#6B1A47]/70">
                     {item.icon}
                   </div>
+                  <div className="w-8 h-px bg-[#6B1A47]/20" />
                   <div>
                     <p className="text-[#1A1218] font-bold text-xl mb-2">{item.title}</p>
                     <p className="text-[#5A3F50] text-lg">{item.sub}</p>
@@ -547,80 +561,6 @@ function NotACourseSection() {
             <p className="text-white font-bold text-xl">גם פרק אחד נותן לך יתרון.</p>
             <p className="text-[#F9D0CF] text-lg">וכשמחברים עוד חלקים? פתאום הכל מתחיל להסתדר.</p>
           </div>
-        </Fade>
-      </div>
-    </section>
-  );
-}
-
-// ─── What You Get ─────────────────────────────────────────── bg: cream ────────
-
-function WhatYouGetSection() {
-  return (
-    <section className="bg-[#FAF6F0] py-16 md:py-20 px-4 md:px-8">
-      <div className="max-w-4xl mx-auto">
-        <Fade className="text-center mb-10">
-          <p className="text-[#6B1A47] font-semibold text-sm uppercase tracking-widest mb-3">אז מה את מקבלת עכשיו?</p>
-          <h2 className="text-2xl md:text-3xl text-[#1A1218] font-bold mb-1">DECORRA PRO</h2>
-          <p className="text-[#5A3F50] text-lg mb-4">מבית סטודיו ברברה ברזין</p>
-          <p className="text-[#1A1218] font-bold text-lg mb-1">סנונית ראשונה מתוך המדריך המלא</p>
-          <p className="text-[#5A3F50] text-lg">6 פרקים. 6 זוויות שונות. <Highlight>6 קפיצות מדרגה בהבנה שלך.</Highlight></p>
-        </Fade>
-
-        <div className="mb-4">
-          <p className="text-[#6B1A47] font-semibold text-lg text-center mb-5">6 הפרקים הזמינים עכשיו:</p>
-          <StaggerFade className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
-            {CHAPTERS.map((ch) => (
-              <motion.div key={ch.number} variants={fadeUp} className="group bg-white card-frame overflow-hidden border border-[#E8DDD0] hover:-translate-y-1 transition-transform duration-300 shadow-sm">
-                <div className="relative bg-[#6B1A47] py-5 px-5 overflow-hidden">
-                  <span className="absolute left-2 top-1/2 -translate-y-1/2 text-[5.5rem] font-black text-white/[0.07] leading-none select-none pointer-events-none">{ch.number}</span>
-                  <span className="relative z-10 text-[#F9D0CF] text-lg font-bold leading-snug block">{ch.name}</span>
-                </div>
-                <div className="p-5 space-y-3">
-                  <p className="text-[#5A3F50] text-lg leading-relaxed">{ch.description}</p>
-                  <span className="inline-flex items-center gap-2 bg-[#F9D0CF] rounded-full px-3 py-1.5 text-base font-semibold text-[#6B1A47]">
-                    ✅ {ch.transformation}
-                  </span>
-                </div>
-              </motion.div>
-            ))}
-          </StaggerFade>
-
-          <div className="bg-white card-frame border border-[#E8DDD0] overflow-hidden shadow-sm">
-            <div className="px-6 py-4 text-center border-b border-[#E8DDD0]">
-              <p className="text-[#6B1A47] font-bold text-base mb-0.5">✦ עוד פרקים בדרך ✦</p>
-              <p className="text-[#5A3F50] text-base">המדריך מתפתח — הנה טעימה ממה שמגיע</p>
-            </div>
-            <StaggerFade className="grid grid-cols-2 md:grid-cols-4 gap-4 p-5">
-              {[
-                { num: 7, name: "עיצוב עם תקציב" },
-                { num: 8, name: "תאורה ואווירה" },
-                { num: 9, name: "טקסטיל ורכות" },
-                { num: 10, name: "שילוב סגנונות" },
-              ].map((ch) => (
-                <motion.div key={ch.num} variants={fadeUp} className="card-frame overflow-hidden border border-[#E8DDD0] shadow-sm">
-                  <div className="relative bg-[#6B1A47] overflow-hidden" style={{ paddingTop: "80%" }}>
-                    <span className="absolute left-2 bottom-0 text-[5rem] font-black text-white/[0.07] leading-none select-none pointer-events-none">{ch.num}</span>
-                    <div className="absolute inset-0 flex flex-col items-center justify-center gap-3">
-                      <div className="w-10 h-10 rounded-full bg-white/10 border border-white/20 flex items-center justify-center">
-                        <svg viewBox="0 0 24 24" fill="white" className="w-4 h-4 translate-x-0.5">
-                          <path d="M8 5v14l11-7z" />
-                        </svg>
-                      </div>
-                      <span className="bg-[#F9D0CF] text-[#6B1A47] text-sm font-bold px-3 py-1 rounded-full">בקרוב</span>
-                    </div>
-                  </div>
-                  <div className="bg-white px-3 py-3 text-center">
-                    <p className="text-[#1A1218] font-semibold text-base">{ch.name}</p>
-                  </div>
-                </motion.div>
-              ))}
-            </StaggerFade>
-          </div>
-        </div>
-
-        <Fade className="text-center mt-8">
-          <CTAButton text="אני רוצה להתחיל →" />
         </Fade>
       </div>
     </section>
@@ -684,6 +624,44 @@ function ChaptersDetailSection() {
           </p>
         </div>
       </Fade>
+
+      <Fade className="max-w-3xl mx-auto px-4 md:px-8 mt-8">
+        <div className="bg-white card-frame border border-[#E8DDD0] overflow-hidden shadow-sm">
+          <div className="px-6 py-4 text-center border-b border-[#E8DDD0]">
+            <p className="text-[#6B1A47] font-bold text-base mb-0.5">✦ עוד פרקים בדרך ✦</p>
+            <p className="text-[#5A3F50] text-base">המדריך מתפתח — הנה טעימה ממה שמגיע</p>
+          </div>
+          <StaggerFade className="grid grid-cols-2 md:grid-cols-4 gap-4 p-5">
+            {[
+              { num: 7, name: "עיצוב עם תקציב" },
+              { num: 8, name: "תאורה ואווירה" },
+              { num: 9, name: "טקסטיל ורכות" },
+              { num: 10, name: "שילוב סגנונות" },
+            ].map((ch) => (
+              <motion.div key={ch.num} variants={fadeUp} className="card-frame overflow-hidden border border-[#E8DDD0] shadow-sm">
+                <div className="relative bg-[#6B1A47] overflow-hidden" style={{ paddingTop: "80%" }}>
+                  <span className="absolute left-2 bottom-0 text-[5rem] font-black text-white/[0.07] leading-none select-none pointer-events-none">{ch.num}</span>
+                  <div className="absolute inset-0 flex flex-col items-center justify-center gap-3">
+                    <div className="w-10 h-10 rounded-full bg-white/10 border border-white/20 flex items-center justify-center">
+                      <svg viewBox="0 0 24 24" fill="white" className="w-4 h-4 translate-x-0.5">
+                        <path d="M8 5v14l11-7z" />
+                      </svg>
+                    </div>
+                    <span className="bg-[#F9D0CF] text-[#6B1A47] text-sm font-bold px-3 py-1 rounded-full">בקרוב</span>
+                  </div>
+                </div>
+                <div className="bg-white px-3 py-3 text-center">
+                  <p className="text-[#1A1218] font-semibold text-base">{ch.name}</p>
+                </div>
+              </motion.div>
+            ))}
+          </StaggerFade>
+        </div>
+      </Fade>
+
+      <Fade className="text-center mt-8">
+        <CTAButton text="אני רוצה להתחיל →" />
+      </Fade>
     </section>
   );
 }
@@ -692,30 +670,33 @@ function ChaptersDetailSection() {
 
 function WhoIsItForSection() {
   return (
-    <section className="bg-[#F9D0CF] py-16 md:py-20 px-4 md:px-8">
+    <section className="bg-[#FDE8E7] py-16 md:py-20 px-4 md:px-8">
       <div className="max-w-2xl mx-auto">
         <Fade className="text-center mb-8">
           <h2 className="text-2xl md:text-3xl text-[#6B1A47] font-bold">למי זה מתאים?</h2>
         </Fade>
         <Fade>
-          <ul className="space-y-4 mb-8">
+          <ul className="space-y-3 mb-10">
             {[
-              "מרגישה שיש לך טעם — אבל חסר לך ביטחון בבחירות",
-              "מתבלבלת בין אפשרויות ולא יודעת מה לבחור",
-              "קונה ולא מרוצה עד הסוף",
-              "רוצה בית שנראה מקצועי באמת",
+              "אם את מרגישה שיש לך טעם — אבל חסר לך ביטחון בבחירות",
+              "אם את מתבלבלת בין אפשרויות ולא יודעת מה לבחור",
+              "אם את קונה ולא מרוצה עד הסוף",
+              "אם את רוצה בית שנראה מקצועי באמת",
             ].map((item, i) => (
-              <li key={i} className="flex items-start gap-3 text-[#1A1218] text-lg bg-white/60 px-4 py-4">
+              <li key={i} className="flex items-start gap-3 text-[#1A1218] text-lg bg-white/70 px-5 py-4">
                 <span className="text-[#6B1A47] flex-shrink-0 mt-0.5 font-bold">✦</span>
                 <span>{item}</span>
               </li>
             ))}
           </ul>
-          <div className="text-center space-y-2 pt-2">
-            <p className="text-[#1A1218] font-bold text-lg">את לא צריכה לדעת הכל.</p>
-            <p className="text-[#1A1218] font-bold text-lg">את רק צריכה להתחיל נכון.</p>
-            <p className="text-[#5A3F50] text-lg mt-1">
-              וששת הפרקים האלה — <span className="font-bold text-[#6B1A47]">הם בדיוק ההתחלה שאת צריכה.</span>
+
+          {/* Highlighted closing block */}
+          <div className="bg-[#6B1A47] px-8 py-8 text-center space-y-3">
+            <p className="text-white font-bold text-xl leading-relaxed">את לא צריכה לדעת הכל.</p>
+            <p className="text-white font-bold text-xl leading-relaxed">את רק צריכה להתחיל נכון.</p>
+            <div className="w-10 h-px bg-[#F9D0CF]/40 mx-auto" />
+            <p className="text-[#F9D0CF] text-lg leading-relaxed">
+              וששת הפרקים האלה — <strong className="text-white">הם בדיוק ההתחלה שאת צריכה.</strong>
             </p>
           </div>
         </Fade>
@@ -728,31 +709,42 @@ function WhoIsItForSection() {
 
 function BenefitsSection() {
   return (
-    <section className="bg-[#6B1A47] py-16 md:py-20 px-4 md:px-8">
-      <div className="max-w-3xl mx-auto">
-        <Fade className="text-center mb-10">
-          <h2 className="text-2xl md:text-3xl text-white font-bold">כשיש שיטה — הכל משתנה</h2>
-        </Fade>
-        <div className="grid grid-cols-2 gap-3 mb-10">
-          <img src="/images/room-2.png" alt="עיצוב פנים" className="w-full object-cover aspect-[4/3]" />
-          <img src="/images/room-1.jpg" alt="עיצוב פנים" className="w-full object-cover aspect-[4/3]" />
+    <section className="relative overflow-hidden min-h-[520px] flex items-center">
+      {/* Background image */}
+      <img
+        src="/images/About-Main-banner-desktop.jpg"
+        alt=""
+        aria-hidden="true"
+        className="absolute inset-0 w-full h-full object-cover opacity-60"
+      />
+      {/* Neutral dark overlay only — no purple */}
+      <div className="absolute inset-0 bg-black/50" />
+
+      <div className="relative z-10 w-full py-16 md:py-24 px-4 md:px-8">
+        <div className="max-w-2xl mx-auto">
+          <Fade className="text-center mb-10">
+            <h2 className="text-2xl md:text-3xl text-white font-extrabold" style={{ textShadow: "0 2px 8px rgba(0,0,0,0.6)" }}>
+              כשיש שיטה — הכל משתנה
+            </h2>
+          </Fade>
+          <Fade>
+            <ul className="grid md:grid-cols-2 gap-3">
+              {[
+                "הבחירות נהיות ברורות",
+                "הבית נראה מחובר ומדויק",
+                "את מפסיקה לנחש",
+                "את חוסכת כסף",
+                "ואת מרגישה שליטה",
+                "כל בחירה מרגישה נכונה",
+              ].map((item, i) => (
+                <li key={i} className="flex items-center gap-3 text-white font-bold text-lg bg-[#6B1A47]/80 backdrop-blur-sm px-5 py-4 border border-[#F9D0CF]/30">
+                  <span className="text-white font-bold flex-shrink-0 text-xl">✔</span>
+                  <span>{item}</span>
+                </li>
+              ))}
+            </ul>
+          </Fade>
         </div>
-        <Fade>
-          <ul className="grid md:grid-cols-2 gap-3">
-            {[
-              "הבחירות נהיות ברורות",
-              "הבית נראה מחובר ומדויק",
-              "את מפסיקה לנחש",
-              "את חוסכת כסף",
-              "ואת מרגישה שליטה",
-            ].map((item, i) => (
-              <li key={i} className="flex items-center gap-3 text-white text-lg bg-white/10 px-4 py-3">
-                <span className="text-[#F9D0CF] font-bold flex-shrink-0">✔</span>
-                <span>{item}</span>
-              </li>
-            ))}
-          </ul>
-        </Fade>
       </div>
     </section>
   );
@@ -847,7 +839,7 @@ function UrgencySection() {
           </p>
           <div className="border-t border-white/10 pt-5 space-y-2">
             <p className="text-white font-bold text-lg">אבל אם את רוצה ביטחון, דיוק ושקט בראש —</p>
-            <p className="text-[#F9D0CF] text-lg">Decorra Pro היא השיטה שתלמד אותך לעצב נכון מהצעד הראשון.</p>
+            <p className="text-[#F9D0CF] text-lg"><span style={BRAND_STYLE}>Decorra Pro</span> היא השיטה שתלמד אותך לעצב נכון מהצעד הראשון.</p>
           </div>
           <div className="pt-2 flex justify-center">
             <CTAButton text="הצטרפי עכשיו →" />
@@ -864,11 +856,11 @@ function Footer() {
   return (
     <footer className="bg-[#6B1A47] text-white py-8 px-4 text-center">
       <p className="text-[#F9D0CF] text-base leading-relaxed">
-        © {new Date().getFullYear()} סטודיו ברברה ברזין | Decorra Pro
+        © {new Date().getFullYear()} סטודיו ברברה ברזין | <span style={BRAND_STYLE}>Decorra Pro</span>
         <br />כל הזכויות שמורות
         <br />
         <span className="text-white/50 text-sm mt-2 block">
-          * Decorra Pro הוא מדריך דיגיטלי מבית סטודיו ברברה ברזין — ולא קורס אישי של ברברה ברזין.
+          * <span style={BRAND_STYLE}>Decorra Pro</span> הוא מדריך דיגיטלי מבית סטודיו ברברה ברזין — ולא קורס אישי של ברברה ברזין.
         </span>
       </p>
     </footer>
@@ -881,15 +873,14 @@ export default function DecoraProPage() {
   return (
     <main dir="rtl" className="text-[#1A1218] overflow-x-hidden">
       <div className="bg-[#6B1A47] text-white text-center py-3 px-4 text-base font-medium">
-        🎉 מחיר השקה | Decorra Pro חלק 1 | ₪450 בלבד — לזמן מוגבל
+        🎉 מחיר השקה | <span style={BRAND_STYLE}>Decorra Pro</span> חלק 1 | ₪450 בלבד — לזמן מוגבל
       </div>
       <NavBar />
       <HeroSection />
+      <TruthSection />
       <ChaptersDetailSection />
       <AuthoritySection />
-      <TruthSection />
       <NotACourseSection />
-      <WhatYouGetSection />
       <WhoIsItForSection />
       <BenefitsSection />
       <PricingSection />
