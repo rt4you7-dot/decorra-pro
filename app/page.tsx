@@ -416,28 +416,48 @@ function AuthoritySection() {
 
 function TruthSection() {
   return (
-    <section className="bg-white py-16 md:py-20 px-4 md:px-8">
-      <div className="max-w-2xl mx-auto text-center">
-        <Fade className="space-y-6">
-          <h2 className="text-2xl md:text-3xl text-[#1A1218] font-bold">האמת הפשוטה</h2>
-          <div className="space-y-1 text-[#5A3F50] text-xl leading-loose">
-            <p>עיצוב טוב הוא לא כישרון.</p>
-            <p>הוא לא אינטואיציה.</p>
-            <p className="font-bold text-[#1A1218] text-2xl"><Highlight>הוא שיטה.</Highlight></p>
+    <section className="bg-white py-16 md:py-24 px-4 md:px-8">
+      <div className="max-w-3xl mx-auto">
+        <Fade className="text-center mb-10">
+          <p className="text-[#6B1A47] text-xs font-semibold uppercase tracking-widest mb-3">האמת הפשוטה</p>
+          <h2 className="text-3xl md:text-4xl text-[#1A1218] font-bold leading-snug mb-4">
+            עיצוב טוב הוא לא כישרון.<br />
+            <span className="text-[#5A3F50] font-normal">הוא לא אינטואיציה.</span>
+          </h2>
+          <div className="inline-block bg-[#F9D0CF] px-6 py-2 mt-1">
+            <p className="text-[#1A1218] font-bold text-2xl md:text-3xl">הוא שיטה.</p>
           </div>
-          <div className="text-right space-y-3 pt-2">
-            <p className="text-[#6B1A47] font-semibold text-center mb-1 text-lg">שיטה שאומרת לך:</p>
-            {["מאיפה מתחילים", "מה עושים קודם", "איך בוחרים נכון", "ואיך הכל מתחבר לתוצאה אחת שלמה"].map((item, i) => (
-              <p key={i} className="text-[#1A1218] flex items-center gap-2 text-lg">
-                <span className="text-[#6B1A47] flex-shrink-0">✦</span> {item}
-              </p>
+        </Fade>
+
+        {/* 4 method steps */}
+        <StaggerFade className="grid grid-cols-2 md:grid-cols-4 gap-3 mb-10">
+          {[
+            { num: "01", text: "מאיפה מתחילים" },
+            { num: "02", text: "מה עושים קודם" },
+            { num: "03", text: "איך בוחרים נכון" },
+            { num: "04", text: "איך הכל מתחבר" },
+          ].map((item) => (
+            <motion.div key={item.num} variants={fadeUp}
+              className="bg-[#FAF6F0] border border-[#E8DDD0] px-4 py-5 text-center">
+              <p className="text-[#6B1A47]/30 font-black text-3xl leading-none mb-2">{item.num}</p>
+              <p className="text-[#1A1218] font-semibold text-base leading-snug">{item.text}</p>
+            </motion.div>
+          ))}
+        </StaggerFade>
+
+        {/* Closing */}
+        <Fade className="text-center space-y-4">
+          <div className="flex flex-wrap justify-center gap-3">
+            {["בלי ניחושים", "בלי בלבול", "בלי טעויות יקרות"].map((t, i) => (
+              <span key={i} className="bg-[#6B1A47] text-white text-base font-semibold px-5 py-2 rounded-full">
+                {t}
+              </span>
             ))}
           </div>
-          <p className="text-[#1A1218] font-bold text-lg pt-2">בלי ניחושים. בלי בלבול. בלי טעויות יקרות.</p>
-          <p className="text-[#5A3F50] text-lg">
+          <p className="text-[#5A3F50] text-lg pt-2">
             אם גם את מרגישה שאת &ldquo;כמעט שם&rdquo; — אבל משהו לא מתחבר —
-            <br /><span className="font-bold text-[#6B1A47]">פה Decorra Pro משנה את המשחק.</span>
           </p>
+          <p className="text-[#6B1A47] font-bold text-xl">פה Decorra Pro משנה את המשחק.</p>
         </Fade>
       </div>
     </section>
