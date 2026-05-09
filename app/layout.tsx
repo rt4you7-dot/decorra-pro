@@ -10,6 +10,7 @@ const playfair = Playfair_Display({
 
 const heebo = Heebo({
   subsets: ["hebrew", "latin"],
+  weight: ["400", "600", "700", "800"],
   variable: "--font-heebo",
   display: "swap",
 });
