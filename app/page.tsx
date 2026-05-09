@@ -442,22 +442,31 @@ function TruthSection() {
             { text: "מה עושים קודם", dark: false },
             { text: "איך בוחרים נכון", dark: true },
             { text: "ואיך הכל מתחבר לתוצאה אחת שלמה", dark: false },
-          ].map((item, i) => (
-            <motion.div key={i} variants={fadeUp}
-              className={`px-8 py-5 text-center ${item.dark ? "bg-[#6B1A47]" : "bg-[#F5F2E9]"}`}>
-              <p className={`font-semibold text-xl ${item.dark ? "text-white" : "text-[#1A1218]"}`}>
-                {item.text}
-              </p>
-            </motion.div>
+          ].map((item, i, arr) => (
+            <div key={i}>
+              <motion.div variants={fadeUp}
+                className={`px-8 py-5 text-center ${item.dark ? "bg-[#6B1A47]" : "bg-[#F5F2E9]"}`}>
+                <p className={`font-semibold text-xl ${item.dark ? "text-white" : "text-[#1A1218]"}`}>
+                  {item.text}
+                </p>
+              </motion.div>
+              {i < arr.length - 1 && (
+                <div className="flex justify-center py-1">
+                  <span className="text-[#6B1A47]/30 text-2xl leading-none">↓</span>
+                </div>
+              )}
+            </div>
           ))}
         </StaggerFade>
 
-        {/* Closing */}
-        <Fade className="text-center space-y-3">
-          <p className="text-[#5A3F50] text-lg">
-            אם גם את מרגישה שאת &ldquo;כמעט שם&rdquo; — אבל משהו לא מתחבר —
-          </p>
-          <p className="text-[#6B1A47] font-bold text-xl">פה Decorra Pro משנה את המשחק.</p>
+        {/* Closing — highlighted */}
+        <Fade>
+          <div className="mt-8 border-r-4 border-[#6B1A47] pr-5 bg-[#FAF6F0] px-6 py-6 text-right">
+            <p className="text-[#5A3F50] text-lg leading-relaxed mb-2">
+              אם גם את מרגישה שאת &ldquo;כמעט שם&rdquo; — אבל משהו לא מתחבר —
+            </p>
+            <p className="text-[#6B1A47] font-bold text-xl">פה Decorra Pro משנה את המשחק.</p>
+          </div>
         </Fade>
       </div>
     </section>
