@@ -383,11 +383,11 @@ function AuthoritySection() {
 
               {/* Big quote */}
               <div className="text-center border-t border-white/20 pt-7">
-                <p className="text-white text-xl md:text-2xl font-bold leading-relaxed max-w-2xl mx-auto">
-                  מה שמעצבי פנים למדו ב-3 שנות לימודים —
+                <p className="text-white text-xl md:text-2xl font-bold leading-relaxed max-w-2xl mx-auto mb-2">
+                  מה שסטודנטים לעיצוב פנים לומדים על הומסטיילינג לאורך שנות הלימודים —
                 </p>
                 <p className="text-[#F9D0CF] text-xl md:text-2xl font-bold leading-relaxed max-w-2xl mx-auto">
-                  את לומדת ב-6 פרקים.
+                  את מקבלת כאן. ב-Decorra Pro.
                 </p>
               </div>
 
