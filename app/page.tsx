@@ -147,7 +147,7 @@ function FAQAccordionItem({ item }: { item: FAQItem }) {
           initial={{ opacity: 0, y: -6 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.25 }}
-          className="pb-5 text-[#5A3F50] leading-relaxed"
+          className="pb-5 text-[#5A3F50] text-base leading-relaxed"
         >
           {item.a}
         </motion.p>
@@ -178,7 +178,7 @@ function HeroSection() {
     <section className="bg-white py-20 md:py-28 px-4 md:px-8">
       <div className="max-w-2xl mx-auto text-center">
         <Fade>
-          <p className="text-[#6B1A47] font-semibold text-xs uppercase tracking-widest mb-4">
+          <p className="text-[#6B1A47] font-semibold text-sm uppercase tracking-widest mb-4">
             מבלבול וחוסר ביטחון לשיטה ברורה שעובדת
           </p>
           <h1 className="text-3xl md:text-4xl lg:text-5xl text-[#1A1218] leading-tight mb-5 font-bold">
@@ -206,8 +206,9 @@ function HeroSection() {
 function VideoSection() {
   const youtubeId = "VIDEO_ID_HERE";
   return (
-    <section className="bg-[#1A1218] py-14 md:py-20 px-4 md:px-8">
-      <div className="max-w-4xl mx-auto">
+    <section className="relative bg-[#1A1218] py-14 md:py-20 px-4 md:px-8">
+      <img src="/images/BG-NEW.jpg" alt="" aria-hidden="true" className="absolute inset-0 w-full h-full object-cover opacity-30 pointer-events-none" />
+      <div className="relative z-10 max-w-4xl mx-auto">
         <Fade>
           <div className="relative w-full rounded-2xl overflow-hidden" style={{ paddingTop: "56.25%" }}>
             {youtubeId === "VIDEO_ID_HERE" ? (
@@ -252,8 +253,8 @@ function AuthoritySection() {
               <p className="text-[#F9D0CF] text-sm">מרצה בכיר | סטודיו ברברה ברזין</p>
             </div>
             <div className="px-5 py-4 space-y-2">
-              <p className="text-[#5A3F50] text-sm leading-relaxed">מייסד מחלקת הום סטיילינג והמחלקה הבינלאומית. 20+ שנות ניסיון בעיצוב פנים ובהוראה.</p>
-              <p className="text-[#1A1218] font-semibold text-sm">מלמד אותך לראות את החלל — לא רק להסתכל עליו.</p>
+              <p className="text-[#5A3F50] text-base leading-relaxed">מייסד מחלקת הום סטיילינג והמחלקה הבינלאומית. 20+ שנות ניסיון בעיצוב פנים ובהוראה.</p>
+              <p className="text-[#1A1218] font-semibold text-base">מלמד אותך לראות את החלל — לא רק להסתכל עליו.</p>
             </div>
           </motion.div>
           {/* Barbara */}
@@ -266,8 +267,8 @@ function AuthoritySection() {
               <p className="text-[#F9D0CF] text-sm">מייסדת הסטודיו | אוטוריטה מובילה בעיצוב פנים</p>
             </div>
             <div className="px-5 py-4 space-y-2">
-              <p className="text-[#5A3F50] text-sm leading-relaxed">45+ שנה בתחום עיצוב הפנים בישראל. מנטורית של אלפי מעצבים ובוגרים ברחבי הארץ.</p>
-              <p className="text-[#1A1218] font-semibold text-sm">בנתה שיטה — לא סתם תוכן. זו המתודולוגיה שמאחורי Decorra Pro.</p>
+              <p className="text-[#5A3F50] text-base leading-relaxed">45+ שנה בתחום עיצוב הפנים בישראל. מנטורית של אלפי מעצבים ובוגרים ברחבי הארץ.</p>
+              <p className="text-[#1A1218] font-semibold text-base">בנתה שיטה — לא סתם תוכן. זו המתודולוגיה שמאחורי Decorra Pro.</p>
             </div>
           </motion.div>
         </StaggerFade>
@@ -287,8 +288,9 @@ function AuthoritySection() {
 function MarketingVideoSection() {
   const youtubeId = "MARKETING_VIDEO_ID_HERE";
   return (
-    <section className="bg-[#1A1218] py-14 md:py-20 px-4 md:px-8">
-      <div className="max-w-4xl mx-auto">
+    <section className="relative bg-[#1A1218] py-14 md:py-20 px-4 md:px-8">
+      <img src="/images/BG-NEW.jpg" alt="" aria-hidden="true" className="absolute inset-0 w-full h-full object-cover opacity-30 pointer-events-none" />
+      <div className="relative z-10 max-w-4xl mx-auto">
         <Fade>
           <div className="relative w-full rounded-2xl overflow-hidden" style={{ paddingTop: "56.25%" }}>
             {youtubeId === "MARKETING_VIDEO_ID_HERE" ? (
@@ -351,60 +353,73 @@ function NotACourseSection() {
   const features = [
     {
       icon: (
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" className="w-7 h-7">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" className="w-12 h-12">
           <path strokeLinecap="round" strokeLinejoin="round" d="M21.75 6.75a4.5 4.5 0 01-4.884 4.484c-1.076-.091-2.264.071-2.95.904l-7.152 8.684a2.548 2.548 0 11-3.586-3.586l8.684-7.152c.833-.686.995-1.874.904-2.95a4.5 4.5 0 016.336-4.486l-3.276 3.276a3.004 3.004 0 002.25 2.25l3.276-3.276c.256.565.398 1.192.398 1.852z" />
         </svg>
       ),
+      accent: "#F9D0CF",
       title: "כלי עבודה אמיתי",
       sub: "כל פרק = יישום מיידי",
+      label: "01",
     },
     {
       icon: (
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" className="w-7 h-7">
-          <path strokeLinecap="round" strokeLinejoin="round" d="M12 18v-5.25m0 0a6.01 6.01 0 001.5-.189m-1.5.189a6.01 6.01 0 01-1.5-.189m3.75 7.478a12.06 12.06 0 01-4.5 0m3.75 2.383a14.406 14.406 0 01-3 0M14.25 18v-.192c0-.983.658-1.823 1.508-2.316a7.5 7.5 0 10-7.517 0c.85.493 1.509 1.333 1.509 2.316V18" />
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" className="w-12 h-12">
+          <path strokeLinecap="round" strokeLinejoin="round" d="M2.036 12.322a1.012 1.012 0 010-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178z" />
+          <path strokeLinecap="round" strokeLinejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
         </svg>
       ),
+      accent: "#F9D0CF",
       title: "שינוי בתפיסה",
       sub: "כל חלק = זווית חדשה",
+      label: "02",
     },
     {
       icon: (
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" className="w-7 h-7">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" className="w-12 h-12">
           <path strokeLinecap="round" strokeLinejoin="round" d="M2.25 18L9 11.25l4.306 4.307a11.95 11.95 0 015.814-5.519l2.74-1.22m0 0l-5.94-2.28m5.94 2.28l-2.28 5.941" />
         </svg>
       ),
+      accent: "#F9D0CF",
       title: "התקדמות מיידית",
       sub: "כל צפייה = צעד קדימה",
+      label: "03",
     },
   ];
 
   return (
-    <section className="bg-[#1A1218] py-16 md:py-20 px-4 md:px-8">
-      <div className="max-w-3xl mx-auto">
-        <Fade className="text-center mb-3">
-          <h2 className="text-2xl md:text-3xl text-white font-bold mb-3">חשוב להבין: זה לא קורס רגיל</h2>
-          <div className="space-y-1 text-white/50 text-base mb-10">
+    <section className="relative bg-[#1A1218] py-16 md:py-24 px-4 md:px-8">
+      <img src="/images/BG-NEW.jpg" alt="" aria-hidden="true" className="absolute inset-0 w-full h-full object-cover opacity-30 pointer-events-none" />
+      <div className="relative z-10 max-w-4xl mx-auto">
+        <Fade className="text-center mb-4">
+          <h2 className="text-2xl md:text-3xl text-white font-bold mb-4">חשוב להבין: זה לא קורס רגיל</h2>
+          <div className="space-y-1 text-white/50 text-base md:text-lg mb-12">
             <p>זה לא מדריך שמתחיל באל״ף ומסתיים בתי״ו.</p>
             <p>זה לא ידע שצריך ״לסיים״ כדי להשתמש בו.</p>
           </div>
         </Fade>
-        <div className="grid md:grid-cols-3 gap-4 mb-10">
+        <div className="grid md:grid-cols-3 gap-5 mb-12">
           {features.map((item, i) => (
             <Fade key={i}>
-              <div className="bg-[#FAF6F0] rounded-2xl p-6 flex flex-col items-center text-center gap-3">
-                <div className="w-12 h-12 rounded-full bg-[#F9D0CF] flex items-center justify-center text-[#6B1A47]">
-                  {item.icon}
+              <div className="group relative rounded-2xl overflow-hidden border border-white/10 hover:border-[#F9D0CF]/40 transition-all duration-300 bg-white/5 backdrop-blur-sm">
+                <div className="absolute top-4 left-4 text-white/10 font-bold text-4xl select-none">{item.label}</div>
+                <div className="p-8 flex flex-col items-center text-center gap-5">
+                  <div className="w-24 h-24 rounded-2xl bg-gradient-to-br from-[#6B1A47] to-[#A0285C] flex items-center justify-center text-white shadow-xl group-hover:shadow-[#6B1A47]/40 transition-shadow duration-300">
+                    {item.icon}
+                  </div>
+                  <div>
+                    <p className="text-white font-bold text-xl mb-2">{item.title}</p>
+                    <p className="text-[#F9D0CF] text-base">{item.sub}</p>
+                  </div>
                 </div>
-                <p className="text-[#1A1218] font-bold text-sm">{item.title}</p>
-                <p className="text-[#5A3F50] text-xs">{item.sub}</p>
               </div>
             </Fade>
           ))}
         </div>
         <Fade>
-          <div className="border-t border-white/10 pt-6 text-center space-y-1">
-            <p className="text-white font-bold text-base">גם פרק אחד נותן לך יתרון.</p>
-            <p className="text-[#F9D0CF] text-sm">וכשמחברים עוד חלקים? פתאום הכל מתחיל להסתדר.</p>
+          <div className="border-t border-white/10 pt-6 text-center space-y-2">
+            <p className="text-white font-bold text-lg">גם פרק אחד נותן לך יתרון.</p>
+            <p className="text-[#F9D0CF] text-base">וכשמחברים עוד חלקים? פתאום הכל מתחיל להסתדר.</p>
           </div>
         </Fade>
       </div>
@@ -421,23 +436,23 @@ function WhatYouGetSection() {
         <Fade className="text-center mb-10">
           <p className="text-[#6B1A47] font-semibold text-xs uppercase tracking-widest mb-3">אז מה את מקבלת עכשיו?</p>
           <h2 className="text-2xl md:text-3xl text-[#1A1218] font-bold mb-1">DECORRA PRO</h2>
-          <p className="text-[#5A3F50] text-sm mb-4">מבית סטודיו ברברה ברזין</p>
+          <p className="text-[#5A3F50] text-base mb-4">מבית סטודיו ברברה ברזין</p>
           <p className="text-[#1A1218] font-bold text-base mb-1">סנונית ראשונה מתוך המדריך המלא</p>
-          <p className="text-[#5A3F50] text-sm">6 פרקים. 6 זוויות שונות. <Highlight>6 קפיצות מדרגה בהבנה שלך.</Highlight></p>
+          <p className="text-[#5A3F50] text-base">6 פרקים. 6 זוויות שונות. <Highlight>6 קפיצות מדרגה בהבנה שלך.</Highlight></p>
         </Fade>
 
         <div className="mb-4">
-          <p className="text-[#6B1A47] font-semibold text-sm text-center mb-5">6 הפרקים הזמינים עכשיו:</p>
+          <p className="text-[#6B1A47] font-semibold text-base text-center mb-5">6 הפרקים הזמינים עכשיו:</p>
           <StaggerFade className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
             {CHAPTERS.map((ch) => (
               <motion.div key={ch.number} variants={fadeUp} className="bg-white rounded-xl overflow-hidden border border-[#E8DDD0]">
                 <div className="bg-[#6B1A47] py-3 px-5 flex items-center gap-3">
                   <span className="text-white font-bold text-xl flex-shrink-0">{ch.number}</span>
-                  <span className="text-[#F9D0CF] text-sm font-semibold leading-snug">{ch.name}</span>
+                  <span className="text-[#F9D0CF] text-base font-semibold leading-snug">{ch.name}</span>
                 </div>
                 <div className="p-4 space-y-2">
-                  <p className="text-[#5A3F50] text-sm leading-relaxed">{ch.description}</p>
-                  <p className="text-[#6B1A47] font-semibold text-xs">✅ {ch.transformation}</p>
+                  <p className="text-[#5A3F50] text-base leading-relaxed">{ch.description}</p>
+                  <p className="text-[#6B1A47] font-semibold text-sm">✅ {ch.transformation}</p>
                 </div>
               </motion.div>
             ))}
@@ -446,7 +461,7 @@ function WhatYouGetSection() {
           <div className="bg-white rounded-2xl p-6 border border-[#E8DDD0]">
             <div className="text-center mb-5">
               <p className="text-[#6B1A47] font-bold text-sm mb-1">✦ עוד פרקים בדרך ✦</p>
-              <p className="text-[#5A3F50] text-xs">המדריך מתפתח — הנה טעימה ממה שמגיע</p>
+              <p className="text-[#5A3F50] text-sm">המדריך מתפתח — הנה טעימה ממה שמגיע</p>
             </div>
             <StaggerFade className="grid grid-cols-2 md:grid-cols-4 gap-3">
               {[
@@ -505,8 +520,8 @@ function ChaptersDetailSection() {
               </span>
               <div className="flex-1">
                 <p className="font-bold text-[#1A1218] text-base mb-1">{ch.name}</p>
-                <p className="text-[#5A3F50] text-sm leading-relaxed mb-2">{ch.description}</p>
-                <p className="text-[#6B1A47] text-xs font-semibold">✅ {ch.transformation}</p>
+                <p className="text-[#5A3F50] text-base leading-relaxed mb-2">{ch.description}</p>
+                <p className="text-[#6B1A47] text-sm font-semibold">✅ {ch.transformation}</p>
               </div>
             </motion.div>
           ))}
@@ -548,7 +563,7 @@ function WhoIsItForSection() {
           <div className="text-center space-y-2 pt-2">
             <p className="text-[#1A1218] font-bold text-base">את לא צריכה לדעת הכל.</p>
             <p className="text-[#1A1218] font-bold text-base">את רק צריכה להתחיל נכון.</p>
-            <p className="text-[#5A3F50] text-sm mt-1">
+            <p className="text-[#5A3F50] text-base mt-1">
               וששת הפרקים האלה — <Highlight>הם בדיוק ההתחלה שאת צריכה.</Highlight>
             </p>
           </div>
@@ -617,7 +632,7 @@ function PricingSection() {
                   "גישה להמשך התפתחות המדריך",
                   "מחיר מועדף על חלקי הקורס הבאים",
                 ].map((item) => (
-                  <li key={item} className="flex items-start gap-3 text-sm border-b border-[#E8DDD0] pb-3 last:border-0">
+                  <li key={item} className="flex items-start gap-3 text-base border-b border-[#E8DDD0] pb-3 last:border-0">
                     <span className="text-[#6B1A47] font-bold flex-shrink-0">✔</span>
                     <span className="text-[#1A1218]">{item}</span>
                   </li>
@@ -628,11 +643,11 @@ function PricingSection() {
                 onSubmit={(e) => { e.preventDefault(); alert("תודה! נחזור אלייך בקרוב."); }}
               >
                 <input type="text" placeholder="שם מלא *" required dir="rtl"
-                  className="w-full border border-[#E8DDD0] rounded-xl px-4 py-3.5 text-[#1A1218] bg-[#FAF6F0] focus:outline-none focus:border-[#6B1A47] text-right text-sm transition-colors" />
+                  className="w-full border border-[#E8DDD0] rounded-xl px-4 py-3.5 text-[#1A1218] bg-[#FAF6F0] focus:outline-none focus:border-[#6B1A47] text-right text-base transition-colors" />
                 <input type="email" placeholder="כתובת מייל *" required dir="rtl"
-                  className="w-full border border-[#E8DDD0] rounded-xl px-4 py-3.5 text-[#1A1218] bg-[#FAF6F0] focus:outline-none focus:border-[#6B1A47] text-right text-sm transition-colors" />
+                  className="w-full border border-[#E8DDD0] rounded-xl px-4 py-3.5 text-[#1A1218] bg-[#FAF6F0] focus:outline-none focus:border-[#6B1A47] text-right text-base transition-colors" />
                 <input type="tel" placeholder="טלפון נייד *" required dir="ltr" style={{ textAlign: "right" }}
-                  className="w-full border border-[#E8DDD0] rounded-xl px-4 py-3.5 text-[#1A1218] bg-[#FAF6F0] focus:outline-none focus:border-[#6B1A47] text-sm transition-colors" />
+                  className="w-full border border-[#E8DDD0] rounded-xl px-4 py-3.5 text-[#1A1218] bg-[#FAF6F0] focus:outline-none focus:border-[#6B1A47] text-base transition-colors" />
                 <button type="submit"
                   className="w-full bg-[#6B1A47] hover:bg-[#4E1235] active:scale-[0.99] text-white text-lg font-bold py-4 rounded-xl transition-all duration-300">
                   הצטרפי עכשיו →
@@ -669,8 +684,9 @@ function FAQSection() {
 
 function UrgencySection() {
   return (
-    <section className="bg-[#1A1218] py-20 md:py-28 px-4 md:px-8">
-      <div className="max-w-xl mx-auto text-center">
+    <section className="relative bg-[#1A1218] py-20 md:py-28 px-4 md:px-8">
+      <img src="/images/BG-NEW.jpg" alt="" aria-hidden="true" className="absolute inset-0 w-full h-full object-cover opacity-30 pointer-events-none" />
+      <div className="relative z-10 max-w-xl mx-auto text-center">
         <Fade className="space-y-5">
           <h2 className="text-2xl md:text-3xl font-bold text-white">אם לא תעשי שינוי עכשיו…</h2>
           <p className="text-white/60 text-base leading-loose">
@@ -680,7 +696,7 @@ function UrgencySection() {
           </p>
           <div className="border-t border-white/10 pt-5 space-y-1">
             <p className="text-white font-bold text-base">אבל אם את רוצה ביטחון, דיוק ושקט בראש —</p>
-            <p className="text-[#F9D0CF] text-sm">Decorra Pro היא השיטה שתלמד אותך לעצב נכון מהצעד הראשון.</p>
+            <p className="text-[#F9D0CF] text-base">Decorra Pro היא השיטה שתלמד אותך לעצב נכון מהצעד הראשון.</p>
           </div>
           <div className="pt-2 flex justify-center">
             <CTAButton text="הצטרפי עכשיו →" />
