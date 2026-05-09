@@ -270,42 +270,42 @@ function AuthoritySection() {
           <h2 className="text-2xl md:text-3xl text-[#1A1218] font-bold">המרצה המוביל. הידע של האגדה.</h2>
         </Fade>
 
-        {/* Boris card — editorial layout */}
+        {/* Boris card — circle photo layout */}
         <Fade>
-          <div className="bg-white rounded-2xl overflow-hidden shadow-md mb-8">
-            <div className="md:flex">
-              {/* Photo */}
-              <div className="md:w-80 flex-shrink-0 h-72 md:h-auto overflow-hidden">
-                <img src="/images/BORIS.jpg" alt="בוריס סולטנוב" className="w-full h-full object-cover object-top" />
-              </div>
-              {/* Content */}
-              <div className="flex-1 flex flex-col">
-                <div className="bg-[#6B1A47] px-6 py-4">
-                  <p className="text-white font-bold text-xl">בוריס סולטנוב</p>
-                  <p className="text-[#F9D0CF] text-base">המרצה המוביל | סטודיו ברברה ברזין</p>
+          <div className="bg-white rounded-2xl shadow-md mb-8 px-6 md:px-10 py-8">
+            {/* Top: circle photo + name */}
+            <div className="flex flex-col md:flex-row items-center md:items-start gap-6 mb-6">
+              {/* Circle photo */}
+              <div className="flex-shrink-0 flex flex-col items-center gap-3">
+                <div className="w-36 h-36 md:w-44 md:h-44 rounded-full overflow-hidden border-4 border-[#6B1A47] shadow-lg">
+                  <img src="/images/BORIS.jpg" alt="בוריס סולטנוב" className="w-full h-full object-cover object-top scale-110" />
                 </div>
-                <div className="px-6 py-5 space-y-4 flex-1">
-                  <div className="space-y-2">
-                    {[
-                      "20+ שנות ניסיון בהוראה ועיצוב פנים",
-                      "מייסד המחלקה הבינלאומית של הסטודיו",
-                      "מוביל משלחות לימוד למרכזי עיצוב בעולם",
-                      "הסמכה בינלאומית בפילוסופיה סינית ופנג שואי",
-                      "מטפל NLP | בוגר הסטודיו בהצטיינות יתרה",
-                      "בעלים של סטודיו עצמאי מתמחה בפרויקטים מורכבים",
-                    ].map((item, i) => (
-                      <p key={i} className="text-[#5A3F50] text-base flex items-start gap-2">
-                        <span className="text-[#6B1A47] mt-1 flex-shrink-0">✦</span> {item}
-                      </p>
-                    ))}
-                  </div>
-                  <blockquote className="border-r-4 border-[#6B1A47] pr-4 mt-2">
-                    <p className="text-[#1A1218] text-base italic leading-relaxed">
-                      &ldquo;עיצוב הוא השתקפות של חוויה אישית ואינדיווידואלית בעולם קוסמופוליטי נטול גבולות&rdquo;
-                    </p>
-                  </blockquote>
+                <div className="text-center">
+                  <p className="text-[#1A1218] font-bold text-xl leading-tight">בוריס סולטנוב</p>
+                  <p className="text-[#6B1A47] text-sm font-medium mt-0.5">המרצה המוביל | סטודיו ברברה ברזין</p>
                 </div>
               </div>
+              {/* Credentials */}
+              <div className="flex-1 space-y-2.5 md:pt-2">
+                {[
+                  "20+ שנות ניסיון בהוראה ועיצוב פנים",
+                  "מייסד המחלקה הבינלאומית של הסטודיו",
+                  "מוביל משלחות לימוד למרכזי עיצוב מובילים בעולם",
+                  "הסמכה בינלאומית בפילוסופיה סינית ופנג שואי",
+                  "מטפל NLP | בוגר הסטודיו בהצטיינות יתרה",
+                  "בעלים של סטודיו עצמאי המתמחה בפרויקטים מורכבים",
+                ].map((item, i) => (
+                  <p key={i} className="text-[#5A3F50] text-base flex items-start gap-2">
+                    <span className="text-[#6B1A47] mt-1 flex-shrink-0">✦</span> {item}
+                  </p>
+                ))}
+              </div>
+            </div>
+            {/* Quote */}
+            <div className="border-r-4 border-[#F9D0CF] pr-5 bg-[#FAF6F0] rounded-xl py-4 px-5">
+              <p className="text-[#1A1218] text-base md:text-lg italic leading-relaxed">
+                &ldquo;עיצוב הוא השתקפות של חוויה אישית ואינדיווידואלית בעולם קוסמופוליטי נטול גבולות&rdquo;
+              </p>
             </div>
           </div>
         </Fade>
