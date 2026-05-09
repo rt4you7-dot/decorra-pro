@@ -426,14 +426,12 @@ function TruthSection() {
     <section className="bg-white py-16 md:py-24 px-4 md:px-8">
       <div className="max-w-3xl mx-auto">
         <Fade className="text-center mb-10">
-          <p className="text-[#6B1A47] text-xs font-semibold uppercase tracking-widest mb-5">האמת הפשוטה</p>
+          <p className="text-[#C9A84C] text-[12px] font-semibold uppercase tracking-widest mb-5">האמת הפשוטה</p>
           <div className="space-y-3">
             <p className="text-2xl md:text-3xl text-[#1A1218] font-bold leading-snug">
               עיצוב טוב הוא לא כישרון. ולא רק אינטואיציה.
             </p>
-            <div className="inline-block bg-[#F9D0CF] px-6 py-2">
-              <p className="text-[#1A1218] font-bold text-2xl md:text-3xl">הוא שיטה.</p>
-            </div>
+            <p className="text-[#6B1A47] font-bold text-2xl md:text-3xl">הוא שיטה.</p>
           </div>
         </Fade>
 
