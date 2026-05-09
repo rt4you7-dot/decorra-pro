@@ -257,38 +257,6 @@ function HeroSection() {
   );
 }
 
-// ─── Video ────────────────────────────────────────────────── bg: dark ─────────
-
-function VideoSection() {
-  const youtubeId = "VIDEO_ID_HERE";
-  return (
-    <section className="relative bg-[#1A1218] py-14 md:py-20 px-4 md:px-8">
-      <img src="/images/BG-NEW.jpg" alt="" aria-hidden="true" className="absolute inset-0 w-full h-full object-cover opacity-30 pointer-events-none" />
-      <div className="relative z-10 max-w-4xl mx-auto">
-        <Fade>
-          <div className="relative w-full rounded-2xl overflow-hidden" style={{ paddingTop: "56.25%" }}>
-            {youtubeId === "VIDEO_ID_HERE" ? (
-              <div className="absolute inset-0 flex flex-col items-center justify-center text-white gap-3 bg-white/5">
-                <p className="text-5xl">🎬</p>
-                <p className="text-[#F9D0CF] text-xl font-semibold">וידאו בוריס סולטנוב</p>
-                <p className="text-white/40 text-base">יתווסף בקרוב</p>
-              </div>
-            ) : (
-              <iframe
-                className="absolute inset-0 w-full h-full"
-                src={`https://www.youtube.com/embed/${youtubeId}`}
-                title="Decorra Pro"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowFullScreen
-              />
-            )}
-          </div>
-        </Fade>
-      </div>
-    </section>
-  );
-}
-
 // ─── Authority ────────────────────────────────────────────── bg: pink ─────────
 
 function AuthoritySection() {
@@ -760,7 +728,6 @@ export default function DecoraProPage() {
       </div>
       <NavBar />
       <HeroSection />
-      <VideoSection />
       <AuthoritySection />
       <TruthSection />
       <NotACourseSection />
