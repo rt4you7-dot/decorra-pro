@@ -429,32 +429,26 @@ function TruthSection() {
           </div>
         </Fade>
 
-        {/* 4 method steps */}
-        <StaggerFade className="grid grid-cols-2 md:grid-cols-4 gap-3 mb-10">
+        {/* 4 method steps — alternating plum/cream */}
+        <StaggerFade className="space-y-3 mb-10">
           {[
-            { num: "01", text: "מאיפה מתחילים" },
-            { num: "02", text: "מה עושים קודם" },
-            { num: "03", text: "איך בוחרים נכון" },
-            { num: "04", text: "איך הכל מתחבר" },
-          ].map((item) => (
-            <motion.div key={item.num} variants={fadeUp}
-              className="bg-[#FAF6F0] border border-[#E8DDD0] px-4 py-5 text-center">
-              <p className="text-[#6B1A47]/30 font-black text-3xl leading-none mb-2">{item.num}</p>
-              <p className="text-[#1A1218] font-semibold text-base leading-snug">{item.text}</p>
+            { text: "מאיפה מתחילים", dark: true },
+            { text: "מה עושים קודם", dark: false },
+            { text: "איך בוחרים נכון", dark: true },
+            { text: "ואיך הכל מתחבר לתוצאה אחת שלמה", dark: false },
+          ].map((item, i) => (
+            <motion.div key={i} variants={fadeUp}
+              className={`px-8 py-5 text-center ${item.dark ? "bg-[#6B1A47]" : "bg-[#F5F2E9]"}`}>
+              <p className={`font-semibold text-xl ${item.dark ? "text-white" : "text-[#1A1218]"}`}>
+                {item.text}
+              </p>
             </motion.div>
           ))}
         </StaggerFade>
 
         {/* Closing */}
-        <Fade className="text-center space-y-4">
-          <div className="flex flex-wrap justify-center gap-3">
-            {["בלי ניחושים", "בלי בלבול", "בלי טעויות יקרות"].map((t, i) => (
-              <span key={i} className="bg-[#6B1A47] text-white text-base font-semibold px-5 py-2 rounded-full">
-                {t}
-              </span>
-            ))}
-          </div>
-          <p className="text-[#5A3F50] text-lg pt-2">
+        <Fade className="text-center space-y-3">
+          <p className="text-[#5A3F50] text-lg">
             אם גם את מרגישה שאת &ldquo;כמעט שם&rdquo; — אבל משהו לא מתחבר —
           </p>
           <p className="text-[#6B1A47] font-bold text-xl">פה Decorra Pro משנה את המשחק.</p>
