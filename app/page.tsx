@@ -449,28 +449,37 @@ function WhatYouGetSection() {
             ))}
           </StaggerFade>
 
-          <Fade>
-            <div className="bg-white rounded-2xl border border-[#E8DDD0] overflow-hidden shadow-sm">
-              <div className="px-6 py-4 text-center border-b border-[#E8DDD0]">
-                <p className="text-[#6B1A47] font-bold text-base mb-0.5">✦ עוד פרקים בדרך ✦</p>
-                <p className="text-[#5A3F50] text-base">המדריך מתפתח — הנה טעימה ממה שמגיע</p>
-              </div>
-              <div className="relative">
-                <video
-                  src="/images/video2.mp4"
-                  muted
-                  playsInline
-                  preload="metadata"
-                  className="w-full block"
-                />
-                <div className="absolute inset-0 flex items-center justify-center bg-[#1A1218]/40">
-                  <span className="bg-[#F9D0CF] text-[#6B1A47] text-base font-bold px-6 py-2 rounded-full shadow-md">
-                    בקרוב
-                  </span>
-                </div>
-              </div>
+          <div className="bg-white rounded-2xl border border-[#E8DDD0] overflow-hidden shadow-sm">
+            <div className="px-6 py-4 text-center border-b border-[#E8DDD0]">
+              <p className="text-[#6B1A47] font-bold text-base mb-0.5">✦ עוד פרקים בדרך ✦</p>
+              <p className="text-[#5A3F50] text-base">המדריך מתפתח — הנה טעימה ממה שמגיע</p>
             </div>
-          </Fade>
+            <StaggerFade className="grid grid-cols-2 md:grid-cols-4 gap-4 p-5">
+              {[
+                { num: 7, name: "עיצוב עם תקציב" },
+                { num: 8, name: "תאורה ואווירה" },
+                { num: 9, name: "טקסטיל ורכות" },
+                { num: 10, name: "שילוב סגנונות" },
+              ].map((ch) => (
+                <motion.div key={ch.num} variants={fadeUp} className="rounded-2xl overflow-hidden border border-[#E8DDD0] shadow-sm">
+                  <div className="relative bg-[#6B1A47] overflow-hidden" style={{ paddingTop: "80%" }}>
+                    <span className="absolute left-2 bottom-0 text-[5rem] font-black text-white/[0.07] leading-none select-none pointer-events-none">{ch.num}</span>
+                    <div className="absolute inset-0 flex flex-col items-center justify-center gap-3">
+                      <div className="w-10 h-10 rounded-full bg-white/10 border border-white/20 flex items-center justify-center">
+                        <svg viewBox="0 0 24 24" fill="white" className="w-4 h-4 translate-x-0.5">
+                          <path d="M8 5v14l11-7z" />
+                        </svg>
+                      </div>
+                      <span className="bg-[#F9D0CF] text-[#6B1A47] text-sm font-bold px-3 py-1 rounded-full">בקרוב</span>
+                    </div>
+                  </div>
+                  <div className="bg-white px-3 py-3 text-center">
+                    <p className="text-[#1A1218] font-semibold text-base">{ch.name}</p>
+                  </div>
+                </motion.div>
+              ))}
+            </StaggerFade>
+          </div>
         </div>
 
         <Fade className="text-center mt-8">
