@@ -360,12 +360,19 @@ function AuthoritySection() {
               {/* Barbara + Boris cards */}
               <div className="grid md:grid-cols-2 gap-5 mb-7">
                 {[
-                  { name: "ברברה ברזין", sub: "45+ שנות ניסיון", desc: "המייסדת. השיטה שלה עיצבה דורות של מעצבים ומעצבות בישראל. עשרות שנים של עשייה אמיתית בשטח — מזוקקת לתוך שיטה אחת ברורה." },
-                  { name: "בוריס סולטנוב", sub: "המרצה המוביל", desc: "לוקח את הידע של ברברה ומגיש אותו בצורה ברורה, מעשית ומדויקת. מעשרות שנות הוראה — הוא יודע בדיוק איפה את נתקעת ואיך לפתוח את זה." },
+                  { name: "ברברה ברזין", sub: "45+ שנות ניסיון", desc: "המייסדת. השיטה שלה עיצבה דורות של מעצבים ומעצבות בישראל. עשרות שנים של עשייה אמיתית בשטח — מזוקקת לתוך שיטה אחת ברורה.", img: "/images/barbara.jpg" },
+                  { name: "בוריס סולטנוב", sub: "המרצה המוביל", desc: "לוקח את הידע של ברברה ומגיש אותו בצורה ברורה, מעשית ומדויקת. מעשרות שנות הוראה — הוא יודע בדיוק איפה את נתקעת ואיך לפתוח את זה.", img: "/images/boris1234.jpg" },
                 ].map((item, i) => (
                   <div key={i} className="bg-white/10 px-6 py-6">
-                    <p className="text-white font-bold text-xl mb-0.5">{item.name}</p>
-                    <p className="text-[#F9D0CF] text-xs uppercase tracking-widest mb-3">{item.sub}</p>
+                    <div className="flex items-center gap-3 mb-3">
+                      <div className="w-12 h-12 rounded-full overflow-hidden flex-shrink-0 border-2 border-[#F9D0CF]/50">
+                        <img src={item.img} alt={item.name} className="w-full h-full object-cover object-top" />
+                      </div>
+                      <div>
+                        <p className="text-white font-bold text-xl leading-tight">{item.name}</p>
+                        <p className="text-[#F9D0CF] text-xs uppercase tracking-widest">{item.sub}</p>
+                      </div>
+                    </div>
                     <p className="text-white/85 text-base leading-relaxed">{item.desc}</p>
                   </div>
                 ))}
