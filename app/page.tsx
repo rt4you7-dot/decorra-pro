@@ -270,39 +270,36 @@ function AuthoritySection() {
           <h2 className="text-2xl md:text-3xl text-[#1A1218] font-bold">המרצה המוביל. הידע של האגדה.</h2>
         </Fade>
 
-        {/* Boris card — circle photo layout */}
+        {/* Boris card — centered circle photo then details */}
         <Fade>
-          <div className="bg-white rounded-2xl shadow-md mb-8 px-6 md:px-10 py-8">
-            {/* Top: circle photo + name */}
-            <div className="flex flex-col md:flex-row items-center md:items-start gap-6 mb-6">
-              {/* Circle photo */}
-              <div className="flex-shrink-0 flex flex-col items-center gap-3">
-                <div className="w-36 h-36 md:w-44 md:h-44 rounded-full overflow-hidden border-4 border-[#6B1A47] shadow-lg">
-                  <img src="/images/BORIS.jpg" alt="בוריס סולטנוב" className="w-full h-full object-cover object-top scale-110" />
-                </div>
-                <div className="text-center">
-                  <p className="text-[#1A1218] font-bold text-xl leading-tight">בוריס סולטנוב</p>
-                  <p className="text-[#6B1A47] text-sm font-medium mt-0.5">המרצה המוביל | סטודיו ברברה ברזין</p>
-                </div>
-              </div>
-              {/* Credentials */}
-              <div className="flex-1 space-y-2.5 md:pt-2">
-                {[
-                  "20+ שנות ניסיון בהוראה ועיצוב פנים",
-                  "מייסד המחלקה הבינלאומית של הסטודיו",
-                  "מוביל משלחות לימוד למרכזי עיצוב מובילים בעולם",
-                  "הסמכה בינלאומית בפילוסופיה סינית ופנג שואי",
-                  "מטפל NLP | בוגר הסטודיו בהצטיינות יתרה",
-                  "בעלים של סטודיו עצמאי המתמחה בפרויקטים מורכבים",
-                ].map((item, i) => (
-                  <p key={i} className="text-[#5A3F50] text-base flex items-start gap-2">
-                    <span className="text-[#6B1A47] mt-1 flex-shrink-0">✦</span> {item}
-                  </p>
-                ))}
+          <div className="bg-white rounded-2xl shadow-md mb-8 px-6 md:px-10 py-8 text-center">
+            {/* Circle photo centered */}
+            <div className="flex justify-center mb-4">
+              <div className="w-40 h-40 md:w-52 md:h-52 rounded-full overflow-hidden shadow-lg"
+                style={{ border: "5px solid rgba(255,255,255,0.3)", outline: "3px solid #6B1A47" }}>
+                <img src="/images/BORIS.jpg" alt="בוריס סולטנוב" className="w-full h-full object-cover object-top scale-110" />
               </div>
             </div>
+            {/* Name + title */}
+            <p className="text-[#1A1218] font-bold text-2xl mb-1">בוריס סולטנוב</p>
+            <p className="text-[#6B1A47] text-base font-medium mb-6">המרצה המוביל | סטודיו ברברה ברזין</p>
+            {/* Credentials */}
+            <div className="text-right space-y-2.5 mb-6 max-w-lg mx-auto">
+              {[
+                "20+ שנות ניסיון בהוראה ועיצוב פנים",
+                "מייסד המחלקה הבינלאומית של הסטודיו",
+                "מוביל משלחות לימוד למרכזי עיצוב מובילים בעולם",
+                "הסמכה בינלאומית בפילוסופיה סינית ופנג שואי",
+                "מטפל NLP | בוגר הסטודיו בהצטיינות יתרה",
+                "בעלים של סטודיו עצמאי המתמחה בפרויקטים מורכבים",
+              ].map((item, i) => (
+                <p key={i} className="text-[#5A3F50] text-base flex items-start gap-2">
+                  <span className="text-[#6B1A47] mt-1 flex-shrink-0">✦</span> {item}
+                </p>
+              ))}
+            </div>
             {/* Quote */}
-            <div className="border-r-4 border-[#F9D0CF] pr-5 bg-[#FAF6F0] rounded-xl py-4 px-5">
+            <div className="border-r-4 border-[#F9D0CF] pr-5 bg-[#FAF6F0] rounded-xl py-4 px-5 text-right">
               <p className="text-[#1A1218] text-base md:text-lg italic leading-relaxed">
                 &ldquo;עיצוב הוא השתקפות של חוויה אישית ואינדיווידואלית בעולם קוסמופוליטי נטול גבולות&rdquo;
               </p>
