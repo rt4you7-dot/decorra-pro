@@ -497,8 +497,13 @@ function ChaptersDetailSection() {
     <section className="bg-white py-16 md:py-20">
       <div className="max-w-3xl mx-auto px-4 md:px-8 mb-10">
         <Fade className="text-center">
-          <h2 className="text-2xl md:text-3xl text-[#1A1218] font-bold">מה מחכה לך בפנים?</h2>
-          <p className="text-[#5A3F50] text-lg mt-2">כל פרק בנוי סביב כלי אחד — ברור, ישיר, עם תוצאה מיידית</p>
+          <p className="text-[#6B1A47] font-semibold text-sm uppercase tracking-widest mb-3">אז מה את מקבלת עכשיו?</p>
+          <h2 className="text-3xl md:text-4xl text-[#1A1218] font-bold mb-1">DECORRA PRO</h2>
+          <p className="text-[#5A3F50] text-lg mb-1">מבית סטודיו ברברה ברזין</p>
+          <p className="text-[#1A1218] font-bold text-lg mb-2">סנונית ראשונה מתוך המדריך הומסטיילינג המלא</p>
+          <p className="text-[#5A3F50] text-lg mb-6">6 פרקים. 6 זוויות שונות. <mark className="bg-[#F9D0CF] text-[#1A1218] px-1 rounded not-italic">6 קפיצות מדרגה בהבנה שלך.</mark></p>
+          <div className="w-16 h-0.5 bg-[#6B1A47] mx-auto mb-6 opacity-30" />
+          <p className="text-[#5A3F50] text-base">מה מחכה לך בכל פרק?</p>
         </Fade>
       </div>
 
@@ -737,12 +742,12 @@ export default function DecoraProPage() {
       </div>
       <NavBar />
       <HeroSection />
+      <ChaptersDetailSection />
       <AuthoritySection />
       <TruthSection />
       <NotACourseSection />
       <WhatYouGetSection />
       <WhoIsItForSection />
-      <ChaptersDetailSection />
       <BenefitsSection />
       <PricingSection />
       <FAQSection />
