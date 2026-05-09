@@ -314,7 +314,7 @@ function AuthoritySection() {
   return (
     <section className="py-16 md:py-20 px-4 md:px-8 max-w-4xl mx-auto">
       <Fade className="text-center mb-10">
-        <h2 className="text-3xl md:text-4xl text-[#1A1218]">
+        <h2 className="text-3xl md:text-4xl text-[#1A1218] font-bold">
           מי עומד מאחורי השיטה?
         </h2>
       </Fade>
@@ -397,7 +397,7 @@ function TruthSection() {
   return (
     <section className="py-16 md:py-20 px-4 md:px-8 max-w-3xl mx-auto text-center">
       <Fade className="space-y-6">
-        <h2 className="text-3xl md:text-4xl text-[#1A1218]">
+        <h2 className="text-3xl md:text-4xl text-[#1A1218] font-bold">
           האמת הפשוטה
         </h2>
         <div className="space-y-1 text-[#5A3F50] text-xl leading-loose">
@@ -524,7 +524,7 @@ function ChaptersDetailSection() {
   return (
     <section className="py-16 md:py-20 px-4 md:px-8 max-w-4xl mx-auto">
       <Fade className="text-center mb-10">
-        <h2 className="text-3xl md:text-4xl text-[#1A1218]">
+        <h2 className="text-3xl md:text-4xl text-[#1A1218] font-bold">
           מה מחכה לך בפנים?
         </h2>
       </Fade>
@@ -566,9 +566,9 @@ function WhoIsItForSection() {
     <section className="py-16 md:py-20 px-4 md:px-8 max-w-3xl mx-auto">
       <Fade>
         <div className="bg-[#F9D0CF] rounded-2xl p-6 md:p-8 mb-8">
-          <p className="text-[#6B1A47] text-xl font-bold mb-5 text-center">
+          <h2 className="text-3xl md:text-4xl text-[#6B1A47] font-bold mb-5 text-center">
             למי זה מתאים?
-          </p>
+          </h2>
           <ul className="space-y-3 mb-5">
             {[
               "מרגישה שיש לך טעם — אבל חסר לך ביטחון בבחירות",
@@ -619,7 +619,7 @@ function BenefitsSection() {
   return (
     <section className="py-16 md:py-20 px-4 md:px-8 max-w-3xl mx-auto">
       <Fade className="text-center mb-8">
-        <h2 className="text-3xl md:text-4xl text-[#1A1218]">
+        <h2 className="text-3xl md:text-4xl text-[#1A1218] font-bold">
           כשיש שיטה — הכל משתנה
         </h2>
       </Fade>
@@ -651,7 +651,7 @@ function PricingSection() {
   return (
     <section id="form" className="py-16 md:py-20 px-4 md:px-8 max-w-3xl mx-auto">
       <Fade className="text-center mb-10">
-        <h2 className="text-3xl md:text-4xl text-[#1A1218] mb-3">
+        <h2 className="text-3xl md:text-4xl text-[#1A1218] font-bold mb-3">
           מה תקבלי מיד אחרי ההצטרפות?
         </h2>
       </Fade>
@@ -705,7 +705,7 @@ function FAQSection() {
   return (
     <section className="py-12 md:py-16 px-4 md:px-8 max-w-3xl mx-auto">
       <Fade className="text-center mb-8">
-        <h2 className="text-3xl md:text-4xl text-[#1A1218]">
+        <h2 className="text-3xl md:text-4xl text-[#1A1218] font-bold">
           שאלות נפוצות
         </h2>
       </Fade>
@@ -725,9 +725,9 @@ function UrgencySection() {
     <section className="py-16 md:py-24 px-4 md:px-8 max-w-3xl mx-auto text-center">
       <Fade>
         <div className="bg-[#1A1218] text-white rounded-2xl p-8 md:p-12 mb-8">
-          <p className="text-3xl md:text-4xl mb-6">
+          <h2 className="text-3xl md:text-4xl font-bold mb-6">
             אם לא תעשי שינוי עכשיו…
-          </p>
+          </h2>
           <p className="text-[#F9D0CF] text-lg md:text-xl leading-loose mb-6">
             סביר שתמשיכי:
             <br />להתלבט,
