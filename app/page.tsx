@@ -213,7 +213,7 @@ function NavBar() {
   return (
     <nav className="sticky top-0 z-50 bg-white/95 backdrop-blur-sm border-b border-[#E8DDD0] py-3 px-4 md:px-8">
       <div className="max-w-5xl mx-auto relative flex items-center justify-center">
-        <img src="/images/logo_BB SHORT.png" alt="Decorra Pro" className="h-10 md:h-12" />
+        <img src="/images/logo_BB SHORT.png" alt="Decorra Pro" className="h-5 md:h-6" />
         <a href="#form" className="absolute left-0 bg-[#6B1A47] text-white text-base font-semibold px-5 py-2 rounded-lg hover:bg-[#4E1235] transition-colors">
           הצטרפות →
         </a>
