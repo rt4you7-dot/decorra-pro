@@ -494,7 +494,7 @@ function WhatYouGetSection() {
 
 function ChaptersDetailSection() {
   return (
-    <section className="bg-white py-16 md:py-20">
+    <section className="bg-[#F5F2E9] py-16 md:py-20">
       <div className="max-w-3xl mx-auto px-4 md:px-8 mb-10">
         <Fade className="text-center">
           <p className="text-[#6B1A47] font-semibold text-sm uppercase tracking-widest mb-3">אז מה את מקבלת עכשיו?</p>
