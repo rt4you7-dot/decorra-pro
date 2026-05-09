@@ -212,16 +212,9 @@ function FAQAccordionItem({ item }: { item: FAQItem }) {
 function NavBar() {
   return (
     <nav className="sticky top-0 z-50 bg-white/95 backdrop-blur-sm border-b border-[#E8DDD0] py-3 px-4 md:px-8">
-      <div className="max-w-5xl mx-auto relative flex items-center justify-center py-1">
-        <div className="text-center">
-          <p className="font-['var(--font-playfair)'] tracking-[0.22em] text-[#1A1218] text-lg md:text-xl font-bold leading-none" style={{ fontFamily: "var(--font-playfair), 'Playfair Display', serif", letterSpacing: "0.22em" }}>
-            DECORRA PRO
-          </p>
-          <p className="text-[#6B1A47] text-[10px] md:text-xs tracking-widest mt-0.5 font-medium" style={{ fontFamily: "var(--font-heebo), Heebo, sans-serif" }}>
-            מבית סטודיו ברברה ברזין
-          </p>
-        </div>
-        <a href="#form" className="absolute left-0 bg-[#6B1A47] text-white text-sm md:text-base font-semibold px-4 py-2 rounded-lg hover:bg-[#4E1235] transition-colors">
+      <div className="max-w-5xl mx-auto relative flex items-center justify-center">
+        <img src="/images/logo_BB SHORT.png" alt="Decorra Pro" className="h-5 md:h-6" />
+        <a href="#form" className="absolute left-0 bg-[#6B1A47] text-white text-base font-semibold px-5 py-2 rounded-lg hover:bg-[#4E1235] transition-colors">
           הצטרפות →
         </a>
       </div>
@@ -504,9 +497,15 @@ function ChaptersDetailSection() {
     <section className="bg-[#F5F2E9] py-16 md:py-20">
       <div className="max-w-3xl mx-auto px-4 md:px-8 mb-10">
         <Fade className="text-center">
-          <p className="text-[#6B1A47] font-semibold text-sm uppercase tracking-widest mb-3">אז מה את מקבלת עכשיו?</p>
-          <h2 className="text-3xl md:text-4xl text-[#1A1218] font-bold mb-1">DECORRA PRO</h2>
-          <p className="text-[#5A3F50] text-lg mb-1">מבית סטודיו ברברה ברזין</p>
+          <p className="text-[#6B1A47] font-semibold text-sm uppercase tracking-widest mb-5">אז מה את מקבלת עכשיו?</p>
+          <div className="inline-block mb-4">
+            <p className="tracking-[0.22em] text-[#1A1218] text-2xl md:text-3xl font-bold leading-none" style={{ fontFamily: "var(--font-playfair), 'Playfair Display', serif" }}>
+              DECORRA PRO
+            </p>
+            <p className="text-[#6B1A47] text-xs md:text-sm tracking-widest mt-1 font-medium">
+              מבית סטודיו ברברה ברזין
+            </p>
+          </div>
           <p className="text-[#1A1218] font-bold text-lg mb-2">סנונית ראשונה מתוך המדריך הומסטיילינג המלא</p>
           <p className="text-[#5A3F50] text-lg mb-6">6 פרקים. 6 זוויות שונות. <mark className="bg-[#F9D0CF] text-[#1A1218] px-1 rounded not-italic">6 קפיצות מדרגה בהבנה שלך.</mark></p>
           <div className="w-16 h-0.5 bg-[#6B1A47] mx-auto mb-6 opacity-30" />
