@@ -212,9 +212,16 @@ function FAQAccordionItem({ item }: { item: FAQItem }) {
 function NavBar() {
   return (
     <nav className="sticky top-0 z-50 bg-white/95 backdrop-blur-sm border-b border-[#E8DDD0] py-3 px-4 md:px-8">
-      <div className="max-w-5xl mx-auto relative flex items-center justify-center">
-        <img src="/images/logo_BB SHORT.png" alt="Decorra Pro" className="h-5 md:h-6" />
-        <a href="#form" className="absolute left-0 bg-[#6B1A47] text-white text-base font-semibold px-5 py-2 rounded-lg hover:bg-[#4E1235] transition-colors">
+      <div className="max-w-5xl mx-auto relative flex items-center justify-center py-1">
+        <div className="text-center">
+          <p className="font-['var(--font-playfair)'] tracking-[0.22em] text-[#1A1218] text-lg md:text-xl font-bold leading-none" style={{ fontFamily: "var(--font-playfair), 'Playfair Display', serif", letterSpacing: "0.22em" }}>
+            DECORRA PRO
+          </p>
+          <p className="text-[#6B1A47] text-[10px] md:text-xs tracking-widest mt-0.5 font-medium" style={{ fontFamily: "var(--font-heebo), Heebo, sans-serif" }}>
+            מבית סטודיו ברברה ברזין
+          </p>
+        </div>
+        <a href="#form" className="absolute left-0 bg-[#6B1A47] text-white text-sm md:text-base font-semibold px-4 py-2 rounded-lg hover:bg-[#4E1235] transition-colors">
           הצטרפות →
         </a>
       </div>
