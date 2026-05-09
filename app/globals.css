@@ -63,7 +63,7 @@ mark {
   outline: none;
 }
 
-/* Card border — 5px white 60% opacity */
+/* Card border — thin white 40% opacity outer ring */
 .card-frame {
-  border: 5px solid rgba(255, 255, 255, 0.6) !important;
+  border: 1.5px solid rgba(255, 255, 255, 0.4) !important;
 }

@@ -311,7 +311,7 @@ function AuthoritySection() {
             </div>
 
             {/* Quote */}
-            <div className="mx-6 md:mx-8 mb-7 card-frame bg-[#6B1A47] px-6 py-6">
+            <div className="mx-6 md:mx-8 mb-7 bg-[#6B1A47] px-6 py-6">
               <p className="text-[#F9D0CF]/60 text-xs mb-3 text-center">משפט לדוגמא</p>
               <p className="text-white text-lg md:text-xl leading-relaxed font-medium text-center">
                 &ldquo;רוב האנשים קונים פריטים. מעצבים בונים חוויה. ההבדל ביניהם הוא לא תקציב ולא טעם — הוא שיטת חשיבה. וזה בדיוק מה שאפשר ללמוד.&rdquo;
@@ -363,7 +363,7 @@ function AuthoritySection() {
                   { name: "ברברה ברזין", sub: "45+ שנות ניסיון", desc: "המייסדת. השיטה שלה עיצבה דורות של מעצבים ומעצבות בישראל. עשרות שנים של עשייה אמיתית בשטח — מזוקקת לתוך שיטה אחת ברורה." },
                   { name: "בוריס סולטנוב", sub: "המרצה המוביל", desc: "לוקח את הידע של ברברה ומגיש אותו בצורה ברורה, מעשית ומדויקת. מעשרות שנות הוראה — הוא יודע בדיוק איפה את נתקעת ואיך לפתוח את זה." },
                 ].map((item, i) => (
-                  <div key={i} className="bg-white/10 card-frame px-6 py-6">
+                  <div key={i} className="bg-white/10 px-6 py-6">
                     <p className="text-white font-bold text-xl mb-0.5">{item.name}</p>
                     <p className="text-[#F9D0CF] text-xs uppercase tracking-widest mb-3">{item.sub}</p>
                     <p className="text-white/85 text-base leading-relaxed">{item.desc}</p>
@@ -372,7 +372,7 @@ function AuthoritySection() {
               </div>
 
               {/* "Not anywhere else" block */}
-              <div className="bg-white/10 card-frame px-6 py-5 mb-7">
+              <div className="bg-white/10 px-6 py-5 mb-7">
                 <p className="text-[#F9D0CF] text-xs font-semibold uppercase tracking-widest mb-4 text-center">מה שלא תמצאי בשום מקום אחר</p>
                 <div className="space-y-3">
                   {[
@@ -498,7 +498,7 @@ function NotACourseSection() {
               <div className="group relative bg-[#FAF6F0] card-frame overflow-hidden border border-[#6B1A47]/20 hover:border-[#1A1218]/20 transition-all duration-300 shadow-lg">
                 <div className="absolute top-4 left-4 text-[#6B1A47]/10 font-bold text-4xl select-none">{item.label}</div>
                 <div className="p-8 flex flex-col items-center text-center gap-5">
-                  <div className="w-24 h-24 card-frame bg-gradient-to-br from-[#6B1A47] to-[#A0285C] flex items-center justify-center text-white shadow-xl">
+                  <div className="w-24 h-24 bg-gradient-to-br from-[#6B1A47] to-[#A0285C] flex items-center justify-center text-white shadow-xl">
                     {item.icon}
                   </div>
                   <div>
@@ -673,7 +673,7 @@ function WhoIsItForSection() {
               "קונה ולא מרוצה עד הסוף",
               "רוצה בית שנראה מקצועי באמת",
             ].map((item, i) => (
-              <li key={i} className="flex items-start gap-3 text-[#1A1218] text-lg bg-white/60 card-frame px-4 py-4">
+              <li key={i} className="flex items-start gap-3 text-[#1A1218] text-lg bg-white/60 px-4 py-4">
                 <span className="text-[#6B1A47] flex-shrink-0 mt-0.5 font-bold">✦</span>
                 <span>{item}</span>
               </li>
@@ -714,7 +714,7 @@ function BenefitsSection() {
               "את חוסכת כסף",
               "ואת מרגישה שליטה",
             ].map((item, i) => (
-              <li key={i} className="flex items-center gap-3 text-white text-lg bg-white/10 card-frame px-4 py-3">
+              <li key={i} className="flex items-center gap-3 text-white text-lg bg-white/10 px-4 py-3">
                 <span className="text-[#F9D0CF] font-bold flex-shrink-0">✔</span>
                 <span>{item}</span>
               </li>
