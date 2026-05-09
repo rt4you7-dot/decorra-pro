@@ -302,24 +302,12 @@ function AuthoritySection() {
               ))}
             </div>
 
-            {/* Credentials — 2-col grid cards */}
-            <div className="px-6 md:px-8 py-6 grid grid-cols-1 md:grid-cols-2 gap-3">
-              {[
-                { title: "מייסד המחלקה הבינלאומית", sub: "של סטודיו ברברה ברזין" },
-                { title: "מוביל משלחות לימוד", sub: "למרכזי עיצוב מובילים בעולם" },
-                { title: "הסמכה בינלאומית", sub: "פילוסופיה סינית ופנג שואי" },
-                { title: "מטפל NLP", sub: "מבין את הפסיכולוגיה של החלל" },
-                { title: "סטודיו עצמאי", sub: "פרויקטים מסחריים ופרטיים מורכבים" },
-                { title: "ניסיון בינלאומי", sub: "השתלמויות באסיה, אירופה וצפון אפריקה" },
-              ].map((item, i) => (
-                <div key={i} className="flex items-start gap-4 bg-[#FAF6F0] rounded-xl px-4 py-4 border border-[#E8DDD0]">
-                  <span className="flex-shrink-0 mt-1 w-2 h-2 rounded-full bg-[#6B1A47] ring-4 ring-[#6B1A47]/15" />
-                  <div>
-                    <p className="text-[#1A1218] font-bold text-lg leading-tight">{item.title}</p>
-                    <p className="text-[#5A3F50] text-base mt-0.5">{item.sub}</p>
-                  </div>
-                </div>
-              ))}
+            {/* Bio paragraph */}
+            <div className="px-6 md:px-8 py-6">
+              <p className="text-[#5A3F50] text-lg md:text-xl leading-loose">
+                בוריס סולטנוב הוא אחד המרצים המובילים והמבוקשים בתחום עיצוב הפנים בישראל. עם למעלה מ-20 שנות ניסיון בהוראה ובשטח, הוא מייסד המחלקה הבינלאומית של סטודיו ברברה ברזין — שם הוא בונה תוכניות הדרכה ומוביל משלחות לימוד למרכזי עיצוב וארכיטקטורה מהחשובים בעולם. לבוריס הסמכה בינלאומית בפילוסופיה סינית ובתורת הפנג שואי, הוא מטפל NLP מוסמך, ובעלים של סטודיו עצמאי מצליח המתמחה בפרויקטים מורכבים במגזרי הפרטי, המסחרי והחינוך.{" "}
+                <span className="font-semibold text-[#1A1218]">מה שמייחד אותו הוא היכולת לקחת ידע עמוק ומורכב — ולהפוך אותו לכלי עבודה ברורים ומעשיים שאפשר ליישם מיד.</span>
+              </p>
             </div>
 
             {/* Quote */}
