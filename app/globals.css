@@ -34,7 +34,7 @@ h1,
 h2,
 h3,
 h4 {
-  font-family: var(--font-playfair), "Playfair Display", Georgia, serif;
+  font-family: var(--font-heebo), "Heebo", Arial, sans-serif;
   line-height: 1.25;
 }
 
