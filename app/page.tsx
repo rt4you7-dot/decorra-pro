@@ -388,7 +388,7 @@ function AuthoritySection() {
                   <span className="text-[#F9D0CF]"> את מקבלת כאן. ב-Decorra Pro.</span>
                 </p>
                 <p className="text-white/75 text-base md:text-lg leading-relaxed max-w-xl mx-auto">
-                  התוכן הכי מדויק והכי מזוקק שיש — בלי לבזבז שנים כדי ללמוד אותו.
+                  התוכן הכי מדויק והכי מזוקק שיש — מוגש בצורה פשוטה וברורה, עם חומר נגיש לכולן. בלי לבזבז שנים כדי ללמוד אותו.
                 </p>
               </div>
 
