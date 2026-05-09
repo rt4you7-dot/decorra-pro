@@ -323,13 +323,33 @@ function AuthoritySection() {
         {/* DNA block */}
         <Fade>
           <div className="rounded-2xl overflow-hidden mb-2">
-            <div className="bg-[#1A1218] px-6 md:px-10 py-5 text-center">
+
+            {/* Header */}
+            <div className="bg-[#1A1218] px-6 md:px-10 py-6 text-center">
               <p className="text-[#F9D0CF] text-xs font-semibold uppercase tracking-[0.2em] mb-2">ה-DNA של Decorra Pro</p>
-              <p className="text-white text-lg md:text-xl font-semibold leading-snug">
+              <p className="text-white text-xl md:text-2xl font-semibold leading-snug">
                 את מקבלת 45 שנות חוכמה דרך אחד המרצים החדים ביותר בתחום.
               </p>
             </div>
+
+            {/* Proof bar */}
+            <div className="bg-[#F9D0CF] grid grid-cols-4 divide-x divide-[#6B1A47]/20">
+              {[
+                { num: "45+", label: "שנות ניסיון" },
+                { num: "20+", label: "שנות הוראה" },
+                { num: "6", label: "כלי עבודה" },
+                { num: "0", label: "קורסים דומים" },
+              ].map((s, i) => (
+                <div key={i} className="py-4 text-center">
+                  <p className="text-[#6B1A47] font-bold text-2xl md:text-3xl leading-none">{s.num}</p>
+                  <p className="text-[#5A3F50] text-xs mt-1">{s.label}</p>
+                </div>
+              ))}
+            </div>
+
             <div className="bg-[#6B1A47] px-6 md:px-10 py-8">
+
+              {/* Barbara + Boris cards */}
               <div className="grid md:grid-cols-2 gap-5 mb-7">
                 {[
                   { name: "ברברה ברזין", sub: "45+ שנות ניסיון", desc: "המייסדת. השיטה שלה עיצבה דורות של מעצבים ומעצבות בישראל. עשרות שנים של עשייה אמיתית בשטח — מזוקקת לתוך שיטה אחת ברורה." },
@@ -342,9 +362,35 @@ function AuthoritySection() {
                   </div>
                 ))}
               </div>
-              <p className="text-white text-center text-lg md:text-xl font-semibold leading-relaxed max-w-2xl mx-auto">
-                זה לא קורס רגיל. זה עשורים של ניסיון אמיתי — <span className="text-[#F9D0CF]">מזוקק, ממוקד, ומוגש בצורה שעובדת.</span>
-              </p>
+
+              {/* "Not anywhere else" block */}
+              <div className="bg-white/10 rounded-xl px-6 py-5 mb-7">
+                <p className="text-[#F9D0CF] text-xs font-semibold uppercase tracking-widest mb-4 text-center">מה שלא תמצאי בשום מקום אחר</p>
+                <div className="space-y-3">
+                  {[
+                    "לא תאוריה כללית — כל פרק הוא כלי עבודה שאפשר ליישם מיד",
+                    "לא קורס שנגמר — שיטה שמתפתחת ומלווה אותך הלאה",
+                    "לא ידע מפוזר — חומר מרוכז, מדויק ובנוי לפי סדר הגיוני",
+                    "לא נלמד בשום מקום בצורה כל כך מרוכזת ומעשית",
+                  ].map((item, i) => (
+                    <div key={i} className="flex items-start gap-3">
+                      <span className="text-[#F9D0CF] font-bold mt-0.5 flex-shrink-0">✗</span>
+                      <p className="text-white/85 text-base">{item}</p>
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+              {/* Big quote */}
+              <div className="text-center border-t border-white/20 pt-7">
+                <p className="text-white text-xl md:text-2xl font-bold leading-relaxed max-w-2xl mx-auto">
+                  מה שמעצבי פנים למדו ב-3 שנות לימודים —
+                </p>
+                <p className="text-[#F9D0CF] text-xl md:text-2xl font-bold leading-relaxed max-w-2xl mx-auto">
+                  את לומדת ב-6 פרקים.
+                </p>
+              </div>
+
             </div>
           </div>
         </Fade>
